@@ -1,0 +1,58 @@
+.burger {
+  width: 25px;
+  composes: icon from '../../css/generic.css';
+  cursor: pointer;
+}
+
+.logo {
+  width: 100%;
+  fill: #fff;
+  max-width: 200px;
+
+  @media(min-width: 768px) {
+    max-width: 250px;
+  }
+}
+
+.arrowLeft {
+  composes: icon from '../../css/generic.css';
+  height: 25px;
+  width: 25px;
+  padding-bottom: 10px;
+  margin-bottom: 3px;
+
+  svg {
+    transform: rotate(-90deg);
+  }
+}
+
+.close {
+  composes: icon from '../../css/generic.css';
+  cursor: pointer;
+  width: 20px;
+}
+
+.arrowDown, .arrowUp {
+  composes: icon from '../../css/generic.css';
+  width: 20px;
+}
+
+.arrowUp {
+  transform: rotate(90deg);
+}
+
+.facebook, .instagram {
+  composes: icon from '../../css/generic.css';
+  width: 20px;
+  height: 25px;
+  margin-top: 20px;
+  display: block;
+  color: #bebebe;
+}
+
+.produce, .benefits, .shooting {
+  composes: icon from '../../css/generic.css';
+  width: 60px;
+  height: 60px;
+  margin-right: 30px;
+}

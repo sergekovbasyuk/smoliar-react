@@ -1,0 +1,49 @@
+.content {
+  padding: 0 60px;
+  position: absolute;
+  top: calc(40vh - 30px);
+
+  @media(min-width: 768px) {
+    padding: 0 0 0 140px;
+    max-width: 70%;
+  }
+
+  p {
+    max-width: 590px;
+    margin: 0;
+
+    span {
+      color: #c1c1c1;
+    }
+  }
+}
+
+.logoContainer {
+  composes: logoContainer from '../../../css/generic.css';
+}
+
+.linkScroll{
+  display: none;
+  position: absolute;
+  bottom: 40px;
+  left: 140px;
+  font-weight: bold;
+  vertical-align: bottom;
+  font-size: 12px;
+
+  @media(min-width: 768px) {
+    display: inline-block;
+  }
+
+  &:hover, &:focus {
+    color: inherit;
+  }
+}
+
+.link {
+  composes: link from '../../../css/generic.css';
+}
+
+.title {
+  composes: title from '../../../css/generic.css';
+}

@@ -1,0 +1,23 @@
+@import "../../node_modules/normalize.css/normalize.css";
+@import "./jquery.fullPage.css";
+@import "./base.css";
+@import "./generic.css";
+@import "https://fonts.googleapis.com/css?family=Lato:700,900|Open+Sans:400,700";
+
+.mainContainer {
+  position: relative;
+}
+
+:global .is-open {
+  transform: translateY(0) !important;
+}
+
+:global .slick-dots {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+
+  li {
+    display: inline-block;
+  }
+}

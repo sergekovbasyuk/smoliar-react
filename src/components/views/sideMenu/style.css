@@ -1,0 +1,19 @@
+.menu {
+  position: fixed;
+  left: 15px;
+  top: 40vh;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  font-weight: bold;
+
+  @media(min-width: 768px) {
+    left: 36px;
+  }
+}
+
+.social {
+  display: inline-block;
+}

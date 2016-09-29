@@ -1,0 +1,71 @@
+.icon {
+  color: #fff;
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: middle;
+  position: relative;
+  top: -0.0625em;
+}
+
+.title {
+  color: #fddc94;
+  font-size: 26px;
+  margin-right: -20px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  line-height: 1;
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+
+  @media(min-width: 768px) {
+    font-size: 38px;
+  }
+
+  @media(min-width: 1024px) {
+    font-size: 64px;
+  }
+}
+
+.link {
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  position: relative;
+  display: inline-block;
+  font-family: 'Lato', sans-serif;
+  margin-top: 50px;
+  z-index: 2;
+
+  @media(min-width: 768px) {
+    font-size: 22px;
+  }
+
+  &:hover {
+    color: inherit;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -9px;
+    right: -18px;
+    height: 8px;
+    display: block;
+    background: #1287f4;
+    z-index: -1;
+  }
+}
+
+.logoContainer {
+  position: absolute;
+  top: 22px;
+  left: 0;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+
+  @media(min-width: 768px) {
+    top: 44px;
+  }
+}

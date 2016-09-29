@@ -1,0 +1,83 @@
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+  color: #f1f2f2;
+  background: #232323;
+  font-size: responsive;
+  min-font-size: 12px;
+  max-font-size: 16px;
+  lower-font-range: 420px;
+  upper-font-range: 1254px;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 18px;
+
+  @media(min-width: 768px){
+    line-height: 24px;
+  }
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+*:not(body) {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  outline: 0;
+  transition: color 0.3s ease-out;
+
+  &:hover,
+  &:focus {
+    color: #1287f4;
+  }
+}
+
+
+
+
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+:global .section {
+  position: relative;
+
+  video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  &:nth-child(5) {
+    background-image: url('http://res.cloudinary.com/dsie3eeqb/image/upload/v1474876954/get-in-touch2_pijsda.jpg');
+  }
+
+  &:nth-child(4) {
+    background-image: url('http://res.cloudinary.com/dsie3eeqb/image/upload/v1474877131/resources_tueoys.jpg');
+  }
+
+  &:nth-child(3) {
+    background-image: url('http://res.cloudinary.com/dsie3eeqb/image/upload/v1474877042/my-works_yscbog.jpg');
+  }
+
+  &:nth-child(2) {
+    background-image: url('http://res.cloudinary.com/dsie3eeqb/image/upload/v1474876954/main_ycizs6.jpg');
+  }
+}
