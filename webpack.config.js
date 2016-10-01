@@ -58,7 +58,7 @@ switch(process.env.npm_lifecycle_event) {
       ),
       parts.extractBundle({
         name: 'vendor',
-        entries: ['react', 'react-dom', 'react-scroll', 'jquery', 'fullpage.js']
+        entries: ['react', 'react-dom', 'jquery', 'fullpage.js']
       }),
       parts.minify(),
       parts.setupCSS(PATHS.app),

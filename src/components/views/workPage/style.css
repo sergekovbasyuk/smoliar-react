@@ -1,0 +1,144 @@
+.title {
+  composes: title from '../../../css/generic.css';
+}
+
+.minorTitle {
+  composes: minorTitle from '../../../css/generic.css';
+}
+
+.minorDescription {
+  composes: minorTitle from '../../../css/generic.css';
+  text-align: center;
+}
+
+.benefitsTitle {
+  font-size: 19px;
+  margin-bottom: 0;
+}
+
+.benefitsText {
+  margin-top: 0px;
+  line-height: 1.5;
+}
+
+.section {
+  min-height: 100vw;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  line-height: 1.5;
+  flex-direction: column;
+
+  @media(min-width: 768px){
+    line-height: 1.7;
+    min-height: 42vw;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+.first {
+  composes: section;
+  min-height: 100vh;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url('http://res.cloudinary.com/dsie3eeqb/image/upload/v1474998995/bg-about_y7fmtx.jpg');
+
+  @media(min-width: 768px){
+    min-height: 42vw;
+    flex-direction: row;
+  }
+}
+
+.second {
+  composes: section;
+  background-image: url('http://res.cloudinary.com/dsie3eeqb/image/upload/v1475051438/bg-about2_wsso4o.jpg');
+  background-position: 75% 50%;
+
+  @media(min-width: 768px){
+    background-position: inherit;
+
+    .content {
+      width: 50%;
+    }
+  }
+
+  .content {
+    width: 70%;
+  }
+}
+
+.content {
+  /*min-height: 100vw;*/
+  /*display: flex;*/
+  width: 100%;
+  align-items: center;
+
+  @media(min-width: 768px){
+    display: block;
+    width: 50%;
+    min-height: auto;
+  }
+}
+
+.description {
+  padding: 0 20px;
+
+  p {
+    text-align: justify;
+  }
+
+  @media(min-width: 768px){
+    padding: 15%;
+  }
+}
+
+.minorDescription {
+  padding: 10%;
+}
+
+.yellow {
+  color: #fddc94;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  @media(min-width: 768px){
+    width: 50%;
+  }
+}
+
+.logoContainer {
+  composes: logoContainer from '../../../css/generic.css';
+}
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 100%;
+  height: 0;
+
+  @media(min-width: 768px){
+    padding-bottom: 42%;
+    padding-top: 25px;
+  }
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.item {
+  display: flex;
+  align-items: center;
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { IndexLink, Link } from 'react-router';
+import { Link } from 'react-router';
 import s from './style.css';
 
 class Footer extends React.Component {
@@ -21,7 +21,7 @@ class Footer extends React.Component {
         </div>
         <footer className={s.footer}>
           <a href="/aleksei_smoliar_cv.pdf">Download my CV</a>
-          <a href="http://shortcute.xyz/" target="_blank">created at /shortcute</a>
+          <a href="http://shortcute.xyz/" target="_blank" rel="noopener noreferrer">created at /shortcute</a>
         </footer>
       </div>
     );

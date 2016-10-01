@@ -1,30 +1,29 @@
 import React from 'react';
-import { IndexLink, Link } from 'react-router';
 import s from './style.css';
 import Burger from '../../icons/burger';
 import MainMenu from '../mainMenu';
 import SideMenu from '../sideMenu';
 
-let Header = React.createClass({
-  getInitialState: function(){
+const Header = React.createClass({
+  getInitialState() {
     return {
-      hidden: true
+      hidden: true,
     };
   },
 
-  burgerClickHandler(e){
+  burgerClickHandler(e) {
     e.preventDefault();
     const newState = { hidden: false };
     this.setState(newState);
   },
 
-  crossClickHandler(e){
+  crossClickHandler(e) {
     e.preventDefault();
     const newState = { hidden: true };
     this.setState(newState);
   },
 
-  menuItemClickHandler(){
+  menuItemClickHandler() {
     const newState = { hidden: true };
     this.setState(newState);
   },
@@ -32,20 +31,27 @@ let Header = React.createClass({
   render() {
     let headerComponent;
 
-    if(this.props.location.pathname === '/'){
+    if (this.props.location.pathname === '/') {
       headerComponent = (
         <div>
-          <a onClick={this.burgerClickHandler} href="#"><Burger /></a>
-          <MainMenu hidden={this.state.hidden} crossClickHandler={this.crossClickHandler} menuItemClickHandler={this.menuItemClickHandler}/>
+          <a onClick={this.burgerClickHandler} href=""><Burger /></a>
+          <MainMenu
+            hidden={this.state.hidden}
+            crossClickHandler={this.crossClickHandler}
+            menuItemClickHandler={this.menuItemClickHandler}
+          />
           <SideMenu />
         </div>
       );
-    }
-    else {
+    } else {
       headerComponent = (
         <div>
-          <a onClick={this.burgerClickHandler} href="#"><Burger /></a>
-          <MainMenu hidden={this.state.hidden} crossClickHandler={this.crossClickHandler} menuItemClickHandler={this.menuItemClickHandler}/>
+          <a onClick={this.burgerClickHandler} href=""><Burger /></a>
+          <MainMenu
+            hidden={this.state.hidden}
+            crossClickHandler={this.crossClickHandler}
+            menuItemClickHandler={this.menuItemClickHandler}
+          />
         </div>
       );
     }
@@ -54,7 +60,7 @@ let Header = React.createClass({
         {headerComponent}
       </header>
     );
-  }
+  },
 });
 
 export default Header;

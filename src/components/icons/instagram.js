@@ -1,10 +1,10 @@
 import React from 'react';
-import s from "./style.css";
-import SVGInline from "react-svg-inline";
-import instagram from "../../svg/instagram.svg";
+import SVGInline from 'react-svg-inline';
+import s from './style.css';
+import instagram from '../../svg/instagram.svg';
 
 const Instagram = () => (
-  <SVGInline svg={ instagram } className={s.instagram} classSuffix='' cleanup/>
+  <SVGInline svg={instagram} className={s.instagram} classSuffix="" cleanup />
 );
 
 export default Instagram;
