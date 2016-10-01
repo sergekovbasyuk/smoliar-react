@@ -7,16 +7,16 @@ import Instagram from '../../icons/instagram';
 import ArrowDown from '../../icons/arrowDown';
 import ArrowUp from '../../icons/arrowUp';
 
-const SideMenu = React.createClass({
+class SideMenu extends React.Component {
   upClickHandler(e) {
     e.preventDefault();
     jquery.fn.fullpage.moveSectionUp();
-  },
+  }
 
   downClickHandler(e) {
     e.preventDefault();
     jquery.fn.fullpage.moveSectionDown();
-  },
+  }
 
   render() {
     return (
@@ -30,7 +30,7 @@ const SideMenu = React.createClass({
         <a className={s.social} href="https://www.instagram.com/leshasmoliar/"><Instagram /></a>
       </div>
     );
-  },
-});
+  }
+}
 
 export default SideMenu;

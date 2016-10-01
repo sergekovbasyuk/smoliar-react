@@ -13,18 +13,16 @@ function NoMatch() {
   return <div>Not found</div>;
 }
 
-export default React.createClass({
-  render() {
-    return (
-      <Router onUpdate={() => window.scrollTo(0, 0)} history={appHistory}>
-        <Route path="/" component={mainLayout}>
-          <IndexRoute component={mainPage} />
-          <Route path="/blog" component={newsContainer} />
-          <Route path="/about" component={aboutContainer} />
-          <Route path="/contacts" component={contactsContainer} />
-          <Route path="*" component={NoMatch} />
-        </Route>
-      </Router>
-   );
-  },
-});
+const AppRouter = () => (
+  <Router onUpdate={() => window.scrollTo(0, 0)} history={appHistory}>
+    <Route path="/" component={mainLayout}>
+      <IndexRoute component={mainPage} />
+      <Route path="/blog" component={newsContainer} />
+      <Route path="/about" component={aboutContainer} />
+      <Route path="/contacts" component={contactsContainer} />
+      <Route path="*" component={NoMatch} />
+    </Route>
+  </Router>
+);
+
+export default AppRouter;

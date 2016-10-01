@@ -62,31 +62,43 @@ class mainPage extends React.Component {
           <div className={s.content}>
             <h1 className={s.title}>Hi, there!</h1>
             <br />
-            <p>“The challenge is to be strong, but not rude; be kind, but not weak; be bold, but not a bully;
-             be thoughtful, but not lazy; be humble, but not timid; be proud, but not arrogant; have humor, but without folly.”
+            <p>“The challenge is to be strong, but not rude; be kind,
+            but not weak; be bold, but not a bully;
+            be thoughtful, but not lazy; be humble, but not timid;
+            be proud, but not arrogant; have humor, but without folly.”
               <br /><span>– Bob Jeffords on being an effective First AD</span></p>
           </div>
-          <a href="" className={s.linkScroll} onClick={this.arrowClickHandler} ><ArrowLeft />Scroll down</a>
+          <a href="" className={s.linkScroll} onClick={this.arrowClickHandler}>
+            <ArrowLeft />Scroll down
+          </a>
         </section>
         <section className="section">
           <div className={s.content}>
             <h1 className={s.title}>About Me</h1>
             <p>Ukrainian - First Assistant Director</p><br />
-            <p>I have more than 6 years international experience as a freelance filmmaker making feature films, tv commercials, music videos, tv series and shorts.</p>
+            <p>I have more than 6 years international experience as a freelance
+            filmmaker making feature films, tv commercials, music videos,
+            tv series and shorts.</p>
             <Link to="/about" className={s.link}>read more</Link>
           </div>
         </section>
         <section className="section">
           <div className={s.content}>
             <h1 className={s.title}>My Works</h1>
-            <p>Have gone through all facets of production including Animals, Children, Crowd Scenes, Cranes, Drones, Explosives, Multiple-Cameras, Highway closures, Special Effects, Stunts Sequences, Weapon Scenes, Open Water and Underwater filming.</p>
+            <p>Have gone through all facets of production including Animals,
+            Children, Crowd Scenes, Cranes, Drones, Explosives,
+            Multiple-Cameras, Highway closures, Special Effects,
+            Stunts Sequences, Weapon Scenes, Open Water and Underwater filming.</p>
             <Link to="/works" className={s.link}>learn more</Link>
           </div>
         </section>
         <section className="section">
           <div className={s.content}>
             <h1 className={s.title}>Usefull resources</h1>
-            <p>He was the director, writer, producer, and production designer for Xenogenesis (1978). He then became a production assistant on a film called Rock and Roll High School, though uncredited, in 1979. While continuing to educate himself in film-making techniques.</p>
+            <p>He was the director, writer, producer, and production designer
+            for Xenogenesis (1978). He then became a production assistant on a
+            film called Rock and Roll High School, though uncredited,
+            in 1979. While continuing to educate himself in film-making techniques.</p>
             <Link to="/blog" className={s.link}>learn more</Link>
           </div>
         </section>

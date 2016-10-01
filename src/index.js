@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Router from './router';
+import AppRouter from './router';
 
 ReactDOM.render(
-  <Router />,
+  <AppRouter />,
   document.querySelector('#app')
 );

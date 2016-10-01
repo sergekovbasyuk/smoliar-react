@@ -11,15 +11,13 @@ class aboutContainer extends React.Component {
   }
 
   componentDidMount() {
-    const _this = this;
+    const that = this;
     this.serverRequest =
       axios
         .get('https://cdn.contentful.com/spaces/g2w5ttfmcha9/entries/1ek10CCI4CWcomQKSo4See?access_token=d5db5009e3c4b1ae9c382ce4ba431d0d6c581eb7e528d1d4b2b5d4c8644c5658')
-        .then(function (result) {
-          _this.setState({
-            data: result.data.fields,
-          });
-        });
+        .then(result => that.setState({
+          data: result.data.fields,
+        }));
   }
 
   componentWillUnmount() {

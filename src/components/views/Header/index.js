@@ -63,4 +63,8 @@ const Header = React.createClass({
   },
 });
 
+Header.propTypes = {
+  location: React.PropTypes.object.isRequired,
+};
+
 export default Header;
