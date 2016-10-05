@@ -1,0 +1,44 @@
+.item {
+  composes: item from '../BlogPosts/style.css';
+  padding: 0 20px;
+  height: 100vh;
+
+  @media(min-width: 768px){
+    padding: 0 40px;
+    height: 44vw;
+  }
+}
+
+.title {
+  composes: title from '../BlogPosts/style.css';
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  @media(min-width: 768px){
+    margin-bottom: 30px;
+  }
+}
+
+.link {
+  composes: link from '../BlogPosts/style.css';
+  opacity: 1;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  max-width: 630px;
+}
+
+.decription {
+  margin-top: 0;
+  margin-bottom: 55px;
+  line-height: 1.5;
+
+  @media(min-width: 768px){
+    margin-bottom: 60px;
+  }
+}

@@ -1,10 +1,10 @@
 import React from 'react';
 import { Router, Route, IndexRoute, useRouterHistory } from 'react-router';
-import { createHashHistory } from 'history';
+import { createHashHistory } from 'react-router/node_modules/history';
 import mainLayout from './components/layouts/mainLayout';
-import newsContainer from './components/containers/newsContainer';
+import blogContainer from './components/containers/blogContainer';
+import worksContainer from './components/containers/worksContainer';
 import aboutContainer from './components/containers/aboutContainer';
-import contactsContainer from './components/containers/contactsContainer';
 import mainPage from './components/views/mainPage';
 
 const appHistory = useRouterHistory(createHashHistory)({ queryKey: false });
@@ -17,9 +17,10 @@ const AppRouter = () => (
   <Router onUpdate={() => window.scrollTo(0, 0)} history={appHistory}>
     <Route path="/" component={mainLayout}>
       <IndexRoute component={mainPage} />
-      <Route path="/blog" component={newsContainer} />
+      <Route path="/works" component={worksContainer} />
+      <Route path="/blog" component={blogContainer} />
       <Route path="/about" component={aboutContainer} />
-      <Route path="/contacts" component={contactsContainer} />
+      {/* <Route path="/contacts" component={contactsContainer} /> */}
       <Route path="*" component={NoMatch} />
     </Route>
   </Router>

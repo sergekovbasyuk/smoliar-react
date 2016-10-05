@@ -2,6 +2,7 @@
   padding: 0 60px;
   position: absolute;
   top: calc(40vh - 30px);
+  text-align: justify;
 
   @media(min-width: 768px) {
     padding: 0 0 0 140px;
@@ -41,7 +42,9 @@
 }
 
 .link {
+  margin-top: 40px;
   composes: link from '../../../css/generic.css';
+  z-index: 1;
 }
 
 .title {

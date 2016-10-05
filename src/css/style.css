@@ -2,7 +2,7 @@
 @import "./jquery.fullPage.css";
 @import "./base.css";
 @import "./generic.css";
-@import "https://fonts.googleapis.com/css?family=Lato:700,900|Open+Sans:400,700";
+@import "https://fonts.googleapis.com/css?family=Lato:700,900|Open+Sans:400,600,700";
 
 .mainContainer {
   position: relative;
@@ -61,6 +61,23 @@
     button {
       background: rgba(#fddc94, .7);
     }
+  }
+}
 
+:global .TopSlider {
+  box-shadow: none;
+
+  .slick-dots {
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    left: 0;
+    text-align: center;
+  }
+
+  .slick-active {
+    button {
+      background: rgba(#1287f4, .7);
+    }
   }
 }

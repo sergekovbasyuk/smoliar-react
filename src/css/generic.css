@@ -48,7 +48,6 @@
   position: relative;
   display: inline-block;
   font-family: 'Lato', sans-serif;
-  margin-top: 50px;
   z-index: 1;
 
   @media(min-width: 768px) {
@@ -80,6 +79,7 @@
   margin: 0;
   text-align: center;
   display: inline-block;
+  z-index: 1;
 
   @media(min-width: 768px) {
     top: 44px;

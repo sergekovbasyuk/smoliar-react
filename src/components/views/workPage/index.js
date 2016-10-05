@@ -14,7 +14,8 @@ const WorkPage = () => (
       <h1 className={s.title}>About me</h1>
     </section>
     <section className={s.second}>
-      <div className={s.content}>
+      <div className={s.bg} />
+      <div className={s.secondContent}>
         <div className={s.description}>
           <h1 className={s.minorTitle}>A group of Soviet Superheroes</h1>
           <p className={s.text}>Set during the Cold War,
@@ -40,17 +41,21 @@ const WorkPage = () => (
     <section className={s.section}>
       <div className={s.content}>
         <div className={s.description}>
-          <h1 className={s.minorTitle}>A group of Soviet Superheroes</h1>
-          <p className={s.text}>Set during the Cold War, a secret
-          organization named &quot;Patriot&quot; gathered a group of Soviet
-          superheroes, altering and augmenting the DNA of four individuals,
-          in order to defend the homeland from supernatural threats.
-          The group includes representatives of the different nationalities
-          of the Soviet Union.</p>
+          <h1 className={s.minorTitle}>My Gear</h1>
+          <p className={s.text}>If you are looking for a new way to promote
+          your business that won’t cost you more money, maybe printing
+          is one of the options you won’t resist. Printing is a widely
+          use process in making printed materials that are used for
+          advertising. Brochure, catalogs, flyers, banners, posters,
+          and booklets are some of several examples of printed materials.
+          Nowadays, making printed materials have become fast, easy and simple.
+          If you want your promotional material to be an eye-catching object,
+          you should make it colored. By way of using inkjet printer
+          this is not hard to make.</p>
         </div>
       </div>
       <div className={s.content}>
-        <div className={s.description}>
+        <div className={s.items}>
           <div className={s.item}>
             <Benefits />
             <div>
@@ -81,7 +86,7 @@ const WorkPage = () => (
       </div>
     </section>
     <section className={s.section}>
-      <div className={s.content}>
+      <div className={s.sliderContainer}>
         <WorkPageSlider />
       </div>
       <div className={s.content}>
