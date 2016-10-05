@@ -4,7 +4,7 @@
   top: calc(40vh - 30px);
   text-align: justify;
 
-  @media(min-width: 768px) {
+  @media (min-width: 768px) {
     padding: 0 0 0 140px;
     max-width: 70%;
   }
@@ -23,7 +23,7 @@
   composes: logoContainer from '../../../css/generic.css';
 }
 
-.linkScroll{
+.linkScroll {
   display: none;
   position: absolute;
   bottom: 40px;
@@ -32,11 +32,12 @@
   vertical-align: bottom;
   font-size: 12px;
 
-  @media(min-width: 768px) {
+  @media (min-width: 768px) {
     display: inline-block;
   }
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     color: inherit;
   }
 }

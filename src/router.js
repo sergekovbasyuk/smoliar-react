@@ -4,6 +4,7 @@ import { createHashHistory } from 'react-router/node_modules/history';
 import mainLayout from './components/layouts/mainLayout';
 import blogContainer from './components/containers/blogContainer';
 import worksContainer from './components/containers/worksContainer';
+import workPageContainer from './components/containers/workPageContainer';
 import aboutContainer from './components/containers/aboutContainer';
 import mainPage from './components/views/mainPage';
 
@@ -20,6 +21,7 @@ const AppRouter = () => (
       <Route path="/works" component={worksContainer} />
       <Route path="/blog" component={blogContainer} />
       <Route path="/about" component={aboutContainer} />
+      <Route path="/workpage" component={workPageContainer} />
       {/* <Route path="/contacts" component={contactsContainer} /> */}
       <Route path="*" component={NoMatch} />
     </Route>

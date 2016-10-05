@@ -1,8 +1,8 @@
 import React from 'react';
 import axios from 'axios';
-import AboutPage from '../views/AboutPage';
+import WorkPage from '../views/workPage';
 
-class aboutContainer extends React.Component {
+class workPageContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -26,9 +26,9 @@ class aboutContainer extends React.Component {
 
   render() {
     return (
-      <AboutPage data={this.state.data} />
+      <WorkPage data={this.state.data} />
     );
   }
 }
 
-export default aboutContainer;
+export default workPageContainer;

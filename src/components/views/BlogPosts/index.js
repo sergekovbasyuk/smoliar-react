@@ -15,7 +15,7 @@ const BlogPosts = () => (
       <li className={`is-active ${s.catItem}`}><a href="">All</a></li>
       <li className={s.catItem}><a href="">Work</a></li>
       <li className={s.catItem}><a href="">Life</a></li>
-      <li className={s.catItem}><a href="">experience</a></li>
+      <li className={s.catItem}><a href="">Experience</a></li>
     </ul>
     <section>
       <div className={s.item}>

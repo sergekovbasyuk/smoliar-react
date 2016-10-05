@@ -41,7 +41,7 @@
       position: relative;
       background: none;
 
-      &:before {
+      &::before {
         content: '';
         position: absolute;
         top: -3px;
@@ -59,7 +59,7 @@
 
   .slick-active {
     button {
-      background: rgba(#fddc94, .7);
+      background: rgba(#1287f4, 0.7);
     }
   }
 }
@@ -73,11 +73,5 @@
     right: 0;
     left: 0;
     text-align: center;
-  }
-
-  .slick-active {
-    button {
-      background: rgba(#1287f4, .7);
-    }
   }
 }

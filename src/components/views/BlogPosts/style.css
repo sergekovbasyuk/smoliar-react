@@ -27,10 +27,10 @@
   z-index: 0;
   display: none;
 
-  @media(min-width: 768px){
+  @media (min-width: 768px) {
     display: inline-block;
     opacity: 0;
-    transition: opacity .4s;
+    transition: opacity 0.4s;
   }
 }
 
@@ -39,13 +39,9 @@
   color: #fddc94;
   max-width: 270px;
 
-  @media(min-width: 768px){
+  @media (min-width: 768px) {
     max-width: 485px;
   }
-}
-
-.items {
-
 }
 
 .item {
@@ -58,37 +54,36 @@
   justify-content: space-between;
   background-image: url('http://res.cloudinary.com/dsie3eeqb/image/upload/v1475003357/slide-about_buecme.jpg');
 
-  @media(min-width: 768px){
+  @media (min-width: 768px) {
     width: 50%;
-    min-height: calc(50vw * .8);
+    min-height: calc(50vw * 0.8);
     padding: 30px 30px 64px;
 
     &:nth-child(3) {
       width: 100%;
 
       .title {
-        @media(min-width: 768px){
+        @media (min-width: 768px) {
           max-width: 540px;
         }
       }
     }
 
     &:hover {
-      .link, .category {
+      .link,
+      .category {
         opacity: 1;
       }
     }
   }
-
-
 }
 
 .category {
   font-weight: 600;
 
-  @media(min-width: 768px){
-    opacity: .6;
-    transition: opacity .4s;
+  @media (min-width: 768px) {
+    opacity: 0.6;
+    transition: opacity 0.4s;
   }
 }
 
@@ -99,7 +94,7 @@
   font-weight: 600;
   margin: 0;
 
-  @media(min-width: 768px){
+  @media (min-width: 768px) {
     padding: 45px 0 50px;
   }
 

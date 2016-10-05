@@ -7,15 +7,11 @@ import Produce from '../../icons/produce';
 import Shooting from '../../icons/shooting';
 import WorkPageSlider from '../WorkPageSlider';
 
-const WorkPage = () => (
+const AboutPage = () => (
   <div className="container">
     <section className={s.first}>
       <div className={s.logoContainer}><Logo /></div>
-      <h1 className={s.title}>The Guardians</h1>
-      <p>You may be a skillful, effective employer but if you don’t trust
-      your personnel and the opposite, then the chances of
-      improving and expanding the business you deal with,
-      are extremely limited.</p>
+      <h1 className={s.title}>About me</h1>
     </section>
     <section className={s.second}>
       <div className={s.bg} />
@@ -89,9 +85,6 @@ const WorkPage = () => (
         </div>
       </div>
     </section>
-    <section className={s.awards}>
-      <span>some logos here</span>
-    </section>
     <section className={s.section}>
       <div className={s.sliderContainer}>
         <WorkPageSlider />
@@ -108,24 +101,9 @@ const WorkPage = () => (
         </div>
       </div>
     </section>
-    <section className={s.quote}>
-      <p>Tremblant is based in Canada and has over 90 runs servicing
-      millions of skiers each year. With 13 state-of-the-art ski lifts
-      and a selection of choices for both snowboarders and skiers Tremblant
-      attained its reputation thrååough daring.</p>
-      <p className={s.author}>Hugh Jackman, Actor</p>
-    </section>
-    <section className={s.related}>
-      <div className={s.previous}>
-        <span to="/about" className={s.link}>previous project</span>
-      </div>
-      <div className={s.next}>
-        <span to="/about" className={s.link}>next project</span>
-      </div>
-    </section>
     <Footer />
   </div>
 );
 
 
-export default WorkPage;
+export default AboutPage;

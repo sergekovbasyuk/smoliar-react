@@ -17,11 +17,11 @@
   font-family: 'Lato', sans-serif;
   font-weight: 900;
 
-  @media(min-width: 768px) {
+  @media (min-width: 768px) {
     font-size: 38px;
   }
 
-  @media(min-width: 1024px) {
+  @media (min-width: 1024px) {
     font-size: 64px;
   }
 }
@@ -32,11 +32,11 @@
   line-height: 1.2;
   font-size: 22px;
 
-  @media(min-width: 768px) {
+  @media (min-width: 768px) {
     font-size: 29px;
   }
 
-  @media(min-width: 1024px) {
+  @media (min-width: 1024px) {
     font-size: 36px;
   }
 }
@@ -50,7 +50,7 @@
   font-family: 'Lato', sans-serif;
   z-index: 1;
 
-  @media(min-width: 768px) {
+  @media (min-width: 768px) {
     font-size: 22px;
   }
 
@@ -58,7 +58,7 @@
     color: inherit;
   }
 
-  &:before {
+  &::before {
     content: '';
     position: absolute;
     bottom: 0;
@@ -81,7 +81,7 @@
   display: inline-block;
   z-index: 1;
 
-  @media(min-width: 768px) {
+  @media (min-width: 768px) {
     top: 44px;
   }
 }

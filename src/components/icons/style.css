@@ -9,7 +9,7 @@
   fill: #fff;
   max-width: 200px;
 
-  @media(min-width: 768px) {
+  @media (min-width: 768px) {
     max-width: 250px;
   }
 }
@@ -32,7 +32,8 @@
   width: 22px;
 }
 
-.arrowDown, .arrowUp {
+.arrowDown,
+.arrowUp {
   composes: icon from '../../css/generic.css';
   width: 20px;
 }
@@ -41,7 +42,8 @@
   transform: rotate(90deg);
 }
 
-.facebook, .instagram {
+.facebook,
+.instagram {
   composes: icon from '../../css/generic.css';
   width: 20px;
   height: 25px;
@@ -50,7 +52,9 @@
   color: #bebebe;
 }
 
-.produce, .benefits, .shooting {
+.produce,
+.benefits,
+.shooting {
   composes: icon from '../../css/generic.css';
   width: 60px;
   height: 60px;

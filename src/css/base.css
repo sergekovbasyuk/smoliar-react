@@ -12,15 +12,16 @@ html {
   font-family: 'Open Sans', sans-serif;
   line-height: 18px;
 
-  @media(min-width: 768px){
+  @media (min-width: 768px) {
     line-height: 24px;
   }
 }
 
-*, *:before, *:after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
-
 
 *:not(body) {
   background-repeat: no-repeat;
@@ -39,10 +40,6 @@ a {
     color: #1287f4;
   }
 }
-
-
-
-
 
 ul {
   padding: 0;
