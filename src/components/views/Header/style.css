@@ -4,8 +4,26 @@
   left: 0;
   z-index: 10;
   padding: 20px;
+  font-size: 15px;
+  line-height: 19px;
+  text-transform: uppercase;
 
   @media (min-width: 768px) {
     padding: 40px;
+  }
+}
+
+.pageName {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: inline;
+  }
+}
+
+.burgerLink {
+  &:hover,
+  &:focus {
+    color: inherit;
   }
 }

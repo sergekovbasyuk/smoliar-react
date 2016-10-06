@@ -5,7 +5,7 @@ import Footer from '../Footer';
 import TopSlider from '../TopSlider';
 import Logo from '../../icons/logo';
 
-const BlogPosts = () => (
+const Blog = () => (
   <div className="container">
     <section className={s.first}>
       <div className={s.logoContainer}><Logo /></div>
@@ -86,4 +86,4 @@ const BlogPosts = () => (
 );
 
 
-export default BlogPosts;
+export default Blog;

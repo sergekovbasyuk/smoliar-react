@@ -30,6 +30,15 @@ const Header = React.createClass({
 
   render() {
     let headerComponent;
+    let pageName;
+
+    if (this.props.location.pathname.indexOf('/blog') === 0) {
+      pageName = 'blog';
+    } else if (this.props.location.pathname.indexOf('/works') === 0) {
+      pageName = 'My works';
+    } else if (this.props.location.pathname.indexOf('/about') === 0) {
+      pageName = 'About me';
+    }
 
     if (this.props.location.pathname === '/') {
       headerComponent = (
@@ -46,7 +55,7 @@ const Header = React.createClass({
     } else {
       headerComponent = (
         <div>
-          <a onClick={this.burgerClickHandler} href=""><Burger /></a>
+          <a className={s.burgerLink} onClick={this.burgerClickHandler} href=""><Burger /><span className={s.pageName}>{pageName}</span></a>
           <MainMenu
             hidden={this.state.hidden}
             crossClickHandler={this.crossClickHandler}

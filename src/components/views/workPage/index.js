@@ -1,7 +1,9 @@
 import React from 'react';
 import s from './style.css';
 import Footer from '../Footer';
+import Calendar from '../../icons/calendar';
 import Logo from '../../icons/logo';
+import Q from '../../icons/q';
 import Benefits from '../../icons/benefits';
 import Produce from '../../icons/produce';
 import Shooting from '../../icons/shooting';
@@ -12,7 +14,8 @@ const WorkPage = () => (
     <section className={s.first}>
       <div className={s.logoContainer}><Logo /></div>
       <h1 className={s.title}>The Guardians</h1>
-      <p>You may be a skillful, effective employer but if you don’t trust
+      <p className={s.topDescription}>You may be a skillful,
+      effective employer but if you don’t trust
       your personnel and the opposite, then the chances of
       improving and expanding the business you deal with,
       are extremely limited.</p>
@@ -22,6 +25,7 @@ const WorkPage = () => (
       <div className={s.secondContent}>
         <div className={s.description}>
           <h1 className={s.minorTitle}>A group of Soviet Superheroes</h1>
+          <span className={s.release}><Calendar /> Ferbuary 2017</span>
           <p className={s.text}>Set during the Cold War,
           a secret organization named &quot;Patriot&quot; gathered a group
           of Soviet superheroes, altering and augmenting the DNA of four
@@ -109,6 +113,7 @@ const WorkPage = () => (
       </div>
     </section>
     <section className={s.quote}>
+      <Q />
       <p>Tremblant is based in Canada and has over 90 runs servicing
       millions of skiers each year. With 13 state-of-the-art ski lifts
       and a selection of choices for both snowboarders and skiers Tremblant

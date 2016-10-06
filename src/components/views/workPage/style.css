@@ -180,3 +180,60 @@
 .link {
   composes: link from '../../../css/generic.css';
 }
+
+.quote {
+  text-align: center;
+  max-width: 630px;
+  margin: 100px auto;
+  padding: 0 20px;
+}
+
+.author {
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.topDescription {
+  max-width: 560px;
+  padding: 0 20px;
+}
+
+.previous,
+.next {
+  width: 100%;
+  height: 110px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  &::before {
+    content: '';
+    background-color: #141921;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -2;
+  }
+
+  &::after {
+    content: '';
+    background-image: url('http://res.cloudinary.com/dsie3eeqb/image/upload/v1475062549/slide-about2_yg37ce.jpg');
+    background-size: cover;
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+  }
+
+  @media (min-width: 768px) {
+    width: 50%;
+    height: 200px;
+  }
+}

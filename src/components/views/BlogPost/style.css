@@ -1,0 +1,68 @@
+.title {
+  composes: title from '../../../css/generic.css';
+}
+
+.topDescription {
+  max-width: 560px;
+  padding: 0 20px;
+}
+
+.first {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url('http://res.cloudinary.com/dsie3eeqb/image/upload/v1474998995/bg-about_y7fmtx.jpg');
+
+  @media (min-width: 768px) {
+    min-height: 43vw;
+  }
+}
+
+.logoContainer {
+  composes: logoContainer from '../../../css/generic.css';
+}
+
+.body {
+  background: #f9f9f9;
+  color: #1d1d1d;
+  text-align: justify;
+}
+
+.post {
+  position: relative;
+  background: #fff;
+  margin: -92px 11% 0;
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.5);
+  padding: 4.125em 12.5em;
+
+  :global .slick-slider {
+    margin: 0 calc(-12.5em - 16px);
+    box-shadow: none;
+  }
+
+  :global .slick-list {
+    overflow: visible;
+  }
+
+  :global .slick-slide {
+    padding: 0 16px;
+  }
+
+  :global .slick-active img {
+    opacity: 1;
+  }
+
+  :global .slick-dots {
+    right: 42px;
+  }
+}
+
+.preface {
+  font-size: 1.3em;
+  color: #868686;
+  line-height: 1.5;
+}
