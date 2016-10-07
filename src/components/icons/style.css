@@ -45,7 +45,9 @@
 }
 
 .facebook,
-.instagram {
+.instagram,
+.linkedin,
+.twitter {
   composes: icon from '../../css/generic.css';
   width: 20px;
   height: 25px;
@@ -77,4 +79,15 @@
   color: #fff;
   vertical-align: text-top;
   margin-right: 10px;
+}
+
+.arrowPrev,
+.arrowNext {
+  composes: icon from '../../css/generic.css';
+  width: 20px;
+  height: 50px;
+}
+
+.arrowPrev {
+  transform: rotate(90deg);
 }

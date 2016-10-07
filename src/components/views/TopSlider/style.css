@@ -1,5 +1,5 @@
 .item {
-  composes: item from '../BlogPosts/style.css';
+  composes: item from '../Blog/style.css';
   padding: 0 20px;
   height: 100vh;
 
@@ -10,7 +10,7 @@
 }
 
 .title {
-  composes: title from '../BlogPosts/style.css';
+  composes: title from '../Blog/style.css';
   margin-top: 0;
   margin-bottom: 20px;
 
@@ -20,7 +20,7 @@
 }
 
 .link {
-  composes: link from '../BlogPosts/style.css';
+  composes: link from '../Blog/style.css';
   opacity: 1;
 }
 
