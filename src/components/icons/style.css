@@ -84,8 +84,8 @@
 .arrowPrev,
 .arrowNext {
   composes: icon from '../../css/generic.css';
-  width: 20px;
-  height: 50px;
+  width: 100%;
+  height: 100%;
 }
 
 .arrowPrev {

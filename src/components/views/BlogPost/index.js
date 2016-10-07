@@ -91,6 +91,4 @@ class BlogPost extends React.Component {
   }
 }
 
-
-
 export default BlogPost;
