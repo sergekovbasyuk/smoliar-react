@@ -27,54 +27,80 @@
 }
 
 .body {
-  background: #d2d2d2;
+  background: #fff;
   color: #1d1d1d;
   text-align: justify;
+
+  @media (min-width: 768px) {
+    background: #d2d2d2;
+  }
 }
 
 .post {
   position: relative;
   background: #fff;
-  margin: -92px 11% 0;
-  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.5);
-  padding: 4.125em 16vw;
+  padding: 0 24px;
+  line-height: 22px;
+
+  @media (min-width: 768px) {
+    margin: -92px 11% 0;
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.5);
+    padding: 4.125em 16vw;
+    line-height: 32px;
+  }
 }
 
 .share {
-  position: absolute;
-  top: 5.125em;
-  left: 24px;
+  padding: 16px 0;
+  max-width: 20px;
 
   svg {
     fill: #e5e5e5;
   }
+
+  @media (min-width: 768px) {
+    position: absolute;
+    top: 5.125em;
+    left: 24px;
+    padding: 0;
+  }
 }
 
 .preface {
-  font-size: 1.3em;
+  font-size: 1.35em;
   color: #868686;
   line-height: 1.5;
+  margin-bottom: 70px;
+
+  @media (min-width: 768px) {
+    margin-bottom: inherit;
+  }
 }
 
 .related {
-  margin: 0 11%;
-  padding-bottom: 84px;
+  @media (min-width: 768px) {
+    margin: 0 11%;
+    padding-bottom: 84px;
+  }
 }
 
 .relatedTitle {
   text-align: center;
   margin: 30px 0;
+  color: #a6a6a6;
 }
 
 .item + .item {
-  margin-left: 32px;
+  @media (min-width: 768px) {
+    margin-left: 32px;
+  }
 }
 
 .item {
   position: relative;
   padding: 20px;
   width: 100%;
-  height: 26vw;
+  height: 100vw;
   display: inline-flex;
   flex-direction: column;
   justify-content: space-between;
@@ -83,6 +109,7 @@
 
   @media (min-width: 768px) {
     width: calc(50% - 16px);
+    height: 26vw;
 
     &:hover {
       .link,
@@ -124,7 +151,20 @@
 
 .sliderWrapper {
   position: relative;
-  margin: 75px calc(-16vw - 16px);
+  margin: 45px -24px;
+
+  @media (min-width: 768px) {
+    margin: 75px calc(-16vw - 16px);
+
+    :global .slick-slide {
+      padding: 0 16px;
+    }
+
+    :global .slick-dots {
+      right: 42px;
+      transform: translateX(0);
+    }
+  }
 
   :global .slick-slider {
     box-shadow: none;
@@ -133,10 +173,6 @@
 
   :global .slick-list {
     overflow: visible;
-  }
-
-  :global .slick-slide {
-    padding: 0 16px;
   }
 
   :global .slick-active img {
@@ -149,7 +185,8 @@
   }
 
   :global .slick-dots {
-    right: 42px;
+    right: 50%;
+    transform: translateX(50%);
   }
 }
 
@@ -158,13 +195,21 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 40px;
+  right: 10px;
   z-index: 10;
   width: 20px;
   height: 50px;
+
+  @media (min-width: 768px) {
+    right: 40px;
+  }
 }
 
 .arrowPrev {
   right: auto;
-  left: 40px;
+  left: 10px;
+
+  @media (min-width: 768px) {
+    left: 40px;
+  }
 }

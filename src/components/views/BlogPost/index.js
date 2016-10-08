@@ -17,11 +17,11 @@ class BlogPost extends React.Component {
   }
   next(e) {
     e.preventDefault();
-    this.refs.slider.slickNext();
+    this.slider.slickNext();
   }
   previous(e) {
     e.preventDefault();
-    this.refs.slider.slickPrev();
+    this.slider.slickPrev();
   }
 
   render() {
@@ -57,7 +57,7 @@ class BlogPost extends React.Component {
             <div className={s.sliderWrapper}>
               <a className={s.arrowPrev} onClick={this.previous} href=""><ArrowPrev /></a>
               <a className={s.arrowNext} onClick={this.next} href=""><ArrowNext /></a>
-              <Slider {...settings} ref="slider">
+              <Slider {...settings} ref={ref => (this.slider = ref)}>
                 <div><img src="http://res.cloudinary.com/dsie3eeqb/image/upload/v1475062549/slide-about2_yg37ce.jpg" alt="" className={s.slider} /></div>
                 <div><img src="http://res.cloudinary.com/dsie3eeqb/image/upload/v1475062549/slide-about2_yg37ce.jpg" alt="" className={s.slider} /></div>
                 <div><img src="http://res.cloudinary.com/dsie3eeqb/image/upload/v1475062549/slide-about2_yg37ce.jpg" alt="" className={s.slider} /></div>
