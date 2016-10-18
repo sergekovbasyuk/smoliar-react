@@ -7,6 +7,7 @@ import worksContainer from './components/containers/worksContainer';
 import workPageContainer from './components/containers/workPageContainer';
 import blogPostContainer from './components/containers/blogPostContainer';
 import aboutContainer from './components/containers/aboutContainer';
+import ContactPage from './components/views/Contact';
 import mainPage from './components/views/mainPage';
 
 const appHistory = useRouterHistory(createHashHistory)({ queryKey: false });
@@ -22,9 +23,9 @@ const AppRouter = () => (
       <Route path="/works" component={worksContainer} />
       <Route path="/blog" component={blogContainer} />
       <Route path="/about" component={aboutContainer} />
-      <Route path="/works/:id" component={workPageContainer} />
-      <Route path="/blog/:id" component={blogPostContainer} />
-      {/* <Route path="/contacts" component={contactsContainer} /> */}
+      <Route path="/works/:name" component={workPageContainer} />
+      <Route path="/blog/:name" component={blogPostContainer} />
+      <Route path="/contact" component={ContactPage} />
       <Route path="*" component={NoMatch} />
     </Route>
   </Router>

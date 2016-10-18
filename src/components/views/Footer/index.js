@@ -13,7 +13,7 @@ const Footer = () => (
         </div>
         <div className={s.schedule}>
           <p>I’m busy as usual, so please check my schedule.</p>
-          <Link to="/schedule" className={s.link}>my schedule</Link>
+          <Link to="/contact" className={s.link}>my schedule</Link>
         </div>
       </div>
     </div>

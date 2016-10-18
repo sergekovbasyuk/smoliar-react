@@ -3,8 +3,8 @@ import SVGInline from 'react-svg-inline';
 import s from './style.css';
 import arrowLeft from '../../svg/arrow-down.svg';
 
-const ArrowLeft = () => (
-  <SVGInline svg={arrowLeft} className={s.arrowLeft} classSuffix="" cleanup />
+const arrowRight = () => (
+  <SVGInline svg={arrowLeft} className={s.arrowRight} classSuffix="" cleanup />
 );
 
-export default ArrowLeft;
+export default arrowRight;

@@ -1,0 +1,131 @@
+:global .flexContainer {
+  max-width: 100%;
+  width: 100%;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background: #212427;
+}
+
+:global .flexColumn {
+  display: flex;
+  width: 13%;
+  border: none;
+  flex: 1 1 auto;
+  font-size: 11px;
+  color: rgba(#fff, 0.5);
+  background: #1c1e20;
+  padding: 10px;
+  margin: 0 0 3px;
+}
+
+:global .day {
+  border: 1px solid rgba(#fddc94, 0.15);
+  background: inherit;
+  font-size: 14px;
+  margin: 0 3px 3px;
+  height: 82px;
+  position: relative;
+  cursor: pointer;
+
+  &::after {
+    content: 'book';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 22px;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    opacity: 0;
+    transition: opacity 300ms;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 58%;
+    left: 55%;
+    transform: translateX(-50%) translateY(-50%);
+    height: 8px;
+    width: 85px;
+    display: block;
+    background: #1287f4;
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 300ms;
+  }
+
+  &:hover {
+    &::before,
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+
+:global .inactive {
+
+}
+
+:global .today {
+
+}
+
+:global .inner-grid {
+  width: 100%;
+  position: relative;
+}
+
+:global .event-slot {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+}
+
+:global .event {
+
+}
+
+:global .event-title {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 0;
+  right: -8px;
+  z-index: 100;
+  height: 5px;
+  font-size: 0;
+}
+
+:global .event-busy {
+  :global .event-title {
+    transform: translateY(-100%);
+    background: #f37272;
+  }
+}
+
+:global .event-unconfirmed {
+  :global .event-title {
+    transform: translateY(100%);
+    background: #4ce799;
+  }
+}
+
+:global .event-first-day {
+
+}
+
+:global .event-last-day {
+  :global .event-title {
+    right: 24px;
+  }
+}
+
+:global .date {
+
+}
