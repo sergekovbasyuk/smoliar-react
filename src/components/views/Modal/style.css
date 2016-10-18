@@ -1,0 +1,51 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 130;
+  background: rgba(#000, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 400ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.close {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: -16px;
+  right: -18px;
+  color: #fddc94;
+}
+
+.modal {
+  width: 66.6vw;
+  background: #232323;
+  display: flex;
+  position: relative;
+}
+
+.img {
+  background-image: url('http://res.cloudinary.com/dsie3eeqb/image/upload/v1475003357/slide-about_buecme.jpg');
+  width: 50%;
+}
+
+.content {
+  padding: 10% 10% 10% 5%;
+  width: 50%;
+}
+
+.title {
+  composes: title from '../../../css/generic.css';
+  margin-bottom: 36px;
+}
+
+.link {
+  composes: link from '../../../css/generic.css';
+  margin-top: 42px;
+}
