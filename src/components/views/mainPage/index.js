@@ -4,7 +4,7 @@ import 'fullpage.js';
 import jquery from 'jquery';
 import s from './style.css';
 import Logo from '../../icons/logo';
-import ArrowLeft from '../../icons/arrowLeft';
+import ArrowScroll from '../../icons/arrowScroll';
 import Footer from '../Footer';
 
 class mainPage extends React.Component {
@@ -69,7 +69,7 @@ class mainPage extends React.Component {
               <br /><span>– Bob Jeffords on being an effective First AD</span></p>
           </div>
           <a href="" className={s.linkScroll} onClick={this.arrowClickHandler}>
-            <ArrowLeft />Scroll down
+            <ArrowScroll />Scroll down
           </a>
         </section>
         <section className="section">
