@@ -1,5 +1,6 @@
 @import "../../node_modules/normalize.css/normalize.css";
 @import "./jquery.fullPage.css";
+@import "./calendar.css";
 @import "./base.css";
 @import "./generic.css";
 @import "https://fonts.googleapis.com/css?family=Lato:700,900|Open+Sans:400,600,700";
@@ -14,6 +15,8 @@
 
 :global .is-open {
   transform: translateY(0) !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 :global .slick-slider {

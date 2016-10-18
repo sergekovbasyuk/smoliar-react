@@ -19,17 +19,20 @@ class SideMenu extends React.Component {
   }
 
   render() {
-    return (
-      <div className={s.menu}>
-        <a href="" onClick={this.upClickHandler}><ArrowUp /></a>
-        <div className={s.inner}>
-          <span id="slide-number" className={s.item} />
+    if (this.props.location.pathname === '/') {
+      return (
+        <div className={s.menu}>
+          <a href="" onClick={this.upClickHandler}><ArrowUp /></a>
+          <div className={s.inner}>
+            <span id="slide-number" className={s.item} />
+          </div>
+          <a href="" onClick={this.downClickHandler}><ArrowDown /></a>
+          <a className={s.social} href="https://www.facebook.com/leshasmoliar"><Facebook /></a>
+          <a className={s.social} href="https://www.instagram.com/leshasmoliar/"><Instagram /></a>
         </div>
-        <a href="" onClick={this.downClickHandler}><ArrowDown /></a>
-        <a className={s.social} href="https://www.facebook.com/leshasmoliar"><Facebook /></a>
-        <a className={s.social} href="https://www.instagram.com/leshasmoliar/"><Instagram /></a>
-      </div>
-    );
+      );
+    }
+    return null;
   }
 }
 

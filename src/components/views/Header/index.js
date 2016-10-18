@@ -1,35 +1,9 @@
 import React from 'react';
 import s from './style.css';
 import Burger from '../../icons/burger';
-import MainMenu from '../mainMenu';
-import SideMenu from '../sideMenu';
 
-const Header = React.createClass({
-  getInitialState() {
-    return {
-      hidden: true,
-    };
-  },
-
-  burgerClickHandler(e) {
-    e.preventDefault();
-    const newState = { hidden: false };
-    this.setState(newState);
-  },
-
-  crossClickHandler(e) {
-    e.preventDefault();
-    const newState = { hidden: true };
-    this.setState(newState);
-  },
-
-  menuItemClickHandler() {
-    const newState = { hidden: true };
-    this.setState(newState);
-  },
-
+class Header extends React.Component {
   render() {
-    let headerComponent;
     let pageName;
 
     if (this.props.location.pathname.indexOf('/blog') === 0) {
@@ -38,42 +12,28 @@ const Header = React.createClass({
       pageName = 'My works';
     } else if (this.props.location.pathname.indexOf('/about') === 0) {
       pageName = 'About me';
+    } else if (this.props.location.pathname.indexOf('/contact') === 0) {
+      pageName = 'Schedule';
     }
 
-    if (this.props.location.pathname === '/') {
-      headerComponent = (
-        <div>
-          <a onClick={this.burgerClickHandler} href=""><Burger /></a>
-          <MainMenu
-            hidden={this.state.hidden}
-            crossClickHandler={this.crossClickHandler}
-            menuItemClickHandler={this.menuItemClickHandler}
-          />
-          <SideMenu />
-        </div>
-      );
-    } else {
-      headerComponent = (
-        <div>
-          <a className={s.burgerLink} onClick={this.burgerClickHandler} href=""><Burger /><span className={s.pageName}>{pageName}</span></a>
-          <MainMenu
-            hidden={this.state.hidden}
-            crossClickHandler={this.crossClickHandler}
-            menuItemClickHandler={this.menuItemClickHandler}
-          />
-        </div>
-      );
+    if (!this.props.location || !this.props.burgerClickHandler) {
+      return null;
     }
+
     return (
       <header className={s.header}>
-        {headerComponent}
+        <a onClick={this.props.burgerClickHandler} href="">
+          <Burger />
+          <span className={s.pageName}>{pageName}</span>
+        </a>
       </header>
     );
-  },
-});
+  }
+}
 
 Header.propTypes = {
   location: React.PropTypes.object.isRequired,
+  burgerClickHandler: React.PropTypes.func.isRequired,
 };
 
 export default Header;
