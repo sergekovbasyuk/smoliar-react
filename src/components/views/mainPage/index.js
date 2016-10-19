@@ -8,7 +8,7 @@ import ArrowScroll from '../../icons/arrowScroll';
 // import Footer from '../Footer';
 
 class mainPage extends React.Component {
-  static arrowClickHandler(e) {
+  arrowClickHandler(e) {
     e.preventDefault();
     jquery.fn.fullpage.moveSectionDown();
   }
