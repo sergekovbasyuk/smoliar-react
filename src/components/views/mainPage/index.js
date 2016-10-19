@@ -5,7 +5,7 @@ import jquery from 'jquery';
 import s from './style.css';
 import Logo from '../../icons/logo';
 import ArrowScroll from '../../icons/arrowScroll';
-import Footer from '../Footer';
+// import Footer from '../Footer';
 
 class mainPage extends React.Component {
   static arrowClickHandler(e) {
@@ -103,7 +103,7 @@ class mainPage extends React.Component {
           </div>
         </section>
         <section className="section">
-          <Footer />
+          {/* <Footer /> */}
         </section>
       </div>
     );

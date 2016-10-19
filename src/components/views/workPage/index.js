@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './style.css';
-import Footer from '../Footer';
+// import Footer from '../Footer';
 import Calendar from '../../icons/calendar';
 import Logo from '../../icons/logo';
 import Q from '../../icons/q';
@@ -128,7 +128,7 @@ const WorkPage = () => (
         <span to="/about" className={s.link}>next project</span>
       </div>
     </section>
-    <Footer />
+    {/* <Footer /> */}
   </div>
 );
 

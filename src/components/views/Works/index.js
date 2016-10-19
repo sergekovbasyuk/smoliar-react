@@ -1,7 +1,7 @@
 import React from 'react';
 // import ReactPaginate from 'react-paginate';
 import s from './style.css';
-import Footer from '../Footer';
+// import Footer from '../Footer';
 import TopSlider from '../TopSlider';
 import Logo from '../../icons/logo';
 
@@ -78,7 +78,7 @@ const Works = () => (
         <a>previous</a>
       </p>
     </section>
-    <Footer />
+    {/* <Footer /> */}
   </div>
 );
 

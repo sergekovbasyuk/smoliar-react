@@ -7,7 +7,7 @@ import ArrowNext from '../../icons/arrow-next';
 import Facebook from '../../icons/facebook';
 import Twitter from '../../icons/twitter';
 import LinkedIn from '../../icons/linkedin';
-import Footer from '../Footer';
+// import Footer from '../Footer';
 
 class BlogPost extends React.Component {
   constructor(props) {
@@ -85,7 +85,7 @@ class BlogPost extends React.Component {
             </div>
           </section>
         </section>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     );
   }

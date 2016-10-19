@@ -1,6 +1,7 @@
 import React from 'react';
 import s from '../../css/style.css';
 import Header from '../views/Header';
+import Footer from '../views/Footer';
 import MainMenu from '../views/mainMenu';
 import SideMenu from '../views/sideMenu';
 
@@ -50,6 +51,7 @@ class mainLayout extends React.Component {
         />
         <SideMenu location={this.props.location} />
         {this.props.children}
+        <Footer location={this.props.location} />
       </div>
     );
   }

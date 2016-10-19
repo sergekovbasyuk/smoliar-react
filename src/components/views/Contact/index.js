@@ -5,7 +5,7 @@ import s from './style.css';
 import Logo from '../../icons/logo';
 import ArrowLeft from '../../icons/arrowLeft';
 import ArrowRight from '../../icons/arrowRight';
-import Footer from '../Footer';
+// import Footer from '../Footer';
 import Modal from '../Modal';
 
 const events = [
@@ -110,7 +110,7 @@ class ContactPage extends React.Component {
             onDayClick={this.handleDayClick}
           />
         </section>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     );
   }

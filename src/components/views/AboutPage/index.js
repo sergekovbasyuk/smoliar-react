@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './style.css';
-import Footer from '../Footer';
+// import Footer from '../Footer';
 import Logo from '../../icons/logo';
 import Benefits from '../../icons/benefits';
 import Produce from '../../icons/produce';
@@ -101,7 +101,7 @@ const AboutPage = () => (
         </div>
       </div>
     </section>
-    <Footer />
+    {/* <Footer /> */}
   </div>
 );
 
