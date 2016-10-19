@@ -51,3 +51,31 @@
 .title {
   composes: title from '../../../css/generic.css';
 }
+
+.footerContainer {
+  composes: footerContainer from '../footer/style.css';
+}
+
+.contentContacts {
+  composes: contentContacts from '../footer/style.css';
+}
+
+.footerTitle {
+  composes: title from '../footer/style.css';
+}
+
+.row {
+  composes: row from '../footer/style.css';
+}
+
+.email {
+  composes: email from '../footer/style.css';
+}
+
+.schedule {
+  composes: schedule from '../footer/style.css';
+}
+
+.footer {
+  composes: footer from '../footer/style.css';
+}
