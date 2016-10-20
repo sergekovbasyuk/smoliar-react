@@ -11,7 +11,7 @@ const MainMenu = ({ hidden, menuItemClickHandler, crossClickHandler }) => (
       <li className={s.item}><Link to="/about" className={s.link}>About Me</Link></li>
       <li className={s.item}><Link to="/works" className={s.link}>My works</Link></li>
       <li className={s.item}><Link to="/blog" className={s.link}>Resources</Link></li>
-      <li className={s.item}><Link to="/contact" className={s.link}>Get in touch</Link></li>
+      <li className={s.scheduleItem}><Link to="/contact" className={s.link}>Get in touch</Link></li>
     </ul>
   </div>
 );

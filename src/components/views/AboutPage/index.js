@@ -6,7 +6,7 @@ import Third from '../Third';
 import Four from '../Four';
 import Five from '../Five';
 
-const title = 'About me';
+const title = 'About Me';
 const secondTitle = 'A group of Soviet Superheroes';
 const secondDescription = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio in dolorem asperiores voluptatem, nam ipsa voluptates eius aliquid placeat a ea adipisci repellat fuga minima perferendis facere quae incidunt nulla?';
 const thirdText = 'The film is about a group of Soviet superheroes created during the Cold War.';

@@ -44,6 +44,15 @@
   margin-bottom: 0.5em;
 }
 
+.scheduleItem {
+  composes: item;
+  display: none;
+
+  @media (min-width: 768px) {
+    display: list-item;
+  }
+}
+
 .link:hover {
   color: #fff;
 }
