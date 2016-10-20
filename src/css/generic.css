@@ -49,6 +49,7 @@
   display: inline-block;
   font-family: 'Lato', sans-serif;
   z-index: 1;
+  text-transform: lowercase;
 
   @media (min-width: 768px) {
     font-size: 22px;
