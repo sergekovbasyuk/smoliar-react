@@ -1,28 +1,22 @@
 import React from 'react';
 import s from './style.css';
-// import Footer from '../Footer';
+import First from '../First';
 import Calendar from '../../icons/calendar';
-import Logo from '../../icons/logo';
 import Q from '../../icons/q';
 import Benefits from '../../icons/benefits';
 import Produce from '../../icons/produce';
 import Shooting from '../../icons/shooting';
 import WorkPageSlider from '../WorkPageSlider';
 
+const title = 'The Guardians';
+const description = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio illum sunt facilis nobis a atque hic, nisi, soluta, fugiat ducimus provident! Asperiores, inventore. Repellat, cupiditate, harum. Fuga, eius, perspiciatis! Beatae?';
+
 const WorkPage = () => (
   <div className="container">
-    <section className={s.first}>
-      <div className={s.logoContainer}><Logo /></div>
-      <h1 className={s.title}>The Guardians</h1>
-      <p className={s.topDescription}>You may be a skillful,
-      effective employer but if you don’t trust
-      your personnel and the opposite, then the chances of
-      improving and expanding the business you deal with,
-      are extremely limited.</p>
-    </section>
+    <First title={title} description={description} />
     <section className={s.second}>
       <div className={s.bg} />
-      <div className={s.secondContent}>
+      <div className={s.content}>
         <div className={s.description}>
           <h1 className={s.minorTitle}>A group of Soviet Superheroes</h1>
           <span className={s.release}><Calendar /> Ferbuary 2017</span>

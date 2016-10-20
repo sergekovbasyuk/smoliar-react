@@ -1,0 +1,29 @@
+.first {
+  display: flex;
+  min-height: 100vh;
+  line-height: 1.5;
+  text-align: justify;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url('http://res.cloudinary.com/dsie3eeqb/image/upload/v1474998995/bg-about_y7fmtx.jpg');
+
+  @media (min-width: 768px) {
+    line-height: 1.7;
+    min-height: 43vw;
+  }
+}
+
+.description {
+  max-width: 560px;
+  padding: 0 20px;
+}
+
+.logoContainer {
+  composes: logoContainer from '../../../css/generic.css';
+}
+
+.title {
+  composes: title from '../../../css/generic.css';
+}

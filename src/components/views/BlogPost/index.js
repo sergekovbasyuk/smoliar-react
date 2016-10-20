@@ -1,13 +1,12 @@
 import React from 'react';
 import Slider from 'react-slick';
 import s from './style.css';
-import Logo from '../../icons/logo';
+import First from '../First';
 import ArrowPrev from '../../icons/arrow-prev';
 import ArrowNext from '../../icons/arrow-next';
 import Facebook from '../../icons/facebook';
 import Twitter from '../../icons/twitter';
 import LinkedIn from '../../icons/linkedin';
-// import Footer from '../Footer';
 
 class BlogPost extends React.Component {
   constructor(props) {
@@ -34,17 +33,12 @@ class BlogPost extends React.Component {
       slidesToScroll: 1,
     };
 
+    const title = 'Blog Post Title';
+    const description = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem nostrum, maxime praesentium eum, facilis nam! Tempore animi corporis, inventore dignissimos corrupti nihil, voluptatibus expedita, eos optio vero neque quod nam.';
+
     return (
       <div className="container">
-        <section className={s.first}>
-          <div className={s.logoContainer}><Logo /></div>
-          <h1 className={s.title}>Fire Up Your Motivation</h1>
-          <p className={s.topDescription}>You may be a skillful,
-          effective employer but if you don’t trust
-          your personnel and the opposite, then the chances of
-          improving and expanding the business you deal with,
-          are extremely limited.</p>
-        </section>
+        <First title={title} description={description} />
         <section className={s.body}>
           <article className={s.post}>
             <div className={s.share}>
@@ -85,7 +79,6 @@ class BlogPost extends React.Component {
             </div>
           </section>
         </section>
-        {/* <Footer /> */}
       </div>
     );
   }

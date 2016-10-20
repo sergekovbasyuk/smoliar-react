@@ -1,7 +1,6 @@
 import React from 'react';
 import s from './style.css';
-// import Footer from '../Footer';
-import Logo from '../../icons/logo';
+import First from '../First';
 import Benefits from '../../icons/benefits';
 import Produce from '../../icons/produce';
 import Shooting from '../../icons/shooting';
@@ -9,10 +8,7 @@ import WorkPageSlider from '../WorkPageSlider';
 
 const AboutPage = () => (
   <div className="container">
-    <section className={s.first}>
-      <div className={s.logoContainer}><Logo /></div>
-      <h1 className={s.title}>About me</h1>
-    </section>
+    <First title="About me" />
     <section className={s.second}>
       <div className={s.bg} />
       <div className={s.secondContent}>

@@ -83,7 +83,7 @@
 }
 
 .content {
-  min-height: 87.5vw;
+  /*min-height: 87.5vw;*/
   display: flex;
   width: 100%;
   align-items: center;
@@ -94,10 +94,6 @@
     width: 50%;
     min-height: auto;
   }
-}
-
-.secondContent {
-  composes: content;
 }
 
 .description {
