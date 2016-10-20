@@ -1,28 +1,23 @@
 import React from 'react';
 import s from './style.css';
 import First from '../First';
+import Second from '../Second';
 import Benefits from '../../icons/benefits';
 import Produce from '../../icons/produce';
 import Shooting from '../../icons/shooting';
 import WorkPageSlider from '../WorkPageSlider';
 
+const title = 'About me';
+const secondTitle = 'A group of Soviet Superheroes';
+const secondDescription = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio in dolorem asperiores voluptatem, nam ipsa voluptates eius aliquid placeat a ea adipisci repellat fuga minima perferendis facere quae incidunt nulla?';
+
 const AboutPage = () => (
   <div className="container">
-    <First title="About me" />
-    <section className={s.second}>
-      <div className={s.bg} />
-      <div className={s.secondContent}>
-        <div className={s.description}>
-          <h1 className={s.minorTitle}>A group of Soviet Superheroes</h1>
-          <p className={s.text}>Set during the Cold War,
-          a secret organization named &quot;Patriot&quot; gathered a group
-          of Soviet superheroes, altering and augmenting the DNA of four
-          individuals, in order to defend the homeland from supernatural
-          threats. The group includes representatives of the different
-          nationalities of the Soviet Union.</p>
-        </div>
-      </div>
-    </section>
+    <First title={title} />
+    <Second
+      title={secondTitle}
+      description={secondDescription}
+    />
     <section className={s.section}>
       <img src="http://res.cloudinary.com/dsie3eeqb/image/upload/v1475003357/slide-about_buecme.jpg" alt="" className={s.image} />
       <div className={s.content}>
