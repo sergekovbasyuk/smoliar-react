@@ -62,6 +62,10 @@
   }
 }
 
+.benefits {
+  flex: 1;
+}
+
 .benefitsTitle {
   font-size: 19px;
   margin: 0;

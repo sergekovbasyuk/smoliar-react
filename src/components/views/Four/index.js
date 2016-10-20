@@ -25,7 +25,7 @@ const Four = () => (
       <div className={s.items}>
         <div className={s.item}>
           <Benefits />
-          <div>
+          <div className={s.benefits}>
             <h3 className={s.benefitsTitle}>Benefits</h3>
             <p className={s.benefitsText}>As a business owner or manager,
             the decision to opt for offshore software development can be
@@ -34,7 +34,7 @@ const Four = () => (
         </div>
         <div className={s.item}>
           <Produce />
-          <div>
+          <div className={s.benefits}>
             <h3 className={s.benefitsTitle}>Produce</h3>
             <p className={s.benefitsText}>As a business owner or manager,
             the decision to opt for offshore software development can be difficult.</p>
@@ -42,7 +42,7 @@ const Four = () => (
         </div>
         <div className={s.item}>
           <Shooting />
-          <div>
+          <div className={s.benefits}>
             <h3 className={s.benefitsTitle}>Shooting</h3>
             <p className={s.benefitsText}>As a business owner or manager,
             the decision to opt for offshore software development can be
