@@ -13,14 +13,24 @@ class WorkPageSlider extends React.Component {
       slidesToScroll: 1,
     };
 
+    const images = this.props.images;
+
+    if (!images) {
+      return null;
+    }
+
     return (
       <Slider {...settings}>
-        <div><img src="http://res.cloudinary.com/dsie3eeqb/image/upload/v1475062549/slide-about2_yg37ce.jpg" alt="" className={s.slider} /></div>
-        <div><img src="http://res.cloudinary.com/dsie3eeqb/image/upload/v1475062549/slide-about2_yg37ce.jpg" alt="" className={s.slider} /></div>
-        <div><img src="http://res.cloudinary.com/dsie3eeqb/image/upload/v1475062549/slide-about2_yg37ce.jpg" alt="" className={s.slider} /></div>
+        <div><img src={images[0]} alt="" className={s.slider} /></div>
+        <div><img src={images[1]} alt="" className={s.slider} /></div>
+        <div><img src={images[2]} alt="" className={s.slider} /></div>
       </Slider>
     );
   }
 }
+
+WorkPageSlider.propTypes = {
+  images: React.PropTypes.array,
+};
 
 export default WorkPageSlider;

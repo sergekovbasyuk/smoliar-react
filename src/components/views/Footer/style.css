@@ -36,7 +36,8 @@
 .contentContacts {
   padding: 0 58px;
   height: 50vw;
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
