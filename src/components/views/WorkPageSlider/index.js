@@ -21,9 +21,11 @@ class WorkPageSlider extends React.Component {
 
     return (
       <Slider {...settings}>
-        <div><img src={images[0]} alt="" className={s.slider} /></div>
-        <div><img src={images[1]} alt="" className={s.slider} /></div>
-        <div><img src={images[2]} alt="" className={s.slider} /></div>
+        {this.props.images.map((image, index) => (
+          <div key={index}>
+            <img src={image} alt="" className={s.slider} />
+          </div>
+        ))}
       </Slider>
     );
   }
