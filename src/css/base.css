@@ -62,18 +62,18 @@ ul {
   }
 
   &:nth-child(5) {
-    background-image: url('http://res.cloudinary.com/dsie3eeqb/image/upload/v1474876954/get-in-touch2_pijsda.jpg');
+    background-image: url('https://res.cloudinary.com/dsie3eeqb/image/upload/v1474876954/smoliar/get-in-touch2_pijsda.jpg');
   }
 
   &:nth-child(4) {
-    background-image: url('http://res.cloudinary.com/dsie3eeqb/image/upload/v1474877131/resources_tueoys.jpg');
+    background-image: url('https://res.cloudinary.com/dsie3eeqb/image/upload/v1474877131/smoliar/resources_tueoys.jpg');
   }
 
   &:nth-child(3) {
-    background-image: url('http://res.cloudinary.com/dsie3eeqb/image/upload/v1474877042/my-works_yscbog.jpg');
+    background-image: url('https://res.cloudinary.com/dsie3eeqb/image/upload/v1474877042/smoliar/my-works_yscbog.jpg');
   }
 
   &:nth-child(2) {
-    background-image: url('http://res.cloudinary.com/dsie3eeqb/image/upload/v1474876954/main_ycizs6.jpg');
+    background-image: url('http://res.cloudinary.com/dsie3eeqb/image/upload/v1474876954/smoliar/main_ycizs6.jpg');
   }
 }
