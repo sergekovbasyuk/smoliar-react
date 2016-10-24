@@ -86,3 +86,96 @@
     top: 38px;
   }
 }
+
+.workBlogCategories {
+  background-color: #353a3e;
+  padding: 30px 0 25px;
+  text-align: center;
+  font-weight: 600;
+
+  * + * {
+    margin-left: 23px;
+  }
+
+  :global .is-active {
+    color: #2499dc;
+  }
+}
+
+.workBlogItem {
+  position: relative;
+  padding: 20px 15px 52px;
+  width: 100%;
+  min-height: 100vw;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url('https://res.cloudinary.com/dsie3eeqb/image/upload/v1475062549/smoliar/slide-about2_yg37ce.jpg');
+
+  @media (min-width: 768px) {
+    width: 50%;
+    min-height: calc(50vw * 0.8);
+    padding: 30px 30px 64px;
+
+    &:nth-child(3) {
+      width: 100%;
+
+      .title {
+        @media (min-width: 768px) {
+          max-width: 540px;
+        }
+      }
+    }
+
+    &:hover {
+      .link,
+      .category {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.section {
+  min-height: 100vw;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  line-height: 1.5;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    line-height: 1.7;
+    min-height: 43vw;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  position: relative;
+  min-height: 280px;
+
+  @media (min-width: 768px) {
+    display: block;
+    width: 50%;
+    min-height: auto;
+  }
+}
+
+.description {
+  padding: 0 20px;
+
+  p {
+    text-align: justify;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: 768px) {
+    padding: 15%;
+  }
+}

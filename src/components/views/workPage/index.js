@@ -13,8 +13,8 @@ const secondTitle = 'A group of Soviet Superheroes';
 const secondDescription = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio in dolorem asperiores voluptatem, nam ipsa voluptates eius aliquid placeat a ea adipisci repellat fuga minima perferendis facere quae incidunt nulla?';
 const releaseDate = 'February 2017';
 const thirdText = 'The film is about a group of Soviet superheroes created during the Cold War.';
-const thirdImage = 'http://res.cloudinary.com/dsie3eeqb/image/upload/v1475003357/slide-about_buecme.jpg';
-const fifthImages = ['http://res.cloudinary.com/dsie3eeqb/image/upload/v1475062549/slide-about2_yg37ce.jpg', 'http://res.cloudinary.com/dsie3eeqb/image/upload/v1475062549/slide-about2_yg37ce.jpg', 'http://res.cloudinary.com/dsie3eeqb/image/upload/v1475062549/slide-about2_yg37ce.jpg'];
+const thirdImage = 'https://res.cloudinary.com/dsie3eeqb/image/upload/v1475003357/smoliar/slide-about_buecme.jpg';
+const fifthImages = ['https://res.cloudinary.com/dsie3eeqb/image/upload/v1475062549/smoliar/slide-about2_yg37ce.jpg', 'https://res.cloudinary.com/dsie3eeqb/image/upload/v1475062549/smoliar/slide-about2_yg37ce.jpg', 'https://res.cloudinary.com/dsie3eeqb/image/upload/v1475062549/smoliar/slide-about2_yg37ce.jpg'];
 const fifthTitle = 'A group of Soviet Superheroes';
 const fifthText = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quisquam laborum, voluptate amet! Suscipit earum doloremque quae possimus vitae voluptates, temporibus tempore sapiente vero ex cumque dolore alias. Sed, ea.';
 

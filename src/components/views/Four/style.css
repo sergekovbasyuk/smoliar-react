@@ -1,44 +1,13 @@
 .section {
-  min-height: 100vw;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  line-height: 1.5;
-  flex-direction: column;
-
-  @media (min-width: 768px) {
-    line-height: 1.7;
-    min-height: 43vw;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-  }
+  composes: section from '../../../css/generic.css';
 }
 
 .content {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  position: relative;
-
-  @media (min-width: 768px) {
-    display: block;
-    width: 50%;
-    min-height: auto;
-  }
+  composes: content from '../../../css/generic.css';
 }
 
 .description {
-  padding: 0 20px;
-
-  p {
-    text-align: justify;
-    margin-bottom: 0;
-  }
-
-  @media (min-width: 768px) {
-    padding: 15%;
-  }
+  composes: description from '../../../css/generic.css';
 }
 
 .items {

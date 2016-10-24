@@ -78,7 +78,7 @@
   display: inline-flex;
   flex-direction: column;
   justify-content: space-between;
-  background-image: url('http://res.cloudinary.com/dsie3eeqb/image/upload/v1475003357/slide-about_buecme.jpg');
+  background-image: url('https://res.cloudinary.com/dsie3eeqb/image/upload/v1475003357/smoliar/slide-about_buecme.jpg');
   box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.5);
 
   @media (min-width: 768px) {

@@ -3,19 +3,7 @@
 }
 
 .categories {
-  background-color: #353a3e;
-  padding: 30px 0 25px;
-  text-transform: uppercase;
-  text-align: center;
-  font-weight: 600;
-
-  * + * {
-    margin-left: 23px;
-  }
-
-  :global .is-active {
-    color: #2499dc;
-  }
+  composes: workBlogCategories from '../../../css/generic.css';
 }
 
 .catItem {
@@ -45,37 +33,7 @@
 }
 
 .item {
-  position: relative;
-  padding: 20px 15px 52px;
-  width: 100%;
-  min-height: 100vw;
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-image: url('http://res.cloudinary.com/dsie3eeqb/image/upload/v1475003357/slide-about_buecme.jpg');
-
-  @media (min-width: 768px) {
-    width: 50%;
-    min-height: calc(50vw * 0.8);
-    padding: 30px 30px 64px;
-
-    &:nth-child(3) {
-      width: 100%;
-
-      .title {
-        @media (min-width: 768px) {
-          max-width: 540px;
-        }
-      }
-    }
-
-    &:hover {
-      .link,
-      .category {
-        opacity: 1;
-      }
-    }
-  }
+  composes: workBlogItem  from '../../../css/generic.css';
 }
 
 .category {

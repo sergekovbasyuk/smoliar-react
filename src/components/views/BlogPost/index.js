@@ -52,9 +52,9 @@ class BlogPost extends React.Component {
               <a className={s.arrowPrev} onClick={this.previous} href=""><ArrowPrev /></a>
               <a className={s.arrowNext} onClick={this.next} href=""><ArrowNext /></a>
               <Slider {...settings} ref={ref => (this.slider = ref)}>
-                <div><img src="http://res.cloudinary.com/dsie3eeqb/image/upload/v1475062549/slide-about2_yg37ce.jpg" alt="" className={s.slider} /></div>
-                <div><img src="http://res.cloudinary.com/dsie3eeqb/image/upload/v1475062549/slide-about2_yg37ce.jpg" alt="" className={s.slider} /></div>
-                <div><img src="http://res.cloudinary.com/dsie3eeqb/image/upload/v1475062549/slide-about2_yg37ce.jpg" alt="" className={s.slider} /></div>
+                <div><img src="https://res.cloudinary.com/dsie3eeqb/image/upload/v1475062549/smoliar/slide-about2_yg37ce.jpg" alt="" className={s.slider} /></div>
+                <div><img src="https://res.cloudinary.com/dsie3eeqb/image/upload/v1475062549/smoliar/slide-about2_yg37ce.jpg" alt="" className={s.slider} /></div>
+                <div><img src="https://res.cloudinary.com/dsie3eeqb/image/upload/v1475062549/smoliar/slide-about2_yg37ce.jpg" alt="" className={s.slider} /></div>
               </Slider>
             </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam dicta laborum quaerat, illum quos, dolor vitae. Consequatur qui totam nam saepe, odit, debitis omnis necessitatibus libero, ratione eveniet nobis quisquam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam dicta laborum quaerat, illum quos, dolor vitae. Consequatur qui totam nam saepe, odit, debitis omnis necessitatibus libero, ratione eveniet nobis quisquam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam dicta laborum quaerat, illum quos, dolor vitae. Consequatur qui totam nam saepe, odit, debitis omnis necessitatibus libero, ratione eveniet nobis quisquam.</p>
