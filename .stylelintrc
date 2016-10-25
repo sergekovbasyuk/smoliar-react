@@ -8,7 +8,11 @@
     }],
     "property-no-unknown": [ true, {
       "ignoreProperties": [
-        "composes"
+        "composes",
+        "min-font-size",
+        "max-font-size",
+        "lower-font-range",
+        "upper-font-range",
       ]
     }],
   }
