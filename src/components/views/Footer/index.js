@@ -7,7 +7,12 @@ class Footer extends React.Component {
     let schedule;
 
     if (this.props.location.pathname.indexOf('/contact') === 0) {
-      schedule = null;
+      schedule = (
+        <div className={s.schedule}>
+          <p>Judge me by deeds — check my new works.</p>
+          <Link to="/works" className={s.link}>see my works</Link>
+        </div>
+      );
     } else {
       schedule = (
         <div className={s.schedule}>
@@ -15,6 +20,10 @@ class Footer extends React.Component {
           <Link to="/contact" className={s.link}>my schedule</Link>
         </div>
       );
+    }
+
+    if (!this.props) {
+      return null;
     }
 
     return (
