@@ -56,9 +56,9 @@
     font-size: 22px;
   }
 
-  /*&:hover {
-    color: inherit;
-  }*/
+  &:hover {
+    color: #fff;
+  }
 
   &::before {
     content: '';
