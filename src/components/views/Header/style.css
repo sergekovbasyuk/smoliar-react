@@ -11,7 +11,7 @@
 
   @media (min-width: 768px) {
     margin: 40px;
-    mix-blend-mode: unset;
+    /*mix-blend-mode: unset;*/
   }
 }
 

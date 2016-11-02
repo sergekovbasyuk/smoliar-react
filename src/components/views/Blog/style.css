@@ -38,6 +38,7 @@
 
 .category {
   font-weight: 600;
+  text-transform: uppercase;
 
   @media (min-width: 768px) {
     opacity: 0.6;

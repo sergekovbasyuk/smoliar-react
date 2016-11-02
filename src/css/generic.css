@@ -31,6 +31,7 @@
   font-weight: 900;
   line-height: 1.2;
   font-size: 22px;
+  color: #fddc94;
 
   @media (min-width: 768px) {
     font-size: 29px;
@@ -55,9 +56,9 @@
     font-size: 22px;
   }
 
-  &:hover {
+  /*&:hover {
     color: inherit;
-  }
+  }*/
 
   &::before {
     content: '';
@@ -110,7 +111,7 @@
   display: inline-flex;
   flex-direction: column;
   justify-content: space-between;
-  background-image: url('https://res.cloudinary.com/dsie3eeqb/image/upload/v1475062549/smoliar/slide-about2_yg37ce.jpg');
+  background-image: url('https://res.cloudinary.com/dsie3eeqb/image/upload/v1478088844/smoliar/blog-bg.jpg');
 
   @media (min-width: 768px) {
     width: 50%;
@@ -173,6 +174,10 @@
   p {
     text-align: justify;
     margin-bottom: 0;
+  }
+
+  h1 {
+    color: #fddc94;
   }
 
   @media (min-width: 768px) {

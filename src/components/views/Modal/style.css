@@ -24,7 +24,8 @@
 }
 
 .modal {
-  width: 66.6vw;
+  width: 830px;
+  height: 400px;
   background: #232323;
   display: flex;
   position: relative;
@@ -36,7 +37,7 @@
 }
 
 .content {
-  padding: 6.25em 6.25em 6.25em 3.125em;
+  padding: 100px 80px 100px 60px;
   width: 50%;
 }
 

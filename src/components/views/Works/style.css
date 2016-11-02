@@ -4,6 +4,8 @@
 
 .categories {
   composes: workBlogCategories from '../../../css/generic.css';
+  color: #a6a6a6;
+  font-weight: 400;
 }
 
 .catItem {
