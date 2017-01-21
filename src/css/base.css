@@ -1,7 +1,7 @@
 html {
   -webkit-font-smoothing: antialiased;
   text-rendering: geometricPrecision;
-  color: #f1f2f2;
+  color: #fff;
   background: #232323;
   font-size: responsive;
   min-font-size: 12px;

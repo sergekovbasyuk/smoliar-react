@@ -1,7 +1,9 @@
 .menu {
   position: fixed;
   left: 15px;
-  top: 40vh;
+  /*top: 40vh;*/
+  top: 50%;
+  transform: translateY(-50%);
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -12,8 +14,4 @@
   @media (min-width: 768px) {
     left: 36px;
   }
-}
-
-.social {
-  display: inline-block;
 }

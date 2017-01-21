@@ -6,16 +6,16 @@ import Third from '../Third';
 import Four from '../Four';
 import Five from '../Five';
 
-const title = 'About Me';
-const secondTitle = 'A group of Soviet Superheroes';
-const secondDescription = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio in dolorem asperiores voluptatem, nam ipsa voluptates eius aliquid placeat a ea adipisci repellat fuga minima perferendis facere quae incidunt nulla?';
-const thirdText = 'The film is about a group of Soviet superheroes created during the Cold War.';
-const thirdImage = 'https://res.cloudinary.com/dsie3eeqb/image/upload/v1475003357/smoliar/slide-about_buecme.jpg';
-const fifthImages = ['https://res.cloudinary.com/dsie3eeqb/image/upload/v1475062549/smoliar/slide-about2_yg37ce.jpg', 'https://res.cloudinary.com/dsie3eeqb/image/upload/v1475062549/smoliar/slide-about2_yg37ce.jpg', 'https://res.cloudinary.com/dsie3eeqb/image/upload/v1475062549/smoliar/slide-about2_yg37ce.jpg'];
-const fifthTitle = 'A group of Soviet Superheroes';
-const fifthText = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quisquam laborum, voluptate amet! Suscipit earum doloremque quae possimus vitae voluptates, temporibus tempore sapiente vero ex cumque dolore alias. Sed, ea.';
-
-const AboutPage = () => (
+const AboutPage = ({
+  title,
+  secondTitle,
+  secondDescription,
+  thirdText,
+  thirdImage,
+  fifthImages,
+  fifthTitle,
+  fifthText,
+}) => (
   <div className="container">
     <First title={title} />
     <Second
@@ -38,5 +38,15 @@ const AboutPage = () => (
   </div>
 );
 
+First.propTypes = {
+  title: React.PropTypes.string,
+  secondTitle: React.PropTypes.string,
+  secondDescription: React.PropTypes.string,
+  thirdText: React.PropTypes.string,
+  thirdImage: React.PropTypes.string,
+  fifthImages: React.PropTypes.string,
+  fifthTitle: React.PropTypes.string,
+  fifthText: React.PropTypes.string,
+};
 
 export default AboutPage;

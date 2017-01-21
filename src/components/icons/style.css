@@ -69,11 +69,17 @@
 .linkedin,
 .twitter {
   composes: icon from '../../css/generic.css';
-  width: 20px;
-  height: 25px;
-  margin-top: 20px;
+  width: 30px;
+  height: 30px;
   display: block;
   color: #bebebe;
+  margin: 0 10px;
+
+  svg {
+    padding: 5px;
+    border: 1px solid;
+    border-radius: 50%;
+  }
 }
 
 .produce,

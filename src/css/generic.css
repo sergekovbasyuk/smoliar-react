@@ -8,14 +8,16 @@
 }
 
 .title {
-  color: #fddc94;
+  /*color: #fddc94;*/
+  color: #fff;
   font-size: 26px;
   margin-right: -20px;
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 28px;
   line-height: 1;
-  font-family: 'Lato', sans-serif;
-  font-weight: 900;
+  /*font-family: 'Lato', sans-serif;*/
+  font-weight: 800;
+  text-transform: uppercase;
 
   @media (min-width: 768px) {
     font-size: 38px;
@@ -27,11 +29,13 @@
 }
 
 .minorTitle {
-  font-family: 'Lato', sans-serif;
-  font-weight: 900;
+  /*font-family: 'Lato', sans-serif;*/
+  font-weight: 800;
   line-height: 1.2;
   font-size: 22px;
-  color: #fddc94;
+  /*color: #fddc94;*/
+  color: #fff;
+  text-transform: uppercase;
 
   @media (min-width: 768px) {
     font-size: 29px;
@@ -177,7 +181,8 @@
   }
 
   h1 {
-    color: #fddc94;
+    /*color: #fddc94;*/
+    color: #fff;
   }
 
   @media (min-width: 768px) {

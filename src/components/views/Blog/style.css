@@ -24,7 +24,7 @@
 
 .title {
   composes: minorTitle from '../../../css/generic.css';
-  color: #fddc94;
+  /*color: #fddc94;*/
   max-width: 270px;
 
   @media (min-width: 768px) {

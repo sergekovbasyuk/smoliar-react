@@ -5,7 +5,6 @@ import s from './style.css';
 import Logo from '../../icons/logo';
 import ArrowLeft from '../../icons/arrowLeft';
 import ArrowRight from '../../icons/arrowRight';
-// import Footer from '../Footer';
 import Modal from '../Modal';
 
 const events = [
@@ -35,6 +34,7 @@ class ContactPage extends React.Component {
     this.handleToday = this.handleToday.bind(this);
     this.handleDayClick = this.handleDayClick.bind(this);
     this.handleModalClose = this.handleModalClose.bind(this);
+    this.handleEventMouseOver = this.handleEventMouseOver.bind(this);
   }
 
   getHumanDate() {
@@ -45,6 +45,10 @@ class ContactPage extends React.Component {
     this.setState({
       showModal: true,
     });
+  }
+
+  handleEventMouseOver() {
+    console.log('event');
   }
 
   handleModalClose(e) {
@@ -108,9 +112,9 @@ class ContactPage extends React.Component {
             year={this.state.moment.year()}
             events={events}
             onDayClick={this.handleDayClick}
+            onEventMouseOver={this.handleEventMouseOver}
           />
         </section>
-        {/* <Footer /> */}
       </div>
     );
   }

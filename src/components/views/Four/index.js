@@ -54,8 +54,4 @@ const Four = () => (
   </section>
 );
 
-// Four.propTypes = {
-//
-// };
-
 export default Four;

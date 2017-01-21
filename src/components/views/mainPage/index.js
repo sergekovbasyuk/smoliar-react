@@ -5,7 +5,9 @@ import jquery from 'jquery';
 import s from './style.css';
 import Logo from '../../icons/logo';
 import ArrowScroll from '../../icons/arrowScroll';
-// import Footer from '../Footer';
+import Facebook from '../../icons/facebook';
+import Instagram from '../../icons/instagram';
+import Twitter from '../../icons/twitter';
 
 class mainPage extends React.Component {
   arrowClickHandler(e) {
@@ -61,7 +63,6 @@ class mainPage extends React.Component {
           <div className={s.logoContainer}><Logo /></div>
           <div className={s.content}>
             <h1 className={s.title}>Hi, there!</h1>
-            <br />
             <p>“The challenge is to be strong, but not rude; be kind,
             but not weak; be bold, but not a bully;
             be thoughtful, but not lazy; be humble, but not timid;
@@ -75,7 +76,7 @@ class mainPage extends React.Component {
         <section className="section">
           <div className={s.content}>
             <h1 className={s.title}>About Me</h1>
-            <p>Ukrainian - First Assistant Director</p><br />
+            <p>Ukrainian - First Assistant Director</p>
             <p>I have more than 6 years international experience as a freelance
             filmmaker making feature films, tv commercials, music videos,
             tv series and shorts.</p>
@@ -119,6 +120,11 @@ class mainPage extends React.Component {
             </div>
             <footer className={s.footer}>
               <a href="/aleksei_smoliar_cv.pdf">Download my CV</a>
+              <div>
+                <a className={s.social} href="https://www.facebook.com/leshasmoliar"><Facebook /></a>
+                <a className={s.social} href="https://www.instagram.com/leshasmoliar/"><Twitter /></a>
+                <a className={s.social} href="https://www.instagram.com/leshasmoliar/"><Instagram /></a>
+              </div>
               <a href="http://shortcute.xyz/" target="_blank" rel="noopener noreferrer">created at /shortcute</a>
             </footer>
           </div>

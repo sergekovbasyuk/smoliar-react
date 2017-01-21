@@ -2,8 +2,6 @@ import React from 'react';
 import 'fullpage.js';
 import jquery from 'jquery';
 import s from './style.css';
-import Facebook from '../../icons/facebook';
-import Instagram from '../../icons/instagram';
 import ArrowDown from '../../icons/arrowDown';
 import ArrowUp from '../../icons/arrowUp';
 
@@ -27,8 +25,6 @@ class SideMenu extends React.Component {
             <span id="slide-number" className={s.item} />
           </div>
           <a href="" onClick={this.downClickHandler}><ArrowDown /></a>
-          <a className={s.social} href="https://www.facebook.com/leshasmoliar"><Facebook /></a>
-          <a className={s.social} href="https://www.instagram.com/leshasmoliar/"><Instagram /></a>
         </div>
       );
     }

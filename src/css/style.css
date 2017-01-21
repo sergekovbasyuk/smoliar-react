@@ -3,7 +3,7 @@
 @import "./calendar.css";
 @import "./base.css";
 @import "./generic.css";
-@import "https://fonts.googleapis.com/css?family=Lato:700,900|Open+Sans:400,600,700";
+@import "https://fonts.googleapis.com/css?family=Lato:700,900|Open+Sans:400,600,700,800";
 
 .mainContainer {
   position: relative;

@@ -34,9 +34,6 @@ const WorkPage = () => (
       <iframe width="560" height="349" src="https://www.youtube.com/embed/vFwYJYl5GUQ?controls=0&modestbranding=1&rel=0&showinfo=0" frameBorder="0" allowFullScreen />
     </section>
     <Four />
-    <section className={s.awards}>
-      <span>some logos here</span>
-    </section>
     <Five
       images={fifthImages}
       title={fifthTitle}
