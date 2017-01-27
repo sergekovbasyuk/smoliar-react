@@ -35,7 +35,7 @@ class Second extends React.Component {
 }
 
 Second.propTypes = {
-  title: React.PropTypes.string.isRequired,
+  title: React.PropTypes.string,
   description: React.PropTypes.string,
   date: React.PropTypes.string,
 };

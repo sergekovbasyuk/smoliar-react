@@ -8,7 +8,7 @@ import workPageContainer from './components/containers/workPageContainer';
 import blogPostContainer from './components/containers/blogPostContainer';
 import aboutContainer from './components/containers/aboutContainer';
 import ContactPage from './components/views/Contact';
-import mainPage from './components/views/mainPage';
+import mainPageContainer from './components/containers/mainPageContainer';
 
 const appHistory = useRouterHistory(createHashHistory)({ queryKey: false });
 
@@ -19,7 +19,7 @@ function NoMatch() {
 const AppRouter = () => (
   <Router onUpdate={() => window.scrollTo(0, 0)} history={appHistory}>
     <Route path="/" component={mainLayout}>
-      <IndexRoute component={mainPage} />
+      <IndexRoute component={mainPageContainer} />
       <Route path="/works" component={worksContainer} />
       <Route path="/blog" component={blogContainer} />
       <Route path="/about" component={aboutContainer} />

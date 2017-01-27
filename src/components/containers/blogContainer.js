@@ -1,32 +1,51 @@
 import React from 'react';
-import axios from 'axios';
 import Blog from '../views/Blog';
+import client from '../../config';
 
 class blogContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       data: [],
+      skip: 0,
+      limit: 7,
     };
   }
 
   componentDidMount() {
-    const that = this;
-    this.serverRequest =
-      axios
-        .get('https://cdn.contentful.com/spaces/g2w5ttfmcha9/entries?access_token=d5db5009e3c4b1ae9c382ce4ba431d0d6c581eb7e528d1d4b2b5d4c8644c5658&content_type=news')
-        .then(result => that.setState({
-          data: result.data.fields,
-        }));
+    this.loadData();
   }
 
   componentWillUnmount() {
     this.unmounted = true;
   }
 
+  loadData() {
+    client.getEntries({ content_type: 'blogPost', limit: this.state.limit, skip: this.state.skip })
+      .then(response => this.setState({
+        data: response.items,
+        pageCount: Math.ceil(response.total / response.limit),
+      }))
+      .catch(error => console.log(error));
+  }
+
+  handlePageClick(data) {
+    const perPage = 7;
+    const selected = data.selected;
+    const skip = Math.ceil(selected * perPage);
+
+    this.setState({ skip }, () => {
+      this.loadData();
+    });
+  }
+
   render() {
     return (
-      <Blog data={this.state.data} />
+      <Blog
+        data={this.state.data}
+        handlePageClick={this.handlePageClick.bind(this)}
+        pageCount={this.state.pageCount}
+      />
     );
   }
 }

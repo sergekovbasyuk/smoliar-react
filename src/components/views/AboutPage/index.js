@@ -6,47 +6,49 @@ import Third from '../Third';
 import Four from '../Four';
 import Five from '../Five';
 
-const AboutPage = ({
-  title,
-  secondTitle,
-  secondDescription,
-  thirdText,
-  thirdImage,
-  fifthImages,
-  fifthTitle,
-  fifthText,
-}) => (
-  <div className="container">
-    <First title={title} />
-    <Second
-      title={secondTitle}
-      description={secondDescription}
-    />
-    <Third
-      text={thirdText}
-      image={thirdImage}
-    />
-    <section className={s.videoWrapper}>
-      <iframe width="560" height="349" src="https://www.youtube.com/embed/vFwYJYl5GUQ?controls=0&modestbranding=1&rel=0&showinfo=0" frameBorder="0" allowFullScreen />
-    </section>
-    <Four />
-    <Five
-      images={fifthImages}
-      title={fifthTitle}
-      text={fifthText}
-    />
-  </div>
-);
+const AboutPage = ({ data, url }) => {
+  const {
+    introTitle,
+    introText,
+    quote,
+    benefitsTitle,
+    benefitsText,
+    benefit1Title,
+    benefit1Text,
+    benefit2Title,
+    benefit2Text,
+    benefit3Title,
+    benefit3Text,
+    conclusionTitle,
+    conclusionText,
+  } = data;
 
-First.propTypes = {
-  title: React.PropTypes.string,
-  secondTitle: React.PropTypes.string,
-  secondDescription: React.PropTypes.string,
-  thirdText: React.PropTypes.string,
-  thirdImage: React.PropTypes.string,
-  fifthImages: React.PropTypes.string,
-  fifthTitle: React.PropTypes.string,
-  fifthText: React.PropTypes.string,
+  return (
+    <div className="container">
+      <First title="About Me" />
+      <Second
+        title={introTitle}
+        description={introText}
+      />
+      {/* <Third
+        text={quote}
+        image={thirdImage}
+      /> */}
+      {/* <section className={s.videoWrapper}>
+        <iframe width="560" height="349" src="https://www.youtube.com/embed/vFwYJYl5GUQ?controls=0&modestbranding=1&rel=0&showinfo=0" frameBorder="0" allowFullScreen />
+      </section>
+      <Four />
+      <Five
+        images={fifthImages}
+        title={conclusionTitle}
+        text={conclusionText}
+      /> */}
+    </div>
+  );
+}
+
+AboutPage.propTypes = {
+  data: React.PropTypes.object.isRequired,
 };
 
 export default AboutPage;

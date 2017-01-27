@@ -1,10 +1,11 @@
 import React from 'react';
-// import ReactPaginate from 'react-paginate';
+import { Link } from 'react-router';
+import ReactPaginate from 'react-paginate';
 import s from './style.css';
 import TopSlider from '../TopSlider';
 import Logo from '../../icons/logo';
 
-const Blog = () => (
+const Blog = ({ data, handlePageClick, pageCount }) => (
   <div className="container">
     <section className={s.first}>
       <div className={s.logoContainer}><Logo /></div>
@@ -17,68 +18,28 @@ const Blog = () => (
       <li className={s.catItem}><a href="">Experience</a></li>
     </ul>
     <section>
-      <div className={s.item}>
-        <span className={s.category}>Work</span>
-        <div>
-          <h1 className={s.title}>Change Your Mind Change Your Luck</h1>
-          <span to="/about" className={s.link}>read more</span>
+      {data.map((item, index) => (
+        <div className={s.item} key={index}>
+          <span className={s.category}>Work</span>
+          <div>
+            <h1 className={s.title}>{data[index].fields.blogPostTitle}</h1>
+            <Link to={`/blog/${data[index].sys.id}`} className={s.link}>read more</Link>
+          </div>
         </div>
-      </div>
-      <div className={s.item}>
-        <span className={s.category}>Work</span>
-        <div>
-          <h1 className={s.title}>Change Your Mind Change Your Luck</h1>
-          <span to="/about" className={s.link}>read more</span>
-        </div>
-      </div>
-      <div className={s.item}>
-        <span className={s.category}>Work</span>
-        <div>
-          <h1 className={s.title}>Change Your Mind Change Your Luck</h1>
-          <span to="/about" className={s.link}>read more</span>
-        </div>
-      </div>
-      <div className={s.item}>
-        <span className={s.category}>Work</span>
-        <div>
-          <h1 className={s.title}>Change Your Mind Change Your Luck</h1>
-          <span to="/about" className={s.link}>read more</span>
-        </div>
-      </div>
-      <div className={s.item}>
-        <span className={s.category}>Work</span>
-        <div>
-          <h1 className={s.title}>Change Your Mind Change Your Luck</h1>
-          <span to="/about" className={s.link}>read more</span>
-        </div>
-      </div>
-      <div className={s.item}>
-        <span className={s.category}>Work</span>
-        <div>
-          <h1 className={s.title}>Change Your Mind Change Your Luck</h1>
-          <span to="/about" className={s.link}>read more</span>
-        </div>
-      </div>
-      <div className={s.item}>
-        <span className={s.category}>Work</span>
-        <div>
-          <h1 className={s.title}>Change Your Mind Change Your Luck</h1>
-          <span to="/about" className={s.link}>read more</span>
-        </div>
-      </div>
+      ))}
     </section>
     <section>
-      <p className={s.pagination}>
-        <a>next</a>
-        <a>1</a>
-        <a>2</a>
-        <a>3</a>
-        <a>4</a>
-        <a>5</a>
-        <a>6</a>
-        <a>7</a>
-        <a>previous</a>
-      </p>
+      <ReactPaginate
+        pageCount={pageCount}
+        previousLabel={'previous'}
+        nextLabel={'next'}
+        breakLabel={<a href="">...</a>}
+        breakClassName={'break-me'}
+        marginPagesDisplayed={2}
+        pageRangeDisplayed={3}
+        onPageChange={handlePageClick}
+        containerClassName={s.pagination}
+      />
     </section>
   </div>
 );
