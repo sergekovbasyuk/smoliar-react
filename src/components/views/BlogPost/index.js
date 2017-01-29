@@ -14,6 +14,7 @@ class BlogPost extends React.Component {
     this.next = this.next.bind(this);
     this.previous = this.previous.bind(this);
   }
+
   next(e) {
     e.preventDefault();
     this.slider.slickNext();
@@ -32,8 +33,6 @@ class BlogPost extends React.Component {
       slidesToShow: 1,
       slidesToScroll: 1,
     };
-
-    console.log(this.props.nextItem);
 
     return (
       <div className="container">
@@ -60,27 +59,33 @@ class BlogPost extends React.Component {
           </article>
           <section className={s.related}>
             <p className={s.relatedTitle}>See also</p>
-            <div className={s.items}>
+            {/* <div className={s.items}>
               <div className={s.item}>
-                {/* <span className={s.category}>{this.props.nextItem.category}</span> */}
+                <span className={s.category}>{this.props.nextItem.fields.category}</span>
                 <div>
-                  {/* <h1 className={s.itemTitle}>{this.props.nextItem.title}</h1> */}
-                  <span to="/about" className={s.link}>read more</span>
+                  <h1 className={s.itemTitle}>{this.props.nextItem.fields.title}</h1>
+                  <span to={`${this.props.nextItem.sys.id}`} className={s.link}>read more</span>
                 </div>
               </div>
               <div className={s.item}>
-                {/* <span className={s.category}>{this.props.previousItem.category}</span> */}
+                <span className={s.category}>{this.props.previousItem.fields.category}</span>
                 <div>
-                  {/* <h1 className={s.itemTitle}>{this.props.previousItem.title}</h1> */}
-                  <span to="/about" className={s.link}>read more</span>
+                  <h1 className={s.itemTitle}>{this.props.previousItem.fields.title}</h1>
+                  <span to={`${this.props.previousItem.sys.id}`} className={s.link}>read more</span>
                 </div>
               </div>
-            </div>
+            </div> */}
           </section>
         </section>
       </div>
     );
   }
 }
+
+BlogPost.propTypes = {
+  data: React.PropTypes.object,
+  nextItem: React.PropTypes.object,
+  previousItem: React.PropTypes.object,
+};
 
 export default BlogPost;
