@@ -15,18 +15,24 @@ const Works = ({ data, handlePageClick, pageCount }) => (
       <span>check out my works</span>
     </div>
     <section>
-      {data.map((item, index) => (
-        <div className={s.item} key={index}>
-          <span className={s.category}>Work</span>
-          <div>
-            <h1 className={s.title}>{data[index].fields.workTitle}</h1>
-            <Link to={`/works/${data[index].sys.id}`} className={s.link}>read more</Link>
+      {data.map((item, index) => {
+        const style = {
+          backgroundImage: `url(${data[index].fields.workBackgroundImage.fields.file.url})`,
+        };
+
+        return (
+          <div className={s.item} key={index} style={style}>
+            <span className={s.category}>Work</span>
+            <div>
+              <h1 className={s.title}>{data[index].fields.workTitle}</h1>
+              <Link to={`/works/${data[index].sys.id}`} className={s.link}>read more</Link>
+            </div>
           </div>
-        </div>
-      ))}
+        );
+      })}
     </section>
     <section>
-      <ReactPaginate
+      { pageCount > 1 ? <ReactPaginate
         pageCount={pageCount}
         previousLabel={'previous'}
         nextLabel={'next'}
@@ -36,10 +42,15 @@ const Works = ({ data, handlePageClick, pageCount }) => (
         pageRangeDisplayed={3}
         onPageChange={handlePageClick}
         containerClassName={s.pagination}
-      />
+      /> : null }
     </section>
   </div>
 );
 
+Works.propTypes = {
+  data: React.PropTypes.array,
+  handlePageClick: React.PropTypes.func,
+  pageCount: React.PropTypes.number,
+};
 
 export default Works;

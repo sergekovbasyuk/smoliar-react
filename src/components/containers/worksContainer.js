@@ -37,6 +37,8 @@ class worksContainer extends React.Component {
     this.setState({ skip }, () => {
       this.loadData();
     });
+
+    window.scrollTo(0, 0);
   }
 
   render() {

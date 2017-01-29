@@ -13,7 +13,7 @@ const First = ({ title, description }) => (
 );
 
 First.propTypes = {
-  title: React.PropTypes.string.isRequired,
+  title: React.PropTypes.string,
   description: React.PropTypes.string,
 };
 

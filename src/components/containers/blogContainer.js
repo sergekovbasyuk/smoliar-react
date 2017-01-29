@@ -10,6 +10,10 @@ class blogContainer extends React.Component {
       skip: 0,
       limit: 7,
     };
+
+    this.loadData = this.loadData.bind(this);
+    this.handlePageClick = this.handlePageClick.bind(this);
+    this.handleFilterChange = this.handleFilterChange.bind(this);
   }
 
   componentDidMount() {
@@ -20,8 +24,13 @@ class blogContainer extends React.Component {
     this.unmounted = true;
   }
 
-  loadData() {
-    client.getEntries({ content_type: 'blogPost', limit: this.state.limit, skip: this.state.skip })
+  loadData(filterValue) {
+    client.getEntries({
+      content_type: 'blogPost',
+      'fields.category': filterValue,
+      limit: this.state.limit,
+      skip: this.state.skip,
+    })
       .then(response => this.setState({
         data: response.items,
         pageCount: Math.ceil(response.total / response.limit),
@@ -37,13 +46,20 @@ class blogContainer extends React.Component {
     this.setState({ skip }, () => {
       this.loadData();
     });
+
+    window.scrollTo(0, 0);
+  }
+
+  handleFilterChange(filterValue) {
+    this.loadData(filterValue);
   }
 
   render() {
     return (
       <Blog
         data={this.state.data}
-        handlePageClick={this.handlePageClick.bind(this)}
+        handlePageClick={this.handlePageClick}
+        handleFilterChange={this.handleFilterChange}
         pageCount={this.state.pageCount}
       />
     );

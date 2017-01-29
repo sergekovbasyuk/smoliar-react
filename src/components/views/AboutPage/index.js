@@ -30,19 +30,32 @@ const AboutPage = ({ data, url }) => {
         title={introTitle}
         description={introText}
       />
-      {/* <Third
+      <Third
         text={quote}
-        image={thirdImage}
-      /> */}
-      {/* <section className={s.videoWrapper}>
+        image="https://res.cloudinary.com/dsie3eeqb/image/upload/v1475003357/smoliar/slide-about_buecme.jpg"
+      />
+      <section className={s.videoWrapper}>
         <iframe width="560" height="349" src="https://www.youtube.com/embed/vFwYJYl5GUQ?controls=0&modestbranding=1&rel=0&showinfo=0" frameBorder="0" allowFullScreen />
       </section>
-      <Four />
+      <Four
+        benefitsTitle={benefitsTitle}
+        benefitsText={benefitsText}
+        benefit1Title={benefit1Title}
+        benefit1Text={benefit1Text}
+        benefit2Title={benefit2Title}
+        benefit2Text={benefit2Text}
+        benefit3Title={benefit3Title}
+        benefit3Text={benefit3Text}
+      />
       <Five
-        images={fifthImages}
+        images={[
+          'https://res.cloudinary.com/dsie3eeqb/image/upload/v1475003357/smoliar/slide-about_buecme.jpg',
+          'https://res.cloudinary.com/dsie3eeqb/image/upload/v1475003357/smoliar/slide-about_buecme.jpg',
+          'https://res.cloudinary.com/dsie3eeqb/image/upload/v1475003357/smoliar/slide-about_buecme.jpg',
+        ]}
         title={conclusionTitle}
         text={conclusionText}
-      /> */}
+      />
     </div>
   );
 }

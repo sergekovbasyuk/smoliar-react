@@ -11,8 +11,8 @@ const Third = ({ text, image }) => (
 );
 
 Third.propTypes = {
-  text: React.PropTypes.string.isRequired,
-  image: React.PropTypes.string.isRequired,
+  text: React.PropTypes.string,
+  image: React.PropTypes.string,
 };
 
 export default Third;
