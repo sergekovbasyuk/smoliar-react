@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 import Slider from 'react-slick';
 import s from './style.css';
 import First from '../First';
@@ -39,14 +40,14 @@ class BlogPost extends React.Component {
             <span className={s.category}>{nextItem.fields.category}</span>
             <div>
               <h1 className={s.itemTitle}>{nextItem.fields.title}</h1>
-              <span to={`${nextItem.sys.id}`} className={s.link}>read more</span>
+              <Link to={`blog/${nextItem.sys.id}`} className={s.link}>read more</Link>
             </div>
           </div>
           <div className={s.item}>
             <span className={s.category}>{previousItem.fields.category}</span>
             <div>
               <h1 className={s.itemTitle}>{previousItem.fields.title}</h1>
-              <span to={`${previousItem.sys.id}`} className={s.link}>read more</span>
+              <Link to={`blog/${previousItem.sys.id}`} className={s.link}>read more</Link>
             </div>
           </div>
         </div>

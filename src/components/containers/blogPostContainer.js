@@ -10,30 +10,40 @@ class blogPostContainer extends React.Component {
       nextItem: null,
       previousItem: null,
     };
+
+    this.loadData = this.loadData.bind(this);
   }
 
   componentDidMount() {
+    this.loadData();
+  }
+
+  componentWillReceiveProps() {
+    this.loadData();
+  }
+
+  componentWillUnmount() {
+    this.unmounted = true;
+  }
+
+  loadData() {
     client.getEntries({
       content_type: 'blogPost',
     })
       .then((response) => {
         const filteredEntry = response.items.filter(item => item.sys.id === this.props.params.name);
-        const dataLength = response.items.length;
-        const randomNext = (Math.random() * dataLength).toFixed(0);
-        const prevNext = (Math.random() * dataLength).toFixed(0);
-        const nextEntry = response.items[randomNext];
-        const previousEntry = response.items[prevNext];
+        const filteredEntryIndex = response.items.indexOf(filteredEntry[0]);
+        const total = response.items.length;
+        const nextEntryIndex = (filteredEntryIndex + 1) >= total ? 0 : (filteredEntryIndex + 1);
+        const previousEntryIndex = (filteredEntryIndex - 1) <= 0 ? (total - 1) : (filteredEntryIndex - 1);
+
         this.setState({
           data: filteredEntry[0].fields,
-          nextItem: nextEntry,
-          previousItem: previousEntry,
+          nextItem: response.items[nextEntryIndex],
+          previousItem: response.items[previousEntryIndex],
         });
       })
       .catch(error => console.log(error));
-  }
-
-  componentWillUnmount() {
-    this.unmounted = true;
   }
 
   render() {
