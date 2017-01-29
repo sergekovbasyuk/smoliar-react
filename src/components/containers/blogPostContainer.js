@@ -21,8 +21,8 @@ class blogPostContainer extends React.Component {
         const dataLength = response.items.length;
         const randomNext = (Math.random() * dataLength).toFixed(0);
         const prevNext = (Math.random() * dataLength).toFixed(0);
-        const nextEntry = response.items[randomNext];
-        const previousEntry = response.items[prevNext];
+        const nextEntry = response.items[1];
+        const previousEntry = response.items[1];
         this.setState({
           data: filteredEntry[0].fields,
           nextItem: nextEntry,

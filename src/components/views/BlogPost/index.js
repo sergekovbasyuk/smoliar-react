@@ -59,7 +59,7 @@ class BlogPost extends React.Component {
           </article>
           <section className={s.related}>
             <p className={s.relatedTitle}>See also</p>
-            {/* <div className={s.items}>
+            <div className={s.items}>
               <div className={s.item}>
                 <span className={s.category}>{this.props.nextItem.fields.category}</span>
                 <div>
@@ -74,7 +74,7 @@ class BlogPost extends React.Component {
                   <span to={`${this.props.previousItem.sys.id}`} className={s.link}>read more</span>
                 </div>
               </div>
-            </div> */}
+            </div>
           </section>
         </section>
       </div>
