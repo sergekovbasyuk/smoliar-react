@@ -51,7 +51,9 @@ class blogContainer extends React.Component {
   }
 
   handleFilterChange(filterValue) {
-    this.loadData(filterValue);
+    this.setState({ skip: 0 }, () => {
+      this.loadData(filterValue);
+    });
   }
 
   render() {

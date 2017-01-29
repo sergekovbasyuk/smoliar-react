@@ -24,6 +24,36 @@ class BlogPost extends React.Component {
     this.slider.slickPrev();
   }
 
+  related() {
+    const { nextItem, previousItem } = this.props;
+
+    if (!nextItem || !previousItem) {
+      return null;
+    }
+
+    return (
+      <section className={s.related}>
+        <p className={s.relatedTitle}>See also</p>
+        <div className={s.items}>
+          <div className={s.item}>
+            <span className={s.category}>{nextItem.fields.category}</span>
+            <div>
+              <h1 className={s.itemTitle}>{nextItem.fields.title}</h1>
+              <span to={`${nextItem.sys.id}`} className={s.link}>read more</span>
+            </div>
+          </div>
+          <div className={s.item}>
+            <span className={s.category}>{previousItem.fields.category}</span>
+            <div>
+              <h1 className={s.itemTitle}>{previousItem.fields.title}</h1>
+              <span to={`${previousItem.sys.id}`} className={s.link}>read more</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   render() {
     const settings = {
       arrows: false,
@@ -33,6 +63,7 @@ class BlogPost extends React.Component {
       slidesToShow: 1,
       slidesToScroll: 1,
     };
+
 
     return (
       <div className="container">
@@ -57,25 +88,7 @@ class BlogPost extends React.Component {
             </div>
             <p>{this.props.data.secondHalf}</p>
           </article>
-          <section className={s.related}>
-            <p className={s.relatedTitle}>See also</p>
-            <div className={s.items}>
-              <div className={s.item}>
-                <span className={s.category}>{this.props.nextItem.fields.category}</span>
-                <div>
-                  <h1 className={s.itemTitle}>{this.props.nextItem.fields.title}</h1>
-                  <span to={`${this.props.nextItem.sys.id}`} className={s.link}>read more</span>
-                </div>
-              </div>
-              <div className={s.item}>
-                <span className={s.category}>{this.props.previousItem.fields.category}</span>
-                <div>
-                  <h1 className={s.itemTitle}>{this.props.previousItem.fields.title}</h1>
-                  <span to={`${this.props.previousItem.sys.id}`} className={s.link}>read more</span>
-                </div>
-              </div>
-            </div>
-          </section>
+          {this.related()}
         </section>
       </div>
     );

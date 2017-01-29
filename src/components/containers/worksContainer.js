@@ -10,6 +10,9 @@ class worksContainer extends React.Component {
       skip: 0,
       limit: 7,
     };
+
+    this.loadData = this.loadData.bind(this);
+    this.handlePageClick = this.handlePageClick.bind(this);
   }
 
   componentDidMount() {
@@ -21,7 +24,11 @@ class worksContainer extends React.Component {
   }
 
   loadData() {
-    client.getEntries({ content_type: 'work', limit: this.state.limit, skip: this.state.skip })
+    client.getEntries({
+      content_type: 'work',
+      limit: this.state.limit,
+      skip: this.state.skip,
+    })
       .then(response => this.setState({
         data: response.items,
         pageCount: Math.ceil(response.total / response.limit),
@@ -45,7 +52,7 @@ class worksContainer extends React.Component {
     return (
       <Works
         data={this.state.data}
-        handlePageClick={this.handlePageClick.bind(this)}
+        handlePageClick={this.handlePageClick}
         pageCount={this.state.pageCount}
       />
     );
