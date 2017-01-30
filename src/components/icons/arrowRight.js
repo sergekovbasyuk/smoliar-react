@@ -1,10 +1,10 @@
 import React from 'react';
-import SVGInline from 'react-svg-inline';
 import s from './style.css';
-import arrowLeft from '../../svg/arrow-down.svg';
 
 const arrowRight = () => (
-  <SVGInline svg={arrowLeft} className={s.arrowRight} classSuffix="" cleanup />
+  <svg className={s.arrowRight} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+    <path d="M1 6l9 9 9-9-.8-1-8.2 8.2L1.8 5z" />
+  </svg>
 );
 
 export default arrowRight;

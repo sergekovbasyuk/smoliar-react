@@ -1,10 +1,10 @@
 import React from 'react';
-import SVGInline from 'react-svg-inline';
 import s from './style.css';
-import shooting from '../../svg/shooting.svg';
 
 const Shooting = () => (
-  <SVGInline svg={shooting} className={s.shooting} classSuffix="" cleanup />
+  <svg className={s.shooting} xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 31.906 32.03">
+    <path d="M23.8 29.8c2.7-.2 5.2-.7 6.5-1.6.4-.4 1-.3 1.4.2.3.4.2 1-.2 1.4-2.6 2-8.3 2.2-12 2.2h-3.6C7 32 0 24.6 0 16 0 7.2 7.2 0 16 0c8.7 0 16 7.2 16 16 0 6-3.4 11-8.2 13.8zM16 2C8.3 2 2 8.3 2 16s6.3 14 14 14c7.6 0 14-6.3 14-14S23.5 2 16 2zm8 18c-2.3 0-4-1.8-4-4s1.7-4 4-4c2 0 4 1.8 4 4s-2 4-4 4zm0-6c-1.2 0-2 1-2 2s.8 2 2 2c1 0 2-1 2-2s-1-2-2-2zm-8-2c-2.2 0-4-1.8-4-4s1.8-4 4-4c2 0 4 1.8 4 4s-2 4-4 4zm0-6c-1 0-2 1-2 2s1 2 2 2 2-1 2-2-1-2-2-2zM8 20c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4zm0-6c-1 0-2 1-2 2s1 2 2 2 2-1 2-2-1-2-2-2zm6 2c0-1 1-2 2-2s2 1 2 2-1 2-2 2-2-1-2-2zm2 4c2 0 4 1.7 4 4 0 2-2 4-4 4-2.2 0-4-2-4-4 0-2.3 1.8-4 4-4zm0 6c1 0 2-1 2-2 0-1.2-1-2-2-2s-2 .8-2 2c0 1 1 2 2 2z" />
+  </svg>
 );
 
 export default Shooting;

@@ -1,10 +1,11 @@
 import React from 'react';
-import SVGInline from 'react-svg-inline';
 import s from './style.css';
-import cross from '../../svg/cross-y.svg';
 
 const Cross = () => (
-  <SVGInline svg={cross} className={s.cross} classSuffix="" cleanup />
+  <svg className={s.cross} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+    <path d="M2.8 0l10.6 10.6-2.8 2.8L0 2.8z" />
+    <path d="M10.6 0l2.8 2.8L2.8 13.4 0 10.6z" />
+  </svg>
 );
 
 export default Cross;

@@ -3,9 +3,9 @@ import { Link } from 'react-router';
 import 'fullpage.js';
 import jquery from 'jquery';
 import s from '../views/mainPage/style.css';
-import Facebook from '../icons/facebook';
-import Instagram from '../icons/instagram';
-import Twitter from '../icons/twitter';
+import FacebookR from '../icons/facebook_r';
+import InstagramR from '../icons/instagram_r';
+import TwitterR from '../icons/twitter_r';
 import First from '../views/mainPage/First';
 import AboutMe from '../views/mainPage/AboutMe';
 import Works from '../views/mainPage/Works';
@@ -112,9 +112,9 @@ class mainPage extends React.Component {
             <footer className={s.footer}>
               <a href="/aleksei_smoliar_cv.pdf">Download my CV</a>
               <div>
-                <a className={s.social} href="https://www.facebook.com/leshasmoliar"><Facebook /></a>
-                <a className={s.social} href="https://www.instagram.com/leshasmoliar/"><Twitter /></a>
-                <a className={s.social} href="https://www.instagram.com/leshasmoliar/"><Instagram /></a>
+                <a className={s.social} href="https://www.facebook.com/leshasmoliar"><FacebookR /></a>
+                <a className={s.social} href="https://www.instagram.com/leshasmoliar/"><TwitterR /></a>
+                <a className={s.social} href="https://www.instagram.com/leshasmoliar/"><InstagramR /></a>
               </div>
               <a href="http://shortcute.xyz/" target="_blank" rel="noopener noreferrer">created at /shortcute</a>
             </footer>

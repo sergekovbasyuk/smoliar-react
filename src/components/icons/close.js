@@ -1,10 +1,11 @@
 import React from 'react';
-import SVGInline from 'react-svg-inline';
 import s from './style.css';
-import close from '../../svg/close.svg';
 
 const Close = () => (
-  <SVGInline svg={close} className={s.close} classSuffix="" cleanup />
+  <svg className={s.close} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 17">
+    <path d="M0 .8L.8 0 17 16.2l-.8.8z" />
+    <path d="M.8 17l-.8-.8L16.2 0l.8.8z" />
+  </svg>
 );
 
 export default Close;
