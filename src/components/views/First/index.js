@@ -4,7 +4,7 @@ import Logo from '../../icons/logo';
 
 const First = ({ title, description, backgroundImage }) => {
   const style = {
-    backgroundImage: `url(${backgroundImage === undefined ? '' : backgroundImage.fields.file.url})`,
+    backgroundImage: `url(${backgroundImage})`,
   };
 
   return (
@@ -21,7 +21,7 @@ const First = ({ title, description, backgroundImage }) => {
 First.propTypes = {
   title: React.PropTypes.string,
   description: React.PropTypes.string,
-  backgroundImage: React.PropTypes.object,
+  backgroundImage: React.PropTypes.string,
 };
 
 export default First;

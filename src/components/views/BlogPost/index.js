@@ -32,18 +32,26 @@ class BlogPost extends React.Component {
       return null;
     }
 
+    const styleNext = {
+      backgroundImage: `url(${nextItem.fields.backgroundImage.fields.file.url})`,
+    };
+
+    const stylePrev = {
+      backgroundImage: `url(${previousItem.fields.backgroundImage.fields.file.url})`,
+    };
+
     return (
       <section className={s.related}>
         <p className={s.relatedTitle}>See also</p>
         <div className={s.items}>
-          <div className={s.item}>
+          <div className={s.item} style={styleNext} >
             <span className={s.category}>{nextItem.fields.category}</span>
             <div>
               <h1 className={s.itemTitle}>{nextItem.fields.title}</h1>
               <Link to={`blog/${nextItem.sys.id}`} className={s.link}>read more</Link>
             </div>
           </div>
-          <div className={s.item}>
+          <div className={s.item} style={stylePrev} >
             <span className={s.category}>{previousItem.fields.category}</span>
             <div>
               <h1 className={s.itemTitle}>{previousItem.fields.title}</h1>
@@ -64,11 +72,25 @@ class BlogPost extends React.Component {
       slidesToShow: 1,
       slidesToScroll: 1,
     };
+    const {
+      title,
+      description,
+      intro,
+      firstHalf,
+      secondHalf,
+      backgroundImage,
+    } = this.props.data;
+
+    const backgroundImageUrl = backgroundImage === undefined ? null : backgroundImage.fields.file.url;
 
 
     return (
       <div className="container">
-        <First title={this.props.data.title} description={this.props.data.description} />
+        <First
+          title={title}
+          description={description}
+          backgroundImage={backgroundImageUrl}
+        />
         <section className={s.body}>
           <article className={s.post}>
             <div className={s.share}>
@@ -76,8 +98,8 @@ class BlogPost extends React.Component {
               <a href=""><Twitter /></a>
               <a href=""><LinkedIn /></a>
             </div>
-            <p className={s.preface}>{this.props.data.intro}</p>
-            <p>{this.props.data.firstHalf}</p>
+            <p className={s.preface}>{intro}</p>
+            <p>{firstHalf}</p>
             <div className={s.sliderWrapper}>
               <a className={s.arrowPrev} onClick={this.previous} href=""><ArrowPrev /></a>
               <a className={s.arrowNext} onClick={this.next} href=""><ArrowNext /></a>
@@ -87,7 +109,7 @@ class BlogPost extends React.Component {
                 <div><img src="https://res.cloudinary.com/dsie3eeqb/image/upload/v1475062549/smoliar/slide-about2_yg37ce.jpg" alt="" className={s.slider} /></div>
               </Slider>
             </div>
-            <p>{this.props.data.secondHalf}</p>
+            <p>{secondHalf}</p>
           </article>
           {this.related()}
         </section>

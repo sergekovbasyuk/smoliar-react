@@ -2,13 +2,9 @@ import React from 'react';
 import s from './style.css';
 
 const Third = ({ text, image }) => {
-  if (image === undefined) {
-    return null;
-  }
-
   return (
     <section className={s.section}>
-      <img src={image.fields.file.url} alt="" className={s.image} />
+      <img src={image} alt="" className={s.image} />
       <div className={s.content}>
         <h1 className={s.text}>{text}</h1>
       </div>
@@ -18,7 +14,7 @@ const Third = ({ text, image }) => {
 
 Third.propTypes = {
   text: React.PropTypes.string,
-  image: React.PropTypes.object,
+  image: React.PropTypes.string,
 };
 
 export default Third;

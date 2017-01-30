@@ -6,15 +6,17 @@
 .bg {
   height: 87.5vw;
   width: 100%;
-  background-image: url('https://res.cloudinary.com/dsie3eeqb/image/upload/v1475051438/smoliar/bg-about2_wsso4o.jpg');
+  background-size: cover;
 
   @media (min-width: 768px) {
+    width: 50%;
     height: auto;
     position: absolute;
     left: 0;
     top: 0;
     bottom: 0;
     right: 0;
+    background-size: contain;
   }
 }
 

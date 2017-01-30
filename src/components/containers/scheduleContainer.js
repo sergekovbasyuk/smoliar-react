@@ -1,8 +1,8 @@
 import React from 'react';
-import AboutPage from '../views/AboutPage';
+import Schedule from '../views/Schedule';
 import client from '../../config';
 
-class aboutContainer extends React.Component {
+class scheduleContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -12,10 +12,10 @@ class aboutContainer extends React.Component {
 
   componentDidMount() {
     client.getEntries({
-      content_type: 'aboutMe',
+      content_type: 'schedule',
     })
       .then(response => this.setState({
-        data: response.items[0].fields,
+        data: response,
       })
     )
       .catch(error => console.log(error));
@@ -27,9 +27,9 @@ class aboutContainer extends React.Component {
 
   render() {
     return (
-      <AboutPage data={this.state.data} />
+      <Schedule data={this.state.data} />
     );
   }
 }
 
-export default aboutContainer;
+export default scheduleContainer;

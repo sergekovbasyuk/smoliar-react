@@ -7,7 +7,7 @@ import worksContainer from './components/containers/worksContainer';
 import workPageContainer from './components/containers/workPageContainer';
 import blogPostContainer from './components/containers/blogPostContainer';
 import aboutContainer from './components/containers/aboutContainer';
-import ContactPage from './components/views/Contact';
+import scheduleContainer from './components/containers/scheduleContainer';
 import mainPageContainer from './components/containers/mainPageContainer';
 
 const appHistory = useRouterHistory(createHashHistory)({ queryKey: false });
@@ -25,7 +25,7 @@ const AppRouter = () => (
       <Route path="/about" component={aboutContainer} />
       <Route path="/works/:name" component={workPageContainer} />
       <Route path="/blog/:name" component={blogPostContainer} />
-      <Route path="/contact" component={ContactPage} />
+      <Route path="/contact" component={scheduleContainer} />
       <Route path="*" component={NoMatch} />
     </Route>
   </Router>

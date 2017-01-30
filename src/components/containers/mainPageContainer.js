@@ -76,6 +76,8 @@ class mainPage extends React.Component {
       aboutMe,
       myWorks,
       usefulResources,
+      instagramLink,
+      facebookLink,
     } = this.state.data;
 
     return (
@@ -112,9 +114,9 @@ class mainPage extends React.Component {
             <footer className={s.footer}>
               <a href="/aleksei_smoliar_cv.pdf">Download my CV</a>
               <div>
-                <a className={s.social} href="https://www.facebook.com/leshasmoliar"><FacebookR /></a>
-                <a className={s.social} href="https://www.instagram.com/leshasmoliar/"><TwitterR /></a>
-                <a className={s.social} href="https://www.instagram.com/leshasmoliar/"><InstagramR /></a>
+                <a className={s.social} href={facebookLink}><FacebookR /></a>
+                <a className={s.social} href=""><TwitterR /></a>
+                <a className={s.social} href={instagramLink}><InstagramR /></a>
               </div>
               <a href="http://shortcute.xyz/" target="_blank" rel="noopener noreferrer">created at /shortcute</a>
             </footer>

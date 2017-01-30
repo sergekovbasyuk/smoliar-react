@@ -6,7 +6,7 @@ import Third from '../Third';
 import Four from '../Four';
 import Five from '../Five';
 
-const AboutPage = ({ data, url }) => {
+const AboutPage = ({ data }) => {
   const {
     introTitle,
     introText,
@@ -21,14 +21,21 @@ const AboutPage = ({ data, url }) => {
     benefit3Text,
     conclusionTitle,
     conclusionText,
+    carouselImages,
   } = data;
+
+  const carouselImagesUrls = carouselImages === undefined ? null : carouselImages.map(x => x.fields.file.url);
 
   return (
     <div className="container">
-      <First title="About Me" />
+      <First
+        title="About Me"
+        backgroundImage="https://res.cloudinary.com/dsie3eeqb/image/upload/v1474998995/smoliar/bg-about_y7fmtx.jpg"
+      />
       <Second
         title={introTitle}
         description={introText}
+        backgroundImage="https://res.cloudinary.com/dsie3eeqb/image/upload/v1475051438/smoliar/bg-about2_wsso4o.jpg"
       />
       <Third
         text={quote}
@@ -48,17 +55,13 @@ const AboutPage = ({ data, url }) => {
         benefit3Text={benefit3Text}
       />
       <Five
-        images={[
-          'https://res.cloudinary.com/dsie3eeqb/image/upload/v1475003357/smoliar/slide-about_buecme.jpg',
-          'https://res.cloudinary.com/dsie3eeqb/image/upload/v1475003357/smoliar/slide-about_buecme.jpg',
-          'https://res.cloudinary.com/dsie3eeqb/image/upload/v1475003357/smoliar/slide-about_buecme.jpg',
-        ]}
+        images={carouselImagesUrls}
         title={conclusionTitle}
         text={conclusionText}
       />
     </div>
   );
-}
+};
 
 AboutPage.propTypes = {
   data: React.PropTypes.object.isRequired,

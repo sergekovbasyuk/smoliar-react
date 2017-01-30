@@ -28,7 +28,7 @@ const Blog = ({ data, handlePageClick, handleFilterChange, pageCount, carouselIt
       <section>
         {data.map((item, index) => {
           const style = {
-            backgroundImage: `url(${item.fields.carouselImages[0].fields.file.url})`,
+            backgroundImage: `url(${item.fields.backgroundImage === undefined ? null : item.fields.backgroundImage.fields.file.url})`,
           };
 
           return (

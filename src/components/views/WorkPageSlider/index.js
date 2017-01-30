@@ -20,7 +20,7 @@ const WorkPageSlider = ({ images }) => {
     <Slider {...settings}>
       {images.map((image, index) => (
         <div key={index}>
-          <img src={image.fields.file.url} alt="" className={s.slider} />
+          <img src={image} alt="" className={s.slider} />
         </div>
       ))}
     </Slider>

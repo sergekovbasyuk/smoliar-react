@@ -16,12 +16,20 @@ class WorkPage extends React.Component {
       return null;
     }
 
+    const styleNext = {
+      backgroundImage: `url(${nextItem.fields.backgroundImage.fields.file.url})`,
+    };
+
+    const stylePrev = {
+      backgroundImage: `url(${previousItem.fields.backgroundImage.fields.file.url})`,
+    };
+
     return (
       <section className={s.related}>
-        <div className={s.previous}>
+        <div className={s.previous} style={styleNext} >
           <Link to={`/works/${nextItem.sys.id}`} className={s.link}>previous project</Link>
         </div>
-        <div className={s.next}>
+        <div className={s.next} style={stylePrev} >
           <Link to={`/works/${previousItem.sys.id}`} className={s.link}>next project</Link>
         </div>
       </section>
@@ -30,23 +38,27 @@ class WorkPage extends React.Component {
 
   render() {
     const { data } = this.props;
+    const backgroundImageUrl = data.backgroundImage === undefined ? null : data.backgroundImage.fields.file.url;
+    const secondImageUrl = data.secondImage === undefined ? null : data.secondImage.fields.file.url;
+    const thirdImageUrl = data.thirdImage === undefined ? null : data.thirdImage.fields.file.url;
+    const carouselImagesUrls = data.carouselImages === undefined ? null : data.carouselImages.map(x => x.fields.file.url);
 
     return (
       <div className="container">
         <First
           title={data.title}
           description={data.description}
-          backgroundImage={data.backgroundImage}
+          backgroundImage={backgroundImageUrl}
         />
         <Second
           title={data.secondTitle}
           description={data.secondDescription}
           date={data.workDate}
-          backgroundImage={data.secondImage}
+          backgroundImage={secondImageUrl}
         />
         <Third
           text={data.thirdTitle}
-          image={data.thirdImage}
+          image={thirdImageUrl}
         />
         <section className={s.videoWrapper}>
           <iframe width="560" height="349" src="https://www.youtube.com/embed/vFwYJYl5GUQ?controls=0&modestbranding=1&rel=0&showinfo=0" frameBorder="0" allowFullScreen />
@@ -62,7 +74,7 @@ class WorkPage extends React.Component {
           benefit3Text={data.stars}
         />
         <Five
-          images={data.carouselImages}
+          images={carouselImagesUrls}
           title="Storyline"
           text={data.storyline}
         />

@@ -45,6 +45,7 @@ const TopSlider = ({ carouselItems, pathname }) => {
 
 TopSlider.propTypes = {
   carouselItems: React.PropTypes.array,
+  pathname: React.PropTypes.string,
 };
 
 export default TopSlider;

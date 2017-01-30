@@ -7,20 +7,7 @@ import ArrowLeft from '../../icons/arrowLeft';
 import ArrowRight from '../../icons/arrowRight';
 import Modal from '../Modal';
 
-const events = [
-  {
-    start: '2016-10-10',
-    end: '2016-10-12',
-    eventClasses: 'event-busy',
-  },
-  {
-    start: '2016-10-12',
-    end: '2016-10-14',
-    eventClasses: 'event-unconfirmed',
-  },
-];
-
-class ContactPage extends React.Component {
+class Schedule extends React.Component {
   constructor(props) {
     super(props);
 
@@ -34,44 +21,33 @@ class ContactPage extends React.Component {
     this.handleToday = this.handleToday.bind(this);
     this.handleDayClick = this.handleDayClick.bind(this);
     this.handleModalClose = this.handleModalClose.bind(this);
-    this.handleEventMouseOver = this.handleEventMouseOver.bind(this);
   }
-
   getHumanDate() {
     return [moment.months('MM', this.state.moment.month()), this.state.moment.year()].join(' ');
   }
-
   handleDayClick() {
     this.setState({
       showModal: true,
     });
   }
-
-  handleEventMouseOver() {
-    console.log('event');
-  }
-
   handleModalClose(e) {
     e.preventDefault();
     this.setState({
       showModal: false,
     });
   }
-
   handleNextMonth(e) {
     e.preventDefault();
     this.setState({
       moment: this.state.moment.add(1, 'M'),
     });
   }
-
   handlePreviousMonth(e) {
     e.preventDefault();
     this.setState({
       moment: this.state.moment.subtract(1, 'M'),
     });
   }
-
   handleToday(e) {
     e.preventDefault();
     this.setState({
@@ -80,6 +56,12 @@ class ContactPage extends React.Component {
   }
 
   render() {
+    let events;
+
+    if (this.props.data.items !== undefined) {
+      events = this.props.data.items.map(item => item.fields);
+    }
+
     return (
       <div className="container">
         <Modal show={this.state.showModal} onClick={this.handleModalClose} />
@@ -112,7 +94,6 @@ class ContactPage extends React.Component {
             year={this.state.moment.year()}
             events={events}
             onDayClick={this.handleDayClick}
-            onEventMouseOver={this.handleEventMouseOver}
           />
         </section>
       </div>
@@ -120,4 +101,8 @@ class ContactPage extends React.Component {
   }
 }
 
-export default ContactPage;
+Schedule.propTypes = {
+  data: React.PropTypes.object,
+};
+
+export default Schedule;

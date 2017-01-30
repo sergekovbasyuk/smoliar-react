@@ -2,48 +2,40 @@ import React from 'react';
 import s from './style.css';
 import Calendar from '../../icons/calendar';
 
-class Second extends React.Component {
-  render() {
-    const { title, description, date, backgroundImage } = this.props;
-    const style = {
-      backgroundImage: `url(${backgroundImage === undefined ? '' : backgroundImage.fields.file.url})`,
-      backgroundSize: 'contain',
-      width: '50%',
-    };
-    let releaseDate;
+const Second = ({ title, description, date, backgroundImage }) => {
+  const style = {
+    backgroundImage: `url(${backgroundImage})`,
+  };
 
-    if (date) {
-      releaseDate = (
-        <span><Calendar /> {date}</span>
-      );
-    } else {
-      releaseDate = null;
-    }
+  let releaseDate;
 
-    if (!this.props) {
-      return null;
-    }
-
-    return (
-      <section className={s.second}>
-        <div className={s.bg} style={style} />
-        <div className={s.content}>
-          <div className={s.description}>
-            <h1 className={s.title}>{title}</h1>
-            {releaseDate}
-            <p>{description}</p>
-          </div>
-        </div>
-      </section>
+  if (date) {
+    releaseDate = (
+      <span><Calendar /> {date}</span>
     );
+  } else {
+    releaseDate = null;
   }
-}
+
+  return (
+    <section className={s.second}>
+      <div className={s.bg} style={style} />
+      <div className={s.content}>
+        <div className={s.description}>
+          <h1 className={s.title}>{title}</h1>
+          {releaseDate}
+          <p>{description}</p>
+        </div>
+      </div>
+    </section>
+  );
+};
 
 Second.propTypes = {
   title: React.PropTypes.string,
   description: React.PropTypes.string,
   date: React.PropTypes.string,
-  backgroundImage: React.PropTypes.object,
+  backgroundImage: React.PropTypes.string,
 };
 
 export default Second;
