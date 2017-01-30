@@ -4,7 +4,12 @@ import Calendar from '../../icons/calendar';
 
 class Second extends React.Component {
   render() {
-    const { title, description, date } = this.props;
+    const { title, description, date, backgroundImage } = this.props;
+    const style = {
+      backgroundImage: `url(${backgroundImage === undefined ? '' : backgroundImage.fields.file.url})`,
+      backgroundSize: 'contain',
+      width: '50%',
+    };
     let releaseDate;
 
     if (date) {
@@ -21,7 +26,7 @@ class Second extends React.Component {
 
     return (
       <section className={s.second}>
-        <div className={s.bg} />
+        <div className={s.bg} style={style} />
         <div className={s.content}>
           <div className={s.description}>
             <h1 className={s.title}>{title}</h1>
@@ -38,6 +43,7 @@ Second.propTypes = {
   title: React.PropTypes.string,
   description: React.PropTypes.string,
   date: React.PropTypes.string,
+  backgroundImage: React.PropTypes.object,
 };
 
 export default Second;

@@ -36,15 +36,20 @@ class WorkPage extends React.Component {
 
     return (
       <div className="container">
-        <First title={data.workTitle} description={data.workDescription} />
+        <First
+          title={data.workTitle}
+          description={data.workDescription}
+          backgroundImage={data.workBackgroundImage}
+        />
         <Second
           title={data.workSecondTitle}
           description={data.workSecondDescription}
           date={data.workDate}
+          backgroundImage={data.workSecondImage}
         />
         <Third
           text={data.workThirdTitle}
-          image={thirdImage}
+          image={data.workThirdImage}
         />
         <section className={s.videoWrapper}>
           <iframe width="560" height="349" src="https://www.youtube.com/embed/vFwYJYl5GUQ?controls=0&modestbranding=1&rel=0&showinfo=0" frameBorder="0" allowFullScreen />
@@ -60,7 +65,7 @@ class WorkPage extends React.Component {
           benefit3Text={data.stars}
         />
         <Five
-          images={fifthImages}
+          images={data.carouselImages}
           title="Storyline"
           text={data.storyline}
         />
