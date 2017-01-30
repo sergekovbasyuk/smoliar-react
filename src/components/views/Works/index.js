@@ -5,11 +5,11 @@ import s from './style.css';
 import TopSlider from '../TopSlider';
 import Logo from '../../icons/logo';
 
-const Works = ({ data, handlePageClick, pageCount }) => (
+const Works = ({ data, handlePageClick, pageCount, carouselItems, pathname }) => (
   <div className="container">
     <section className={s.first}>
       <div className={s.logoContainer}><Logo /></div>
-      <TopSlider />
+      <TopSlider carouselItems={carouselItems} pathname={pathname} />
     </section>
     <div className={s.categories}>
       <span>check out my works</span>
@@ -17,15 +17,15 @@ const Works = ({ data, handlePageClick, pageCount }) => (
     <section>
       {data.map((item, index) => {
         const style = {
-          backgroundImage: `url(${data[index].fields.workBackgroundImage.fields.file.url})`,
+          backgroundImage: `url(${item.fields.backgroundImage.fields.file.url})`,
         };
 
         return (
           <div className={s.item} key={index} style={style}>
             <span className={s.category}>Work</span>
             <div>
-              <h1 className={s.title}>{data[index].fields.workTitle}</h1>
-              <Link to={`/works/${data[index].sys.id}`} className={s.link}>read more</Link>
+              <h1 className={s.title}>{item.fields.title}</h1>
+              <Link to={`/works/${item.sys.id}`} className={s.link}>read more</Link>
             </div>
           </div>
         );
@@ -51,6 +51,8 @@ Works.propTypes = {
   data: React.PropTypes.array,
   handlePageClick: React.PropTypes.func,
   pageCount: React.PropTypes.number,
+  carouselItems: React.PropTypes.array,
+  pathname: React.PropTypes.string,
 };
 
 export default Works;

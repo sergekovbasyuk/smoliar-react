@@ -5,7 +5,7 @@ import s from './style.css';
 import TopSlider from '../TopSlider';
 import Logo from '../../icons/logo';
 
-const Blog = ({ data, handlePageClick, handleFilterChange, pageCount }) => {
+const Blog = ({ data, handlePageClick, handleFilterChange, pageCount, carouselItems, pathname }) => {
   const filterClickHandler = (e) => {
     const activeFilter = document.querySelector('.is-active');
     e.preventDefault();
@@ -17,7 +17,7 @@ const Blog = ({ data, handlePageClick, handleFilterChange, pageCount }) => {
     <div className="container">
       <section className={s.first}>
         <div className={s.logoContainer}><Logo /></div>
-        <TopSlider />
+        <TopSlider carouselItems={carouselItems} pathname={pathname} />
       </section>
       <ul className={s.categories} >
         <li className={`is-active ${s.catItem}`} ><a onClick={filterClickHandler} href="">All</a></li>
@@ -28,15 +28,15 @@ const Blog = ({ data, handlePageClick, handleFilterChange, pageCount }) => {
       <section>
         {data.map((item, index) => {
           const style = {
-            backgroundImage: `url(${data[index].fields.carouselImages[0].fields.file.url})`,
+            backgroundImage: `url(${item.fields.carouselImages[0].fields.file.url})`,
           };
 
           return (
             <div className={s.item} key={index} style={style}>
-              <span className={s.category}>{data[index].fields.category}</span>
+              <span className={s.category}>{item.fields.category}</span>
               <div>
-                <h1 className={s.title}>{data[index].fields.title}</h1>
-                <Link to={`/blog/${data[index].sys.id}`} className={s.link}>read more</Link>
+                <h1 className={s.title}>{item.fields.title}</h1>
+                <Link to={`/blog/${item.sys.id}`} className={s.link}>read more</Link>
               </div>
             </div>
           );
@@ -64,6 +64,7 @@ Blog.propTypes = {
   handlePageClick: React.PropTypes.func,
   handleFilterChange: React.PropTypes.func,
   pageCount: React.PropTypes.number,
+  carouselItems: React.PropTypes.array,
 };
 
 export default Blog;

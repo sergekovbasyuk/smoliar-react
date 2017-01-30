@@ -31,10 +31,15 @@ class blogContainer extends React.Component {
       limit: this.state.limit,
       skip: this.state.skip,
     })
-      .then(response => this.setState({
-        data: response.items,
-        pageCount: Math.ceil(response.total / response.limit),
-      }))
+      .then((response) => {
+        const carouselItems = response.items.filter(item => item.fields.addToCarousel === true);
+
+        this.setState({
+          data: response.items,
+          pageCount: Math.ceil(response.total / response.limit),
+          carouselItems,
+        });
+      })
       .catch(error => console.log(error));
   }
 
@@ -63,9 +68,15 @@ class blogContainer extends React.Component {
         handlePageClick={this.handlePageClick}
         handleFilterChange={this.handleFilterChange}
         pageCount={this.state.pageCount}
+        carouselItems={this.state.carouselItems}
+        pathname={this.props.location.pathname}
       />
     );
   }
 }
+
+blogContainer.propTypes = {
+  location: React.PropTypes.object,
+};
 
 export default blogContainer;

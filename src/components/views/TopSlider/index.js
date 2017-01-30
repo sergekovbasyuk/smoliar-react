@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router';
 import Slider from 'react-slick';
 import s from './style.css';
 
-const TopSlider = () => {
+const TopSlider = ({ carouselItems, pathname }) => {
   const settings = {
     arrows: false,
     dots: true,
@@ -13,40 +14,37 @@ const TopSlider = () => {
     className: 'TopSlider',
   };
 
+  if (!carouselItems) {
+    return null;
+  }
+
   return (
     <Slider {...settings}>
-      <div className={s.item}>
-        <div className={s.content}>
-          <h1 className={s.title}>Change Your Mind Change Your Luck</h1>
-          <p className={s.decription}>You may be a skillful,
-          effective employer but if you don’t trust your personnel
-          and the opposite, then the chances of improving and
-          expanding the business you deal with, are extremely limited.</p>
-          <span to="/about" className={s.link}>read more</span>
-        </div>
-      </div>
-      <div className={s.item}>
-        <div className={s.content}>
-          <h1 className={s.title}>Change Your Mind Change Your Luck</h1>
-          <p className={s.decription}>You may be a skillful,
-          effective employer but if you don’t trust your personnel
-          and the opposite, then the chances of improving and
-          expanding the business you deal with, are extremely limited.</p>
-          <span to="/about" className={s.link}>read more</span>
-        </div>
-      </div>
-      <div className={s.item}>
-        <div className={s.content}>
-          <h1 className={s.title}>Change Your Mind Change Your Luck</h1>
-          <p className={s.decription}>You may be a skillful,
-          effective employer but if you don’t trust your personnel
-          and the opposite, then the chances of improving and
-          expanding the business you deal with, are extremely limited.</p>
-          <span to="/about" className={s.link}>read more</span>
-        </div>
-      </div>
+      { carouselItems.map((item, index) => {
+        let style;
+
+        if (item.fields.backgroundImage) {
+          style = {
+            backgroundImage: `url(${item.fields.backgroundImage.fields.file.url})`,
+          };
+        }
+
+        return (
+          <div className={s.item} style={style} key={index}>
+            <div className={s.content}>
+              <h1 className={s.title}>{item.fields.title}</h1>
+              <p className={s.decription}>{item.fields.description}</p>
+              <Link to={`${pathname}/${item.sys.id}`} className={s.link}>read more</Link>
+            </div>
+          </div>
+        );
+      })}
     </Slider>
   );
+};
+
+TopSlider.propTypes = {
+  carouselItems: React.PropTypes.array,
 };
 
 export default TopSlider;
