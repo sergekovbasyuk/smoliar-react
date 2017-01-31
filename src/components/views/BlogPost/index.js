@@ -83,6 +83,7 @@ class BlogPost extends React.Component {
 
     const backgroundImageUrl = backgroundImage === undefined ? null : backgroundImage.fields.file.url;
 
+    const url = document.URL;
 
     return (
       <div className="container">
@@ -94,9 +95,9 @@ class BlogPost extends React.Component {
         <section className={s.body}>
           <article className={s.post}>
             <div className={s.share}>
-              <a href=""><Facebook /></a>
-              <a href=""><Twitter /></a>
-              <a href=""><LinkedIn /></a>
+              <a href={`http://www.facebook.com/sharer.php?u=${url}`}><Facebook /></a>
+              <a href={`http://twitter.com/share?url=${url}`}><Twitter /></a>
+              <a href={`http://www.linkedin.com/shareArticle?mini=true&url=${url}`}><LinkedIn /></a>
             </div>
             <p className={s.preface}>{intro}</p>
             <p>{firstHalf}</p>
