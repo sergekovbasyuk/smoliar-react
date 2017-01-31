@@ -27,7 +27,7 @@
   margin: 0 3px 3px;
   height: 82px;
   position: relative;
-  cursor: pointer;
+  /*cursor: pointer;*/
 
   /*&::after {
     content: 'book';

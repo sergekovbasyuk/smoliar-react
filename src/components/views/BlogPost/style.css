@@ -108,7 +108,7 @@
 
 .itemTitle {
   composes: minorTitle from '../../../css/generic.css';
-  color: #fddc94;
+  /*color: #fddc94;*/
   font-size: 26px;
   text-align: left;
 }

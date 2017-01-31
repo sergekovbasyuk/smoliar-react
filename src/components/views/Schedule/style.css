@@ -1,5 +1,6 @@
 .title {
   composes: title from '../../../css/generic.css';
+  margin-bottom: 20px;
 }
 
 .link {
@@ -9,7 +10,7 @@
 .topDescription {
   max-width: 560px;
   padding: 0 20px;
-  margin: 0;
+  margin: 0 0 34px;
 }
 
 .first {
@@ -20,7 +21,7 @@
   text-align: center;
   align-items: center;
   flex-direction: column;
-  background-image: url('https://res.cloudinary.com/dsie3eeqb/image/upload/v1474998995/smoliar/bg-about_y7fmtx.jpg');
+  background-image: url('https://res.cloudinary.com/dsie3eeqb/image/upload/v1485861452/smoliar/schedule-bg.jpg');
 
   @media (min-width: 768px) {
     min-height: 43vw;

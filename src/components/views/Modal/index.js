@@ -5,7 +5,7 @@ import Cross from '../../icons/cross';
 const Modal = ({ show, onClick }) => (
   <div className={s.overlay + (show ? ' is-open' : ' ')}>
     <div className={s.modal}>
-      <a className={s.close} href="" onClick={onClick}><Cross /></a>
+      <span className={s.close} href="" onClick={onClick}><Cross /></span>
       <div className={s.img} />
       <div className={s.content}>
         <h1 className={s.title}>book me</h1>

@@ -19,22 +19,34 @@ class Schedule extends React.Component {
     this.handleNextMonth = this.handleNextMonth.bind(this);
     this.handlePreviousMonth = this.handlePreviousMonth.bind(this);
     this.handleToday = this.handleToday.bind(this);
-    this.handleDayClick = this.handleDayClick.bind(this);
+    this.handleModalOpen = this.handleModalOpen.bind(this);
     this.handleModalClose = this.handleModalClose.bind(this);
+    this.listenForEsc = this.listenForEsc.bind(this);
+  }
+  componentDidMount() {
+    window.addEventListener('keydown', this.listenForEsc, true);
+  }
+  componentWillUnmount() {
+    window.removeEventListener('keydown', this.listenForEsc, true);
   }
   getHumanDate() {
     return [moment.months('MM', this.state.moment.month()), this.state.moment.year()].join(' ');
   }
-  handleDayClick() {
+  handleModalOpen(e) {
+    e.preventDefault();
     this.setState({
       showModal: true,
     });
   }
-  handleModalClose(e) {
-    e.preventDefault();
+  handleModalClose() {
     this.setState({
       showModal: false,
     });
+  }
+  listenForEsc(e) {
+    if (e.key === 'Escape' || e.keyCode === 27) {
+      this.handleModalClose();
+    }
   }
   handleNextMonth(e) {
     e.preventDefault();
@@ -69,6 +81,7 @@ class Schedule extends React.Component {
           <div className={s.logoContainer}><Logo /></div>
           <h1 className={s.title}>Schedule</h1>
           <p className={s.topDescription}>check my spare time to be on point</p>
+          <a href="#" className={s.link} onClick={this.handleModalOpen}>book</a>
         </section>
         <section className={s.calendar}>
           <div className={s.calendarTop}>

@@ -5,7 +5,6 @@ import jquery from 'jquery';
 import s from '../views/mainPage/style.css';
 import FacebookR from '../icons/facebook_r';
 import InstagramR from '../icons/instagram_r';
-import TwitterR from '../icons/twitter_r';
 import First from '../views/mainPage/First';
 import AboutMe from '../views/mainPage/AboutMe';
 import Works from '../views/mainPage/Works';
@@ -115,7 +114,6 @@ class mainPage extends React.Component {
               <a href="/aleksei_smoliar_cv.pdf">Download my CV</a>
               <div>
                 <a className={s.social} href={facebookLink}><FacebookR /></a>
-                <a className={s.social} href=""><TwitterR /></a>
                 <a className={s.social} href={instagramLink}><InstagramR /></a>
               </div>
               <a href="http://shortcute.xyz/" target="_blank" rel="noopener noreferrer">created at /shortcute</a>
