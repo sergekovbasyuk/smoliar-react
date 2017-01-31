@@ -63,7 +63,14 @@ class BlogPost extends React.Component {
     );
   }
 
-  render() {
+  slider() {
+    const { carouselImages } = this.props.data;
+
+    if (!carouselImages) {
+      return null;
+    }
+
+    const carouselImagesUrls = carouselImages.map(x => x.fields.file.url);
     const settings = {
       arrows: false,
       dots: true,
@@ -72,6 +79,23 @@ class BlogPost extends React.Component {
       slidesToShow: 1,
       slidesToScroll: 1,
     };
+
+    return (
+      <div className={s.sliderWrapper}>
+        <a className={s.arrowPrev} onClick={this.previous} href=""><ArrowPrev /></a>
+        <a className={s.arrowNext} onClick={this.next} href=""><ArrowNext /></a>
+        <Slider {...settings} ref={ref => (this.slider = ref)}>
+          {carouselImagesUrls.map((item, index) => (
+            <div key={index}>
+              <img src={item} alt="" className={s.slider} />
+            </div>
+          ))}
+        </Slider>
+      </div>
+    );
+  }
+
+  render() {
     const {
       title,
       description,
@@ -82,7 +106,6 @@ class BlogPost extends React.Component {
     } = this.props.data;
 
     const backgroundImageUrl = backgroundImage === undefined ? null : backgroundImage.fields.file.url;
-
     const url = document.URL;
 
     return (
@@ -101,15 +124,7 @@ class BlogPost extends React.Component {
             </div>
             <p className={s.preface}>{intro}</p>
             <p>{firstHalf}</p>
-            <div className={s.sliderWrapper}>
-              <a className={s.arrowPrev} onClick={this.previous} href=""><ArrowPrev /></a>
-              <a className={s.arrowNext} onClick={this.next} href=""><ArrowNext /></a>
-              <Slider {...settings} ref={ref => (this.slider = ref)}>
-                <div><img src="https://res.cloudinary.com/dsie3eeqb/image/upload/v1475062549/smoliar/slide-about2_yg37ce.jpg" alt="" className={s.slider} /></div>
-                <div><img src="https://res.cloudinary.com/dsie3eeqb/image/upload/v1475062549/smoliar/slide-about2_yg37ce.jpg" alt="" className={s.slider} /></div>
-                <div><img src="https://res.cloudinary.com/dsie3eeqb/image/upload/v1475062549/smoliar/slide-about2_yg37ce.jpg" alt="" className={s.slider} /></div>
-              </Slider>
-            </div>
+            {this.slider()}
             <p>{secondHalf}</p>
           </article>
           {this.related()}
