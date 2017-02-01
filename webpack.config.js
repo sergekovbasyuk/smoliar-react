@@ -7,36 +7,37 @@ const parts = require('./libs/parts');
 const PATHS = {
   app: path.join(__dirname, 'src'),
   build: path.join(__dirname, 'build'),
-  images: path.join(__dirname, 'src/img')
+  images: path.join(__dirname, 'src/img'),
 };
 
 const common = {
   entry: {
-    app: PATHS.app
+    app: PATHS.app,
   },
   output: {
     path: PATHS.build,
-    filename: '[name].js'
+    publicPath: '/',
+    filename: '[name].js',
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'template.ejs',
+      template: 'src/template.ejs',
       title: 'Aleksei Smoliar',
       appMountId: 'app',
       inject: false,
       mobile: true,
-      favicon: 'favicon.ico'
-    })
+      favicon: 'favicon.ico',
+    }),
   ],
   resolve: {
-    extensions: ['', '.js', '.jsx']
-  }
+    extensions: ['', '.js', '.jsx'],
+  },
 };
 
 var config;
 
 // Detect how npm is run and branch based on that
-switch(process.env.npm_lifecycle_event) {
+switch (process.env.npm_lifecycle_event) {
   case 'build':
     config = merge(
       common,
@@ -48,8 +49,8 @@ switch(process.env.npm_lifecycle_event) {
           filename: '[name].[chunkhash].js',
           // This is used for require.ensure. The setup
           // will work without but this is useful to set.
-          chunkFilename: '[chunkhash].js'
-        }
+          chunkFilename: '[chunkhash].js',
+        },
       },
       parts.clean(PATHS.build),
       parts.setFreeVariable(
@@ -58,7 +59,7 @@ switch(process.env.npm_lifecycle_event) {
       ),
       parts.extractBundle({
         name: 'vendor',
-        entries: ['react', 'react-dom', 'jquery', 'fullpage.js']
+        entries: ['react', 'react-dom', 'react-router', 'jquery', 'fullpage.js'],
       }),
       parts.minify(),
       parts.setupCSS(PATHS.app),
@@ -73,7 +74,7 @@ switch(process.env.npm_lifecycle_event) {
     config = merge(
       common,
       {
-        devtool: 'eval-source-map'
+        devtool: 'eval-source-map',
       },
       parts.setupCSS(PATHS.app),
       parts.extractImage(PATHS.images),

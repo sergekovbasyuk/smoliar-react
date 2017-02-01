@@ -1,6 +1,6 @@
 import React from 'react';
-import { Router, Route, IndexRoute, useRouterHistory } from 'react-router';
-import { createHashHistory } from 'react-router/node_modules/history';
+import { Router, Route, IndexRoute, useRouterHistory, browserHistory } from 'react-router';
+// import { createHashHistory } from 'react-router/node_modules/history';
 import mainLayout from './components/layouts/mainLayout';
 import blogContainer from './components/containers/blogContainer';
 import worksContainer from './components/containers/worksContainer';
@@ -10,14 +10,14 @@ import aboutContainer from './components/containers/aboutContainer';
 import scheduleContainer from './components/containers/scheduleContainer';
 import mainPageContainer from './components/containers/mainPageContainer';
 
-const appHistory = useRouterHistory(createHashHistory)({ queryKey: false });
+// const appHistory = useRouterHistory(createHashHistory)({ queryKey: false });
 
 function NoMatch() {
   return <div>Not found</div>;
 }
 
 const AppRouter = () => (
-  <Router onUpdate={() => window.scrollTo(0, 0)} history={appHistory}>
+  <Router onUpdate={() => window.scrollTo(0, 0)} history={browserHistory}>
     <Route path="/" component={mainLayout}>
       <IndexRoute component={mainPageContainer} />
       <Route path="/works" component={worksContainer} />
