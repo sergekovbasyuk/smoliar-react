@@ -35,7 +35,8 @@ const AboutPage = ({ data }) => {
       <Second
         title={introTitle}
         description={introText}
-        backgroundImage="https://res.cloudinary.com/dsie3eeqb/image/upload/v1475051438/smoliar/bg-about2_wsso4o.jpg"
+        // backgroundImage="https://res.cloudinary.com/dsie3eeqb/image/upload/v1475051438/smoliar/bg-about2_wsso4o.jpg"
+        backgroundImage="https://res.cloudinary.com/dsie3eeqb/image/upload/v1486033603/about-second-image_yfgs8u.jpg"
       />
       <Third
         text={quote}

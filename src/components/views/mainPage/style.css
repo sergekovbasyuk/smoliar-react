@@ -1,8 +1,5 @@
 .content {
   padding: 0 60px;
-  position: absolute;
-  top: calc(40vh - 30px);
-  text-align: justify;
 
   @media (min-width: 768px) {
     padding: 0 0 0 140px;
@@ -11,7 +8,7 @@
 
   p {
     max-width: 590px;
-    margin: 0 0 20px;
+    margin: 0 0 50px;
 
     span {
       text-transform: uppercase;
@@ -42,7 +39,6 @@
 }
 
 .link {
-  margin-top: 70px;
   composes: link from '../../../css/generic.css';
   z-index: 1;
 }
@@ -81,4 +77,11 @@
 
 .social {
   display: inline-block;
+}
+
+.schedule,
+.email {
+  p {
+    margin-bottom: 50px;
+  }
 }

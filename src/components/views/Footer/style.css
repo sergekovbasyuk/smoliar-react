@@ -58,7 +58,7 @@
   margin-bottom: 0;
 
   @media (min-width: 768px) {
-    margin-bottom: inherit;
+    margin-bottom: 54px;
   }
 }
 
@@ -83,11 +83,13 @@
   }
 }
 
+.email,
+.schedule {
+  p {
+    margin-bottom: 50px;
+  }
+}
+
 .link {
   composes: link from '../../../css/generic.css';
-  margin-top: 18px;
-
-  @media (min-width: 768px) {
-    margin-top: 32px;
-  }
 }

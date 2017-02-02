@@ -34,7 +34,7 @@ const TopSlider = ({ carouselItems, pathname }) => {
             <div className={s.content}>
               <h1 className={s.title}>{item.fields.title}</h1>
               <p className={s.decription}>{item.fields.description}</p>
-              <Link to={`${pathname}/${item.sys.id}`} className={s.link}>read more</Link>
+              <Link to={`${pathname}${item.sys.id}`} className={s.link}>read more</Link>
             </div>
           </div>
         );

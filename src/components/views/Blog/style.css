@@ -25,6 +25,8 @@
   composes: minorTitle from '../../../css/generic.css';
   /*color: #fddc94;*/
   max-width: 270px;
+  text-transform: none;
+  margin-bottom: 36px;
 
   @media (min-width: 768px) {
     max-width: 485px;

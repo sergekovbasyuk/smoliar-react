@@ -21,4 +21,5 @@
 .minorTitle {
   composes: minorTitle from '../../../css/generic.css';
   margin-top: 0;
+  text-transform: none;
 }

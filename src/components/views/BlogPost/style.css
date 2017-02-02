@@ -73,7 +73,7 @@
 
 .item {
   position: relative;
-  padding: 20px;
+  padding: 20px 20px 50px;
   width: 100%;
   height: 100vw;
   display: inline-flex;
@@ -85,6 +85,7 @@
   @media (min-width: 768px) {
     width: calc(50% - 16px);
     height: 26vw;
+    padding-bottom: 20px;
 
     &:hover {
       .link,
@@ -116,7 +117,7 @@
 .link {
   composes: link from '../../../css/generic.css';
   z-index: 0;
-  display: none;
+  /*display: none;*/
 
   @media (min-width: 768px) {
     display: inline-block;

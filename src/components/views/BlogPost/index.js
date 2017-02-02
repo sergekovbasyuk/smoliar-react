@@ -48,14 +48,14 @@ class BlogPost extends React.Component {
             <span className={s.category}>{nextItem.fields.category}</span>
             <div>
               <h1 className={s.itemTitle}>{nextItem.fields.title}</h1>
-              <Link to={`blog/${nextItem.sys.id}`} className={s.link}>read more</Link>
+              <Link to={`${nextItem.sys.id}`} className={s.link}>read more</Link>
             </div>
           </div>
           <div className={s.item} style={stylePrev} >
             <span className={s.category}>{previousItem.fields.category}</span>
             <div>
               <h1 className={s.itemTitle}>{previousItem.fields.title}</h1>
-              <Link to={`blog/${previousItem.sys.id}`} className={s.link}>read more</Link>
+              <Link to={`${previousItem.sys.id}`} className={s.link}>read more</Link>
             </div>
           </div>
         </div>

@@ -10,7 +10,7 @@
 }
 
 .title {
-  composes: title from '../Blog/style.css';
+  composes: title from '../../../css/generic.css';
   margin-top: 0;
   margin-bottom: 20px;
 
@@ -20,7 +20,7 @@
 }
 
 .link {
-  composes: link from '../Blog/style.css';
+  composes: link from '../../../css/generic.css';
   opacity: 1;
 }
 

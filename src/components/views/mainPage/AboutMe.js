@@ -6,7 +6,9 @@ const AboutMe = ({ aboutMe }) => (
   <section className="section">
     <div className={s.content}>
       <h1 className={s.title}>About Me</h1>
-      <p>Ukrainian - First Assistant Director</p>
+      <span>Ukrainian - First Assistant Director</span>
+      <br />
+      <br />
       <p>{aboutMe}</p>
       <Link to="/about" className={s.link}>read more</Link>
     </div>
