@@ -12,11 +12,13 @@ class blogContainer extends React.Component {
     };
 
     this.loadData = this.loadData.bind(this);
+    this.loadCarouselItems = this.loadCarouselItems.bind(this);
     this.handlePageClick = this.handlePageClick.bind(this);
     this.handleFilterChange = this.handleFilterChange.bind(this);
   }
 
   componentDidMount() {
+    this.loadCarouselItems();
     this.loadData();
   }
 
@@ -32,16 +34,24 @@ class blogContainer extends React.Component {
       skip: this.state.skip,
     })
       .then((response) => {
-        const carouselItems = response.items.filter(item => item.fields.addToCarousel === true);
-
         this.setState({
           data: response.items,
           pageCount: Math.ceil(response.total / response.limit),
-          carouselItems,
         });
       })
       .catch(error => console.log(error));
   }
+
+  loadCarouselItems() {
+    client.getEntries({
+      content_type: 'blogPost',
+      'fields.addToCarousel': true,
+    })
+      .then((response) => {
+        this.setState({ carouselItems: response.items });
+      });
+  }
+
 
   handlePageClick(data) {
     const perPage = 7;

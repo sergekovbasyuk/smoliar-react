@@ -10,14 +10,12 @@
   padding: 30px 0;
 
   @media (min-width: 768px) {
-    /*width: 50%;*/
     height: auto;
     position: absolute;
     left: 0;
     top: 0;
     bottom: 0;
     right: 0;
-    /*background-size: contain;*/
   }
 }
 
