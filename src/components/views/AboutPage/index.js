@@ -7,7 +7,7 @@ import Third from '../Third';
 import Four from '../Four';
 import Five from '../Five';
 
-const AboutPage = ({ data, videoId }) => {
+const AboutPage = ({ data, videoId, location }) => {
   const {
     introTitle,
     introText,
@@ -36,7 +36,9 @@ const AboutPage = ({ data, videoId }) => {
       <Second
         title={introTitle}
         description={introText}
-        backgroundImage="https://res.cloudinary.com/dsie3eeqb/image/upload/v1486033603/about-second-image_yfgs8u.jpg"
+        location={location}
+        // backgroundImage="https://res.cloudinary.com/dsie3eeqb/image/upload/v1486033603/about-second-image_yfgs8u.jpg"
+        backgroundImage="http://res.cloudinary.com/dsie3eeqb/image/upload/v1475051438/smoliar/bg-about2_wsso4o.jpg"
       />
       <Third
         text={quote}

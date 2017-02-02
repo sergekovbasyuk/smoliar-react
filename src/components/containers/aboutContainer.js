@@ -42,7 +42,7 @@ class aboutContainer extends React.Component {
     const videoId = this.state.data.videoLink === undefined ? null : this.getYouTubeID(this.state.data.videoLink);
 
     return (
-      <AboutPage data={this.state.data} videoId={videoId} />
+      <AboutPage data={this.state.data} videoId={videoId} location={this.props.location.pathname} />
     );
   }
 }

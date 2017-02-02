@@ -2,11 +2,11 @@ import React from 'react';
 import s from './style.css';
 import Calendar from '../../icons/calendar';
 
-const Second = ({ title, description, date, backgroundImage }) => {
-  // const style = {
-  //   backgroundImage: `url(${backgroundImage})`,
-  // };
-
+const Second = ({ title, description, date, backgroundImage, location }) => {
+  const style = {
+    backgroundImage: `url(${backgroundImage})`,
+  };
+  let img;
   let releaseDate;
 
   if (date) {
@@ -17,10 +17,15 @@ const Second = ({ title, description, date, backgroundImage }) => {
     releaseDate = null;
   }
 
+  if (location === '/about') {
+    img = <div className={s.bg} style={style} />;
+  } else {
+    img = <img src={backgroundImage} className={s.posterImage} alt="" />;
+  }
+
   return (
     <section className={s.second}>
-      {/* <div className={s.bg} style={style} /> */}
-      <img src={backgroundImage} className={s.posterImage} alt="" />
+      {img}
       <div className={s.content}>
         <div className={s.description}>
           <h1 className={s.title}>{title}</h1>
@@ -37,6 +42,7 @@ Second.propTypes = {
   description: React.PropTypes.string,
   date: React.PropTypes.string,
   backgroundImage: React.PropTypes.string,
+  location: React.PropTypes.string,
 };
 
 export default Second;

@@ -7,18 +7,17 @@
   height: 87.5vw;
   width: 100%;
   background-size: cover;
-  padding: 8% 0;
-  background-origin: content-box;
+  padding: 30px 0;
 
   @media (min-width: 768px) {
-    width: 50%;
+    /*width: 50%;*/
     height: auto;
     position: absolute;
     left: 0;
     top: 0;
     bottom: 0;
     right: 0;
-    background-size: contain;
+    /*background-size: contain;*/
   }
 }
 
@@ -36,10 +35,12 @@
 
 .content {
   composes: content from '../../../css/generic.css';
+  min-height: initial;
 }
 
 .description {
   composes: description from '../../../css/generic.css';
+  padding: 40px 20px;
 }
 
 .title {
