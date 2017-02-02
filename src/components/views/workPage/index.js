@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import YouTube from 'react-youtube';
 import s from './style.css';
 import First from '../First';
 import Second from '../Second';
@@ -37,7 +38,7 @@ class WorkPage extends React.Component {
   }
 
   render() {
-    const { data } = this.props;
+    const { data, videoId } = this.props;
     const backgroundImageUrl = data.backgroundImage === undefined ? null : data.backgroundImage.fields.file.url;
     const secondImageUrl = data.secondImage === undefined ? null : data.secondImage.fields.file.url;
     const thirdImageUrl = data.thirdImage === undefined ? null : data.thirdImage.fields.file.url;
@@ -61,7 +62,7 @@ class WorkPage extends React.Component {
           image={thirdImageUrl}
         />
         <section className={s.videoWrapper}>
-          <iframe width="560" height="349" src="https://www.youtube.com/embed/vFwYJYl5GUQ?controls=0&modestbranding=1&rel=0&showinfo=0" frameBorder="0" allowFullScreen />
+          <YouTube videoId={videoId} />
         </section>
         <Four
           benefitsTitle={data.textSectionTitle}

@@ -26,6 +26,18 @@ class workPageContainer extends React.Component {
     this.unmounted = true;
   }
 
+  getYouTubeID(url) {
+    let ID = '';
+    url = url.replace(/(>|<)/gi,'').split(/(vi\/|v=|\/v\/|youtu\.be\/|\/embed\/)/);
+    if (url[2] !== undefined) {
+      ID = url[2].split(/[^0-9a-z_\-]/i);
+      ID = ID[0];
+    } else {
+      ID = url;
+    }
+    return ID.toString();
+  }
+
   loadData() {
     client.getEntries({
       content_type: 'work',
@@ -46,11 +58,14 @@ class workPageContainer extends React.Component {
   }
 
   render() {
+    const videoId = this.state.data.videoLink === undefined ? null : this.getYouTubeID(this.state.data.videoLink);
+
     return (
       <WorkPage
         data={this.state.data}
         nextItem={this.state.nextItem}
         previousItem={this.state.previousItem}
+        videoId={videoId}
       />
     );
   }

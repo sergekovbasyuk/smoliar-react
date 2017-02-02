@@ -1,10 +1,9 @@
 .videoWrapper {
   position: relative;
-  padding-bottom: 87.5%;
+  padding-bottom: 56.25%;
   height: 0;
 
   @media (min-width: 768px) {
-    padding-bottom: 42%;
     padding-top: 25px;
   }
 

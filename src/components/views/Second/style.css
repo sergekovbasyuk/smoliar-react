@@ -7,6 +7,8 @@
   height: 87.5vw;
   width: 100%;
   background-size: cover;
+  padding: 8% 0;
+  background-origin: content-box;
 
   @media (min-width: 768px) {
     width: 50%;
@@ -17,6 +19,18 @@
     bottom: 0;
     right: 0;
     background-size: contain;
+  }
+}
+
+.posterImage {
+  display: block;
+  margin: 8% auto;
+  width: 100%;
+  height: auto;
+
+  @media (min-width: 426px) {
+    box-shadow: 8px 6px 70px 0 rgba(0, 0, 0, 0.35);
+    width: inherit;
   }
 }
 

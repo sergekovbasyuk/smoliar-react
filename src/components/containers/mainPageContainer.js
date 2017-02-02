@@ -111,8 +111,8 @@ class mainPage extends React.Component {
               </div>
             </div>
             <footer className={s.footer}>
-              <a href="/aleksei_smoliar_cv.pdf">Download my CV</a>
-              <div>
+              <a href="/aleksei_smoliar_cv.pdf" className={s.cvLink}>Download my CV</a>
+              <div className={s.socialIcons}>
                 <a className={s.social} href={facebookLink}><FacebookR /></a>
                 <a className={s.social} href={instagramLink}><InstagramR /></a>
               </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import YouTube from 'react-youtube';
 import s from './style.css';
 import First from '../First';
 import Second from '../Second';
@@ -6,7 +7,7 @@ import Third from '../Third';
 import Four from '../Four';
 import Five from '../Five';
 
-const AboutPage = ({ data }) => {
+const AboutPage = ({ data, videoId }) => {
   const {
     introTitle,
     introText,
@@ -35,7 +36,6 @@ const AboutPage = ({ data }) => {
       <Second
         title={introTitle}
         description={introText}
-        // backgroundImage="https://res.cloudinary.com/dsie3eeqb/image/upload/v1475051438/smoliar/bg-about2_wsso4o.jpg"
         backgroundImage="https://res.cloudinary.com/dsie3eeqb/image/upload/v1486033603/about-second-image_yfgs8u.jpg"
       />
       <Third
@@ -43,7 +43,7 @@ const AboutPage = ({ data }) => {
         image="https://res.cloudinary.com/dsie3eeqb/image/upload/v1475003357/smoliar/slide-about_buecme.jpg"
       />
       <section className={s.videoWrapper}>
-        <iframe width="560" height="349" src="https://www.youtube.com/embed/vFwYJYl5GUQ?controls=0&modestbranding=1&rel=0&showinfo=0" frameBorder="0" allowFullScreen />
+        <YouTube videoId={videoId} />
       </section>
       <Four
         benefitsTitle={benefitsTitle}
@@ -66,6 +66,7 @@ const AboutPage = ({ data }) => {
 
 AboutPage.propTypes = {
   data: React.PropTypes.object.isRequired,
+  videoId: React.PropTypes.string,
 };
 
 export default AboutPage;

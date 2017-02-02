@@ -85,3 +85,21 @@
     margin-bottom: 50px;
   }
 }
+
+.cvLink {
+  margin-bottom: 12px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+  }
+}
+
+.socialIcons {
+  order: 2;
+  margin-top: 20px;
+
+  @media (min-width: 768px) {
+    order: initial;
+    margin-top: 0;
+  }
+}

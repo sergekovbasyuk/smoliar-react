@@ -3,9 +3,9 @@ import s from './style.css';
 import Calendar from '../../icons/calendar';
 
 const Second = ({ title, description, date, backgroundImage }) => {
-  const style = {
-    backgroundImage: `url(${backgroundImage})`,
-  };
+  // const style = {
+  //   backgroundImage: `url(${backgroundImage})`,
+  // };
 
   let releaseDate;
 
@@ -19,7 +19,8 @@ const Second = ({ title, description, date, backgroundImage }) => {
 
   return (
     <section className={s.second}>
-      <div className={s.bg} style={style} />
+      {/* <div className={s.bg} style={style} /> */}
+      <img src={backgroundImage} className={s.posterImage} alt="" />
       <div className={s.content}>
         <div className={s.description}>
           <h1 className={s.title}>{title}</h1>
