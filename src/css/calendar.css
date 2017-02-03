@@ -27,51 +27,6 @@
   margin: 0 3px 3px;
   height: 82px;
   position: relative;
-  /*cursor: pointer;*/
-
-  /*&::after {
-    content: 'book';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    font-size: 22px;
-    color: #fff;
-    font-weight: bold;
-    font-family: 'Lato', sans-serif;
-    opacity: 0;
-    transition: opacity 300ms;
-  }
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 58%;
-    left: 55%;
-    transform: translateX(-50%) translateY(-50%);
-    height: 8px;
-    width: 85px;
-    display: block;
-    background: #1287f4;
-    z-index: 0;
-    opacity: 0;
-    transition: opacity 300ms;
-  }
-
-  &:hover {
-    &::before,
-    &::after {
-      opacity: 1;
-    }
-  }*/
-}
-
-:global .inactive {
-
-}
-
-:global .today {
-
 }
 
 :global .inner-grid {
@@ -85,10 +40,6 @@
   left: -10px;
   right: -10px;
   bottom: -10px;
-}
-
-:global .event {
-
 }
 
 :global .event-title {
@@ -116,16 +67,8 @@
   }
 }
 
-:global .event-first-day {
-
-}
-
 :global .event-last-day {
   :global .event-title {
     right: 24px;
   }
-}
-
-:global .date {
-
 }

@@ -48,14 +48,14 @@ class BlogPost extends React.Component {
             <span className={s.category}>{nextItem.fields.category}</span>
             <div>
               <h1 className={s.itemTitle}>{nextItem.fields.title}</h1>
-              <Link to={`${nextItem.sys.id}`} className={s.link}>read more</Link>
+              <Link to={`/blog/${nextItem.sys.id}`} className={s.link}>read more</Link>
             </div>
           </div>
           <div className={s.item} style={stylePrev} >
             <span className={s.category}>{previousItem.fields.category}</span>
             <div>
               <h1 className={s.itemTitle}>{previousItem.fields.title}</h1>
-              <Link to={`${previousItem.sys.id}`} className={s.link}>read more</Link>
+              <Link to={`/blog/${previousItem.sys.id}`} className={s.link}>read more</Link>
             </div>
           </div>
         </div>
@@ -63,7 +63,7 @@ class BlogPost extends React.Component {
     );
   }
 
-  slider() {
+  carousel() {
     const { carouselImages } = this.props.data;
 
     if (!carouselImages) {
@@ -124,7 +124,7 @@ class BlogPost extends React.Component {
             </div>
             <p className={s.preface}>{intro}</p>
             <p>{firstHalf}</p>
-            {this.slider()}
+            {this.carousel()}
             <p>{secondHalf}</p>
           </article>
           {this.related()}

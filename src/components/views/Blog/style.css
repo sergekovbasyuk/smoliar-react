@@ -23,7 +23,6 @@
 
 .title {
   composes: minorTitle from '../../../css/generic.css';
-  /*color: #fddc94;*/
   max-width: 270px;
   text-transform: none;
   margin-bottom: 36px;
