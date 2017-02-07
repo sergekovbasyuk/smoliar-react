@@ -27,6 +27,10 @@ const common = {
       inject: false,
       mobile: true,
       favicon: 'favicon.ico',
+      googleAnalytics: {
+        trackingId: 'UA-91533779-1',
+        pageViewOnLoad: true,
+      },
     }),
   ],
   resolve: {
