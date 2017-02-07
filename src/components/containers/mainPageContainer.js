@@ -29,6 +29,7 @@ class mainPage extends React.Component {
     jquery('.container').fullpage({
       menu: '#menu',
       css3: true,
+      afterRender: () => jquery('video').get(0).play(),
       afterLoad: function updateSlideNumber() {
         const slideNumber = document.getElementById('slide-number');
         const bodyClass = document.body.classList[0];
