@@ -30,6 +30,7 @@ class blogContainer extends React.Component {
     client.getEntries({
       content_type: 'blogPost',
       'fields.category': filterValue,
+      order: '-sys.createdAt',
       limit: this.state.limit,
       skip: this.state.skip,
     })

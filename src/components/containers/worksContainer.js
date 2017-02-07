@@ -28,6 +28,7 @@ class worksContainer extends React.Component {
   loadData() {
     client.getEntries({
       content_type: 'work',
+      order: '-sys.createdAt',
       limit: this.state.limit,
       skip: this.state.skip,
     })
