@@ -7,7 +7,7 @@ class Header extends React.Component {
     let pageName;
 
     if (this.props.location.pathname.indexOf('/blog') === 0) {
-      pageName = 'blog';
+      pageName = 'Resources';
     } else if (this.props.location.pathname.indexOf('/works') === 0) {
       pageName = 'My works';
     } else if (this.props.location.pathname.indexOf('/about') === 0) {

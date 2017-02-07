@@ -79,9 +79,9 @@ class Schedule extends React.Component {
         <Modal show={this.state.showModal} onClick={this.handleModalClose} />
         <section className={s.first}>
           <div className={s.logoContainer}><Logo /></div>
-          <h1 className={s.title}>Schedule</h1>
+          <h1 className={s.title}>My Schedule</h1>
           <p className={s.topDescription}>check my spare time to be on point</p>
-          <a href="#" className={s.link} onClick={this.handleModalOpen}>book</a>
+          <a href="#" className={s.link} onClick={this.handleModalOpen}>leave me a message</a>
         </section>
         <section className={s.calendar}>
           <div className={s.calendarTop}>
