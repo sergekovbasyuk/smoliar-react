@@ -22,4 +22,9 @@ const Works = ({ myWorks, backgroundImage }) => {
   );
 };
 
+Works.propTypes = {
+  backgroundImage: React.PropTypes.object,
+  myWorks: React.PropTypes.string,
+};
+
 export default Works;

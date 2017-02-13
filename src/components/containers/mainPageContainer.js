@@ -1,14 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router';
 import 'fullpage.js';
 import jquery from 'jquery';
-import s from '../views/mainPage/style.css';
-import FacebookR from '../icons/facebook_r';
-import InstagramR from '../icons/instagram_r';
 import First from '../views/mainPage/First';
 import AboutMe from '../views/mainPage/AboutMe';
 import Works from '../views/mainPage/Works';
 import Resources from '../views/mainPage/Resources';
+import GetInTouch from '../views/mainPage/GetInTouch';
 import client from '../../config';
 
 class mainPage extends React.Component {
@@ -20,13 +17,8 @@ class mainPage extends React.Component {
   }
 
   componentDidMount() {
-    client.getEntries({
-      content_type: 'mainPage',
-    })
-      .then(response => this.setState({
-        data: response.items[0].fields,
-      })
-    )
+    client.getEntries({ content_type: 'mainPage' })
+      .then(response => this.setState({ data: response.items[0].fields }))
       .catch(error => console.log(error));
 
     jquery('.container').fullpage({
@@ -87,16 +79,6 @@ class mainPage extends React.Component {
       getInTouchBackgroundImage,
     } = this.state.data;
 
-    let style;
-
-    if (getInTouchBackgroundImage) {
-      style = {
-        backgroundImage: `url(${getInTouchBackgroundImage.fields.file.url})`,
-      };
-    } else {
-      style = null;
-    }
-
     return (
       <div className="container">
         <First
@@ -117,31 +99,11 @@ class mainPage extends React.Component {
           usefulResources={usefulResources}
           backgroundImage={resourcesBackgroundImage}
         />
-        <section className="section" style={style}>
-          <div className={s.footerContainer}>
-            <div className={s.contentContacts}>
-              <h1 className={s.footerTitle}>Get in touch</h1>
-              <div className={s.row}>
-                <div className={s.email}>
-                  <p>If you are interested in contacting me, please drop me a line.</p>
-                  <a href="mailto:aasmoliar@gmail.com" className={s.link}>leave me a message</a>
-                </div>
-                <div className={s.schedule}>
-                  <p>I’m busy as usual, so please check my schedule.</p>
-                  <Link to="/contact" className={s.link}>my schedule</Link>
-                </div>
-              </div>
-            </div>
-            <footer className={s.footer}>
-              <a href="/aleksei_smoliar_cv.pdf" className={s.cvLink}>Download my CV</a>
-              <div className={s.socialIcons}>
-                <a className={s.social} href={facebookLink}><FacebookR /></a>
-                <a className={s.social} href={instagramLink}><InstagramR /></a>
-              </div>
-              <a href="http://shortcute.xyz/" target="_blank" rel="noopener noreferrer">created at /shortcute</a>
-            </footer>
-          </div>
-        </section>
+        <GetInTouch
+          backgroundImage={getInTouchBackgroundImage}
+          instagramLink={instagramLink}
+          facebookLink={facebookLink}
+        />
       </div>
     );
   }

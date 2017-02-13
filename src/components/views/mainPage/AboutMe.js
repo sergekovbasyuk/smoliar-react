@@ -25,4 +25,9 @@ const AboutMe = ({ aboutMe, backgroundImage }) => {
   );
 };
 
+AboutMe.propTypes = {
+  backgroundImage: React.PropTypes.object,
+  aboutMe: React.PropTypes.string,
+};
+
 export default AboutMe;

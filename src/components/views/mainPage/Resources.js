@@ -22,4 +22,9 @@ const Resources = ({ usefulResources, backgroundImage }) => {
   );
 };
 
+Resources.propTypes = {
+  backgroundImage: React.PropTypes.object,
+  usefulResources: React.PropTypes.string,
+};
+
 export default Resources;

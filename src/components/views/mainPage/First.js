@@ -28,4 +28,11 @@ const First = ({ quotation, quoteAuthor, arrowClickHandler, backgroundImage }) =
   );
 };
 
+First.propTypes = {
+  backgroundImage: React.PropTypes.object,
+  quotation: React.PropTypes.string,
+  quoteAuthor: React.PropTypes.string,
+  arrowClickHandler: React.PropTypes.func,
+};
+
 export default First;

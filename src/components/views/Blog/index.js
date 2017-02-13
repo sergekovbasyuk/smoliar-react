@@ -65,6 +65,7 @@ Blog.propTypes = {
   handleFilterChange: React.PropTypes.func,
   pageCount: React.PropTypes.number,
   carouselItems: React.PropTypes.array,
+  pathname: React.PropTypes.string,
 };
 
 export default Blog;

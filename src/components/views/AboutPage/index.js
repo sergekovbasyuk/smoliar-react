@@ -73,6 +73,7 @@ const AboutPage = ({ data, videoId, location }) => {
 
 AboutPage.propTypes = {
   data: React.PropTypes.object.isRequired,
+  location: React.PropTypes.object.isRequired,
   videoId: React.PropTypes.string,
 };
 
