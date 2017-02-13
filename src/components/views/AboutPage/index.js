@@ -23,25 +23,31 @@ const AboutPage = ({ data, videoId, location }) => {
     conclusionTitle,
     conclusionText,
     carouselImages,
+    backgroundImage,
+    secondImage,
+    thirdImage,
   } = data;
 
   const carouselImagesUrls = carouselImages === undefined ? null : carouselImages.map(x => x.fields.file.url);
+  const backgroundImageUrl = backgroundImage === undefined ? null : backgroundImage.fields.file.url;
+  const secondImageUrl = secondImage === undefined ? null : secondImage.fields.file.url;
+  const thirdImageUrl = thirdImage === undefined ? null : thirdImage.fields.file.url;
 
   return (
     <div className="container">
       <First
         title="About Me"
-        backgroundImage="https://res.cloudinary.com/dsie3eeqb/image/upload/v1474998995/smoliar/bg-about_y7fmtx.jpg"
+        backgroundImage={backgroundImageUrl}
       />
       <Second
         title={introTitle}
         description={introText}
         location={location}
-        backgroundImage="https://res.cloudinary.com/dsie3eeqb/image/upload/v1475051438/smoliar/bg-about2_wsso4o.jpg"
+        backgroundImage={secondImageUrl}
       />
       <Third
         text={quote}
-        image="https://res.cloudinary.com/dsie3eeqb/image/upload/v1475003357/smoliar/slide-about_buecme.jpg"
+        image={thirdImageUrl}
       />
       <section className={s.videoWrapper}>
         <YouTube videoId={videoId} />
