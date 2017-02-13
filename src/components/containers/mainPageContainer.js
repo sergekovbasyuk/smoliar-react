@@ -20,16 +20,18 @@ class mainPage extends React.Component {
   }
 
   componentDidMount() {
-    client.getEntry('hKRuaITwl2Qek8owU2MOO')
-      .then(entry => this.setState({
-        data: entry.fields,
-      }))
+    client.getEntries({
+      content_type: 'mainPage',
+    })
+      .then(response => this.setState({
+        data: response.items[0].fields,
+      })
+    )
       .catch(error => console.log(error));
 
     jquery('.container').fullpage({
       menu: '#menu',
       css3: true,
-      afterRender: () => jquery('video').get(0).play(),
       afterLoad: function updateSlideNumber() {
         const slideNumber = document.getElementById('slide-number');
         const bodyClass = document.body.classList[0];
@@ -78,7 +80,22 @@ class mainPage extends React.Component {
       usefulResources,
       instagramLink,
       facebookLink,
+      firstBackgroundImage,
+      aboutBackgroundImage,
+      worksBackgroundImage,
+      resourcesBackgroundImage,
+      getInTouchBackgroundImage,
     } = this.state.data;
+
+    let style;
+
+    if (getInTouchBackgroundImage) {
+      style = {
+        backgroundImage: `url(${getInTouchBackgroundImage.fields.file.url})`,
+      };
+    } else {
+      style = null;
+    }
 
     return (
       <div className="container">
@@ -86,17 +103,21 @@ class mainPage extends React.Component {
           quotation={quotation}
           quoteAuthor={quoteAuthor}
           arrowClickHandler={this.arrowClickHandler}
+          backgroundImage={firstBackgroundImage}
         />
         <AboutMe
           aboutMe={aboutMe}
+          backgroundImage={aboutBackgroundImage}
         />
         <Works
           myWorks={myWorks}
+          backgroundImage={worksBackgroundImage}
         />
         <Resources
           usefulResources={usefulResources}
+          backgroundImage={resourcesBackgroundImage}
         />
-        <section className="section">
+        <section className="section" style={style}>
           <div className={s.footerContainer}>
             <div className={s.contentContacts}>
               <h1 className={s.footerTitle}>Get in touch</h1>

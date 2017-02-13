@@ -45,35 +45,3 @@ ul {
   margin: 0;
   list-style: none;
 }
-
-:global .section {
-  position: relative;
-
-  video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    transform: translateX(-50%) translateY(-50%);
-  }
-
-  &:nth-child(5) {
-    background-image: url('https://res.cloudinary.com/dsie3eeqb/image/upload/v1474876954/smoliar/get-in-touch2_pijsda.jpg');
-  }
-
-  &:nth-child(4) {
-    background-image: url('https://res.cloudinary.com/dsie3eeqb/image/upload/v1474877131/smoliar/resources_tueoys.jpg');
-  }
-
-  &:nth-child(3) {
-    background-image: url('https://res.cloudinary.com/dsie3eeqb/image/upload/v1474877042/smoliar/my-works_yscbog.jpg');
-  }
-
-  &:nth-child(2) {
-    background-image: url('https://res.cloudinary.com/dsie3eeqb/image/upload/v1474876954/smoliar/main_ycizs6.jpg');
-  }
-}
