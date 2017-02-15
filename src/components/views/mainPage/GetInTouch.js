@@ -30,7 +30,7 @@ const GetInTouch = ({ backgroundImage, instagramLink, facebookLink }) => {
           </div>
         </div>
         <footer className={s.footer}>
-          <a href="/aleksei_smoliar_cv.pdf" className={s.cvLink}>Download my CV</a>
+          <a href="https://www.dropbox.com/sh/rluwf44w3fgqt3c/AAACa9uZKk6nW1JxfjSttIqea?dl=0" target="_blank" rel="noopener noreferrer" className={s.cvLink}>Download my CV</a>
           <div className={s.socialIcons}>
             <a className={s.social} href={facebookLink}><FacebookR /></a>
             <a className={s.social} href={instagramLink}><InstagramR /></a>

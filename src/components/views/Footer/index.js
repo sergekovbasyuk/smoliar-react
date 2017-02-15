@@ -39,7 +39,7 @@ class Footer extends React.Component {
           </div>
         </div>
         <footer className={s.footer}>
-          <a href="/aleksei_smoliar_cv.pdf">Download my CV</a>
+          <a href="https://www.dropbox.com/sh/rluwf44w3fgqt3c/AAACa9uZKk6nW1JxfjSttIqea?dl=0" target="_blank" rel="noopener noreferrer">Download my CV</a>
           <a href="http://shortcute.xyz/" target="_blank" rel="noopener noreferrer">created at /shortcute</a>
         </footer>
       </div>
