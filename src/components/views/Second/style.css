@@ -28,6 +28,7 @@
   @media (min-width: 426px) {
     box-shadow: 8px 6px 70px 0 rgba(0, 0, 0, 0.35);
     width: inherit;
+    max-width: 30%;
   }
 }
 
