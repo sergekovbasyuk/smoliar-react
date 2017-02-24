@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import Slider from 'react-slick';
+import marked from 'marked';
 import s from './style.css';
 import First from '../First';
 import ArrowPrev from '../../icons/arrow-prev';
@@ -8,6 +9,14 @@ import ArrowNext from '../../icons/arrow-next';
 import Facebook from '../../icons/facebook';
 import Twitter from '../../icons/twitter';
 import LinkedIn from '../../icons/linkedin';
+
+marked.setOptions({
+  "gfm": true,
+  "tables": true,
+  "breaks": true,
+  "smartypants": true,
+  "sanitize": false
+});
 
 class BlogPost extends React.Component {
   constructor(props) {
@@ -99,11 +108,12 @@ class BlogPost extends React.Component {
     const {
       title,
       description,
-      intro,
-      firstHalf,
-      secondHalf,
       backgroundImage,
     } = this.props.data;
+
+    const intro = this.props.data.intro === undefined ? '' : marked(this.props.data.intro);
+    const firstHalf = this.props.data.firstHalf === undefined ? '' : marked(this.props.data.firstHalf);
+    const secondHalf = this.props.data.secondHalf === undefined ? '' : marked(this.props.data.secondHalf);
 
     const backgroundImageUrl = backgroundImage === undefined ? null : backgroundImage.fields.file.url;
     const url = document.URL;
@@ -122,10 +132,10 @@ class BlogPost extends React.Component {
               <a href={`http://twitter.com/share?url=${url}`}><Twitter /></a>
               <a href={`http://www.linkedin.com/shareArticle?mini=true&url=${url}`}><LinkedIn /></a>
             </div>
-            <p className={s.preface}>{intro}</p>
-            <p>{firstHalf}</p>
+            <div className={s.preface} dangerouslySetInnerHTML={{ __html: intro }} />
+            <div dangerouslySetInnerHTML={{ __html: firstHalf }} />
             {this.carousel()}
-            <p>{secondHalf}</p>
+            <div dangerouslySetInnerHTML={{ __html: secondHalf }} />
           </article>
           {this.related()}
         </section>
