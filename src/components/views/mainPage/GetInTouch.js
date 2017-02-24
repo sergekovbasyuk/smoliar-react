@@ -20,7 +20,7 @@ const GetInTouch = ({ backgroundImage, instagramLink, facebookLink }) => {
           <h1 className={s.footerTitle}>Get in touch</h1>
           <div className={s.row}>
             <div className={s.email}>
-              <p>If you are interested in contacting me, please drop me a line.</p>
+              <p>let’s make something together</p>
               <a href="mailto:aasmoliar@gmail.com" className={s.link}>leave me a message</a>
             </div>
             <div className={s.schedule}>
