@@ -9,7 +9,7 @@ class Footer extends React.Component {
     if (this.props.location.pathname.indexOf('/contact') === 0) {
       schedule = (
         <div className={s.schedule}>
-          <p>Judge me by deeds — check my new works.</p>
+          <p>check my works</p>
           <Link to="/works" className={s.link}>see my works</Link>
         </div>
       );
@@ -32,7 +32,7 @@ class Footer extends React.Component {
           <h1 className={s.title}>Get in touch</h1>
           <div className={s.row}>
             <div className={s.email}>
-              <p>If you are interested in contacting me, please drop me a line.</p>
+              <p>let’s make something together</p>
               <a href="mailto:aasmoliar@gmail.com" className={s.link}>leave me a message</a>
             </div>
             {schedule}

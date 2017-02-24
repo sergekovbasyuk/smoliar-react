@@ -16,7 +16,7 @@ const Resources = ({ usefulResources, backgroundImage }) => {
       <div className={s.content}>
         <h1 className={s.title}>Resources</h1>
         <p>{usefulResources}</p>
-        <Link to="/blog" className={s.link}>learn more</Link>
+        <Link to="/blog" className={s.link}>get more</Link>
       </div>
     </section>
   );
