@@ -109,7 +109,7 @@
   min-height: 100vw;
   display: inline-flex;
   flex-direction: column;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
   background-image: url('https://res.cloudinary.com/dsie3eeqb/image/upload/v1478088844/smoliar/blog-bg.jpg');
 
   @media (min-width: 768px) {

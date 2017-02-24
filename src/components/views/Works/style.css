@@ -41,6 +41,11 @@
   opacity: 0;
 }
 
+.itemName {
+  position: absolute;
+  bottom: 30px;
+}
+
 .pagination {
   padding: 20px 0 40px;
   text-align: center;

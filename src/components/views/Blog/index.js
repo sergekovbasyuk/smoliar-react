@@ -34,7 +34,7 @@ const Blog = ({ data, handlePageClick, handleFilterChange, pageCount, carouselIt
           return (
             <div className={s.item} key={index} style={style}>
               <span className={s.category}>{item.fields.category}</span>
-              <div>
+              <div className={s.itemName}>
                 <h1 className={s.title}>{item.fields.title}</h1>
                 <Link to={`/blog/${item.sys.id}`} className={s.link}>read more</Link>
               </div>
