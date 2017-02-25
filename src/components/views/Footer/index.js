@@ -16,7 +16,7 @@ class Footer extends React.Component {
     } else {
       schedule = (
         <div className={s.schedule}>
-          <p>I’m busy as usual, so please check my schedule.</p>
+          <p>check my availability</p>
           <Link to="/contact" className={s.link}>my schedule</Link>
         </div>
       );

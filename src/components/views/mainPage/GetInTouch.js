@@ -24,7 +24,7 @@ const GetInTouch = ({ backgroundImage, instagramLink, facebookLink }) => {
               <a href="mailto:aasmoliar@gmail.com" className={s.link}>leave me a message</a>
             </div>
             <div className={s.schedule}>
-              <p>I’m busy as usual, so please check my schedule.</p>
+              <p>check my availability</p>
               <Link to="/contact" className={s.link}>my schedule</Link>
             </div>
           </div>
