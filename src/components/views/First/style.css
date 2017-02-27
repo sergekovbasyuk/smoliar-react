@@ -28,4 +28,5 @@
 
 .title {
   composes: title from '../../../css/generic.css';
+  text-align: center;
 }
