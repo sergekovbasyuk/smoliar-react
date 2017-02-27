@@ -29,4 +29,9 @@
 .title {
   composes: title from '../../../css/generic.css';
   text-align: center;
+
+  @media (min-width: 425px) {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
 }
