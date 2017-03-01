@@ -133,9 +133,9 @@ class BlogPost extends React.Component {
               <a href={`http://www.linkedin.com/shareArticle?mini=true&url=${url}`}><LinkedIn /></a>
             </div>
             <div className={s.preface} dangerouslySetInnerHTML={{ __html: intro }} />
-            <div dangerouslySetInnerHTML={{ __html: firstHalf }} />
+            <div className={s.blogText} dangerouslySetInnerHTML={{ __html: firstHalf }} />
             {this.carousel()}
-            <div dangerouslySetInnerHTML={{ __html: secondHalf }} />
+            <div className={s.blogText} dangerouslySetInnerHTML={{ __html: secondHalf }} />
           </article>
           {this.related()}
         </section>

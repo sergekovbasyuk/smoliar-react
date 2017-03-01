@@ -33,7 +33,7 @@ class Footer extends React.Component {
           <div className={s.row}>
             <div className={s.email}>
               <p>let’s make something together</p>
-              <a href="mailto:aasmoliar@gmail.com" className={s.link}>leave me a message</a>
+              <a href="mailto:film@smoliar.works" className={s.link}>leave me a message</a>
             </div>
             {schedule}
           </div>

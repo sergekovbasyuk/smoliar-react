@@ -10,7 +10,7 @@ const Modal = ({ show, onClick }) => (
       <div className={s.content}>
         <h1 className={s.title}>book me</h1>
         <p>If you interested in contacting me, please drop me a line.</p>
-        <a className={s.link} href="mailto:aasmoliar@gmail.com">Book me</a>
+        <a className={s.link} href="mailto:film@smoliar.works">Book me</a>
       </div>
     </div>
   </div>

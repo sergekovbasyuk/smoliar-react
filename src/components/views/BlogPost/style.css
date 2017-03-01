@@ -188,3 +188,9 @@
     left: 40px;
   }
 }
+
+.blogText img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
