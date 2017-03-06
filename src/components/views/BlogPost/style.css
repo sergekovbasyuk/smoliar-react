@@ -1,7 +1,6 @@
 .body {
   background: #f9f9f9;
   color: #1d1d1d;
-  text-align: justify;
 
   @media (min-width: 768px) {
     background: #d2d2d2;
