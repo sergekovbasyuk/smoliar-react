@@ -45,6 +45,7 @@ class worksContainer extends React.Component {
     client.getEntries({
       content_type: 'work',
       'fields.addToCarousel': true,
+      order: '-sys.createdAt',
     })
       .then((response) => {
         this.setState({ carouselItems: response.items });
