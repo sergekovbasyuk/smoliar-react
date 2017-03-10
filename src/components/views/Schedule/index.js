@@ -80,7 +80,7 @@ class Schedule extends React.Component {
         <section className={s.first}>
           <div className={s.logoContainer}><Logo /></div>
           <h1 className={s.title}>My Schedule</h1>
-          <p className={s.topDescription}>check my spare time to be on point</p>
+          <p className={s.topDescription}>Check my timetable for availability</p>
           <a href="#" className={s.link} onClick={this.handleModalOpen}>leave me a message</a>
         </section>
         <section className={s.calendar}>
