@@ -5,7 +5,6 @@ import s from './style.css';
 import Logo from '../../icons/logo';
 import ArrowLeft from '../../icons/arrowLeft';
 import ArrowRight from '../../icons/arrowRight';
-import Modal from '../Modal';
 
 class Schedule extends React.Component {
   constructor(props) {
@@ -13,40 +12,15 @@ class Schedule extends React.Component {
 
     this.state = {
       moment: moment(),
-      showModal: false,
     };
 
     this.handleNextMonth = this.handleNextMonth.bind(this);
     this.handlePreviousMonth = this.handlePreviousMonth.bind(this);
     this.handleToday = this.handleToday.bind(this);
-    this.handleModalOpen = this.handleModalOpen.bind(this);
-    this.handleModalClose = this.handleModalClose.bind(this);
-    this.listenForEsc = this.listenForEsc.bind(this);
   }
-  componentDidMount() {
-    window.addEventListener('keydown', this.listenForEsc, true);
-  }
-  componentWillUnmount() {
-    window.removeEventListener('keydown', this.listenForEsc, true);
-  }
+
   getHumanDate() {
     return [moment.months('MM', this.state.moment.month()), this.state.moment.year()].join(' ');
-  }
-  handleModalOpen(e) {
-    e.preventDefault();
-    this.setState({
-      showModal: true,
-    });
-  }
-  handleModalClose() {
-    this.setState({
-      showModal: false,
-    });
-  }
-  listenForEsc(e) {
-    if (e.key === 'Escape' || e.keyCode === 27) {
-      this.handleModalClose();
-    }
   }
   handleNextMonth(e) {
     e.preventDefault();
@@ -76,12 +50,11 @@ class Schedule extends React.Component {
 
     return (
       <div className="container">
-        <Modal show={this.state.showModal} onClick={this.handleModalClose} />
         <section className={s.first}>
           <div className={s.logoContainer}><Logo /></div>
           <h1 className={s.title}>My Schedule</h1>
           <p className={s.topDescription}>Check my timetable for availability</p>
-          <a href="#" className={s.link} onClick={this.handleModalOpen}>leave me a message</a>
+          <a href="mailto:film@smoliar.works" className={s.link}>leave me a message</a>
         </section>
         <section className={s.calendar}>
           <div className={s.calendarTop}>
