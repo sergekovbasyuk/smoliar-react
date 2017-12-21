@@ -39,12 +39,16 @@ const AboutPage = ({ data, videoId, location }) => {
         title="About Me"
         backgroundImage={backgroundImageUrl}
       />
+      
+      {/*TODO: Uncomment it when we will need block with business carts*/}
+      {/*
       <Second
         title={introTitle}
         description={introText}
         location={location}
         backgroundImage={secondImageUrl}
-      />
+      /> */}
+
       <Third
         text={quote}
         image={thirdImageUrl}
