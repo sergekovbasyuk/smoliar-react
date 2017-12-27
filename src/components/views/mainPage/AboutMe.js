@@ -19,7 +19,7 @@ const AboutMe = ({ aboutMe, backgroundImage }) => {
         <br />
         <br />
         <p>{aboutMe}</p>
-        <Link to="/about" className={s.link}>read more</Link>
+        <Link to="/about" className={`${s.link} more-btn`}>read more</Link>
       </div>
     </section>
   );

@@ -52,6 +52,9 @@
   }
 }
 
+.link {
+	color: #fff;
+}
 .link:hover {
-  color: #fff;
+  color: hsla(0, 0%, 77%, 0.96)
 }
