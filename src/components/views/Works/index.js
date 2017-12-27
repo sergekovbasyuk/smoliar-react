@@ -25,7 +25,7 @@ const Works = ({ data, handlePageClick, pageCount, carouselItems, pathname }) =>
             <span className={s.category}>Work</span>
             <div className={s.itemName}>
               <h1 className={s.title}>{item.fields.title}</h1>
-              <Link to={`/works/${item.sys.id}`} className={s.link}>read more</Link>
+              <Link to={`/works/${item.sys.id}`} className={`${s.link} more-btn`}>read more</Link>
             </div>
           </div>
         );
