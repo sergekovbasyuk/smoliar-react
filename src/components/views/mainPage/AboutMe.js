@@ -12,7 +12,7 @@ const AboutMe = ({ aboutMe, backgroundImage }) => {
   }
 
   return (
-    <section className="section" style={style}>
+    <section className="section dynamic-background" style={style}>
       <div className={s.content}>
         <h1 className={s.title}>About Me</h1>
         <span>Ukrainian - First Assistant Director</span>

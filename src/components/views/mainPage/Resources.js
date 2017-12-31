@@ -12,7 +12,7 @@ const Resources = ({ usefulResources, backgroundImage }) => {
   }
 
   return (
-    <section className="section" style={style}>
+    <section className="section dynamic-background" style={style}>
       <div className={s.content}>
         <h1 className={s.title}>Resources</h1>
         <p>{usefulResources}</p>

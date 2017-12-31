@@ -14,7 +14,7 @@ const GetInTouch = ({ backgroundImage, instagramLink, facebookLink }) => {
   }
 
   return (
-    <section className="section" style={style}>
+    <section className="section dynamic-background" style={style}>
       <div className={s.footerContainer}>
         <div className={s.contentContacts}>
           <h1 className={s.footerTitle}>Get in touch</h1>
