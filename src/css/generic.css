@@ -391,7 +391,7 @@ font-weight: 700;
           flex-direction: column;
           /*justify-content: space-between;*/
           background-image: url('https://res.cloudinary.com/dsie3eeqb/image/upload/v1478088844/smoliar/blog-bg.jpg');
-          background-size: 125% 105%;
+          background-size: 135% 105%;
           -moz-transition: all .5s;
           -webkit-transition: all .5s;
           transition: all .5s;
@@ -415,7 +415,7 @@ font-weight: 700;
             &:hover {
               -webkit-filter: invert(0.1);
               filter: invert(0.05);
-              background-size: 135% 115%;
+              background-size: 145% 115%;
         
               &::before  {
                 content: "";

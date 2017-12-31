@@ -87,3 +87,43 @@
 :global .section {
   position: relative;
 }
+
+:global .dynamic-background {
+  @media (min-width: 1350px) {
+    background-size: 115% auto;
+  }
+
+  transition: background-size 1.1s ease-in;
+  -moz-transition: background-size 1.1s ease-in;
+  -web-kit-transition: background-size 1.1s ease-in
+}
+
+:global .dynamic-background:hover {
+  @media (min-width: 1350px) {
+    background-size: 130% auto;
+  }
+}
+
+:global .dynamic-background p,
+:global .dynamic-background h1,
+:global .dynamic-background span {
+  @media (min-width: 1001px) {
+    position: relative;
+    opacity: 0.7;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+    left: -1%;
+    transition: left .4s linear;
+  }
+}
+
+:global .dynamic-background:hover p,
+:global .dynamic-background:focus p,
+:global .dynamic-background:hover h1,
+:global .dynamic-background:focus h1,
+:global .dynamic-background:hover span,
+:global .dynamic-background:focus span{
+  opacity: 1;
+  left: 0;
+}

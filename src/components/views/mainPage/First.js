@@ -13,7 +13,7 @@ const First = ({ quotation, quoteAuthor, arrowClickHandler, backgroundImage }) =
   }
 
   return (
-    <section className="section" style={style}>
+    <section className="section dynamic-background" style={style}>
       <div className={s.logoContainer}><Logo /></div>
       <div className={s.content}>
         <h1 className={s.title}>Hi, there!</h1>
