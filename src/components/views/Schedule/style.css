@@ -25,6 +25,15 @@
 
   @media (min-width: 768px) {
     min-height: 43vw;
+    background-size: 115% auto;
+    transition: background-size 1.1s ease-in;
+    -moz-transition: background-size 1.1s ease-in;
+    -web-kit-transition: background-size 1.1s ease-in;
+
+    &:hover,
+    &:focus {
+      background-size: 130% auto;
+    }
   }
 }
 
