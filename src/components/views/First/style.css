@@ -8,10 +8,28 @@
   align-items: center;
   flex-direction: column;
   background-image: url('https://res.cloudinary.com/dsie3eeqb/image/upload/v1474998995/smoliar/bg-about_y7fmtx.jpg');
+  transition: all 1.1s ease-in-out;
 
   @media (min-width: 768px) {
+    background-size: 130%, auto;
     line-height: 1.7;
     min-height: 43vw;
+    transition: background-size 1.1s ease-in !important;
+    -moz-transition: background-size 1.1s ease-in;
+    -web-kit-transition: background-size 1.1s ease-in;
+
+    &:hover,
+    &:focus {
+      background-size: 150%, auto;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &:hover,
+    &:focus {
+      transform: scale(1.05);
+      opacity: 0.8;
+    }
   }
 }
 
