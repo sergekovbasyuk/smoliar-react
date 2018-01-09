@@ -1,0 +1,83 @@
+@font-face {
+  font-family: 'GothaProBla';
+  src: url("./Gotham_Cyrillic/GothaProBla.otf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothaProBlaIta';
+  src: url('./Gotham_Cyrillic/GothaProBlaIta.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothaProBol';
+  src: url('./Gotham_Cyrillic/GothaProBol.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothaProBolIta';
+  src: url('./Gotham_Cyrillic/GothaProBolIta.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothaProIta';
+  src: url('./Gotham_Cyrillic/GothaProIta.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothaProLig';
+  src: url('./Gotham_Cyrillic/GothaProLig.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothaProLigIta';
+  src: url('./Gotham_Cyrillic/GothaProLigIta.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothaProMed';
+  src: url('./Gotham_Cyrillic/GothaProMed.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothaProMedIta';
+  src: url('./Gotham_Cyrillic/GothaProMedIta.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothaProNarBol';
+  src: url('./Gotham_Cyrillic/GothaProNarBol.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothaProReg';
+  src: url('./Gotham_Cyrillic/GothaProReg.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothaProNarMed';
+  src: url('./Gotham_Cyrillic/GothaProNarMed.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
