@@ -169,10 +169,10 @@ font-weight: 700;
   flex-direction: column;
   /*justify-content: space-between;*/
   background-image: url('https://res.cloudinary.com/dsie3eeqb/image/upload/v1478088844/smoliar/blog-bg.jpg');
-  background-size: 155% 117%;
-  -moz-transition: all .5s;
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  background-size: 118% 100%;
+  -moz-transition: all .8s;
+  -webkit-transition: all .8s;
+  transition: all .8s;
   background-position: center center;
 
   @media (min-width: 768px) {
@@ -193,7 +193,7 @@ font-weight: 700;
     &:hover {
       -webkit-filter: invert(0.1);
       filter: invert(0.05);
-      background-size: 170% 122%;
+      background-size: 133% 110%;
 
       &::before  {
         content: "";
