@@ -171,9 +171,9 @@ font-weight: 700;
   /*justify-content: space-between;*/
   background-image: url('https://res.cloudinary.com/dsie3eeqb/image/upload/v1478088844/smoliar/blog-bg.jpg');
   background-size: 135% 100%;
-  -moz-transition: all .8s;
-  -webkit-transition: all .8s;
-  transition: all .8s;
+  -moz-transition: background-size .7s ease-in-out,  -moz-transition .5s;
+  -webkit-transition: background-size .7s ease-in-out, -webkit-transition .5s;
+  transition: background-size .7s ease-in-out, filter .5s;
   background-position: center center;
   
 
@@ -195,7 +195,7 @@ font-weight: 700;
     &:hover {
       -webkit-filter: invert(0.1);
       filter: invert(0.05);
-      background-size: 150% 108%;
+      background-size: 145% 107%;
 
       &::before  {
         content: "";
