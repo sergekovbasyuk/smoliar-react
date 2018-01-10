@@ -11,7 +11,8 @@ html {
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
   line-height: 18px;
-
+  font-family: 'GothaProReg';
+  
   @media (min-width: 768px) {
     line-height: 24px;
   }

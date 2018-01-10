@@ -50,6 +50,7 @@
   font-family: 'Open Sans', sans-serif;
   z-index: 1;
   text-transform: lowercase;
+  font-family: 'GothaProLig', sans-serif;
 
   @media (min-width: 768px) {
     font-size: 22px;
@@ -169,11 +170,12 @@ font-weight: 700;
   flex-direction: column;
   /*justify-content: space-between;*/
   background-image: url('https://res.cloudinary.com/dsie3eeqb/image/upload/v1478088844/smoliar/blog-bg.jpg');
-  background-size: 120% 100%;
+  background-size: 135% 100%;
   -moz-transition: all .8s;
   -webkit-transition: all .8s;
   transition: all .8s;
   background-position: center center;
+  
 
   @media (min-width: 768px) {
     width: 50%;
@@ -193,7 +195,7 @@ font-weight: 700;
     &:hover {
       -webkit-filter: invert(0.1);
       filter: invert(0.05);
-      background-size: 133% 108%;
+      background-size: 150% 108%;
 
       &::before  {
         content: "";
@@ -228,6 +230,7 @@ font-weight: 700;
           vertical-align: middle;
           position: relative;
           top: -0.0625em;
+          font-family: 'GothaProLig', sans-serif;
         }
         
         .title {
