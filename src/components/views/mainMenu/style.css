@@ -9,6 +9,7 @@
   transform: translateY(-100%);
   transition: transform 0.4s;
   padding: 20px;
+  font-family: 'GothaProMed';
 
   @media (min-width: 768px) {
     padding: 40px;
