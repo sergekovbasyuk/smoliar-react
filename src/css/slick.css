@@ -63,7 +63,18 @@
     display: none;
     float: left;
     height: 100%;
-    min-height: 1px
+    min-height: 1px;
+
+    @media (min-width: 768px) {
+        background-size: 105% 100% !important;
+        -moz-transition: background-size .7s ease-in-out,  -moz-transition .5s;
+        -webkit-transition: background-size .7s ease-in-out, -webkit-transition .5s;
+        transition: background-size .7s ease-in-out, filter .5s;
+    
+        &:hover {
+          background-size: 112% 107% !important;
+        }
+      }
 }
 
 [dir=rtl] :global .slick-slide {
