@@ -175,26 +175,29 @@ font-weight: 700;
     width: 50%;
     min-height: calc(50vw * 0.8);
     padding: 30px 30px 64px;
-    background-size: 135% 100%;
-    -moz-transition: background-size .75s ease-in-out,  -moz-transition .5s;
-    -webkit-transition: background-size .75s ease-in-out, -webkit-transition .5s;
-    transition: background-size .75s ease-in-out, filter .5s;
+    background-size: cover;
+    background-size: 172% auto;
+    -moz-transition: background-size .55s ease-in-out,  -moz-transition .5s;
+    -webkit-transition: background-size .55s ease-in-out, -webkit-transition .5s;
+    transition: background-size .55s ease-in-out, filter .5s;
     background-position: center center;
 
     &:nth-child(3) {
       width: 100%;
-
+      background-size: 105% auto;
       .title {
         @media (min-width: 768px) {
           max-width: 540px;
         }
       }
+
+      &:hover { 
+        background-size: 112% auto;
+      }
     }
    
     &:hover {
-      -webkit-filter: invert(0.1);
-      filter: invert(0.05);
-      background-size: 145% 107%;
+      background-size: 180% auto;
 
       &::before  {
         content: "";
@@ -410,7 +413,7 @@ font-weight: 700;
             width: 50%;
             min-height: calc(50vw * 0.8);
             padding: 30px 30px 64px;
-            background-size: 135% 105%;
+            background-size: 125% auto;
             -moz-transition: all .5s;
             -webkit-transition: all .5s;
             transition: all .5s;
@@ -427,11 +430,8 @@ font-weight: 700;
             }
            
             &:hover {
-              -webkit-filter: invert(0.1);
-              filter: invert(0.05);
-
               @media (min-width: 768px) {
-                background-size: 145% 115%;
+                background-size: 145% auto; 
               }
         
               &::before  {
