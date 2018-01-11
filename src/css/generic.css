@@ -81,7 +81,6 @@ padding: 12px 10px 10px;
 color: #FFFFFF;
 text-shadow: none;
 font-weight: 700;
-
   
 &::before,
 &::after {
@@ -177,10 +176,25 @@ font-weight: 700;
     padding: 30px 30px 64px;
     background-size: cover;
     background-size: 172% auto;
-    -moz-transition: background-size .55s ease-in-out,  -moz-transition .5s;
-    -webkit-transition: background-size .55s ease-in-out, -webkit-transition .5s;
-    transition: background-size .55s ease-in-out, filter .5s;
+    -moz-transition: background-size .55s ease-out,  -moz-transition .5s;
+    -webkit-transition: background-size .55s ease-out, -webkit-transition .5s;
+    transition: background-size .55s ease-out, filter .5s;
     background-position: center center;
+
+    &::before {
+      content: "";
+      background-color: #000000;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      opacity: 0.3;
+      transition: opacity .4s ease-out;
+      -moz-transition: opacity .4s ease-out;
+      -webkit-transition: opacity .4s ease-out;
+      -o-transition: opacity .4s ease-out;
+    }
 
     &:nth-child(3) {
       width: 100%;
@@ -199,21 +213,9 @@ font-weight: 700;
     &:hover {
       background-size: 180% auto;
 
-      &::before  {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(35,35,35,0);
+      &::before {
         opacity: 0;
-        z-index: 1;
-        transition: opacity .7s ease-out;
-        -moz-transition: opacity .7s ease-out;
-        -webkit-transition: opacity .7s ease-out;
-        -o-transition: opacity .7s ease-out;
-    }
+      }
       .link,
       .category {
         opacity: 1;
