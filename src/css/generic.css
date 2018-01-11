@@ -169,18 +169,17 @@ font-weight: 700;
   display: inline-flex;
   flex-direction: column;
   /*justify-content: space-between;*/
-  background-image: url('https://res.cloudinary.com/dsie3eeqb/image/upload/v1478088844/smoliar/blog-bg.jpg');
-  background-size: 135% 100%;
-  -moz-transition: background-size .7s ease-in-out,  -moz-transition .5s;
-  -webkit-transition: background-size .7s ease-in-out, -webkit-transition .5s;
-  transition: background-size .7s ease-in-out, filter .5s;
-  background-position: center center;
-  
+  background-image: url('https://res.cloudinary.com/dsie3eeqb/image/upload/v1478088844/smoliar/blog-bg.jpg');  
 
   @media (min-width: 768px) {
     width: 50%;
     min-height: calc(50vw * 0.8);
     padding: 30px 30px 64px;
+    background-size: 135% 100%;
+    -moz-transition: background-size .75s ease-in-out,  -moz-transition .5s;
+    -webkit-transition: background-size .75s ease-in-out, -webkit-transition .5s;
+    transition: background-size .75s ease-in-out, filter .5s;
+    background-position: center center;
 
     &:nth-child(3) {
       width: 100%;
@@ -384,6 +383,18 @@ font-weight: 700;
             color: #2499dc;
           }
         }
+
+        .slick-slide {
+          @media (min-width: 768px) {
+            background-size: 105% 100% !important;
+          }
+
+          &:hover {
+            @media (min-width: 768px) {
+              background-size: 145% 115%;
+            }
+          }
+        }
         
         .workBlogItem {
           position: relative;
@@ -394,16 +405,16 @@ font-weight: 700;
           flex-direction: column;
           /*justify-content: space-between;*/
           background-image: url('https://res.cloudinary.com/dsie3eeqb/image/upload/v1478088844/smoliar/blog-bg.jpg');
-          background-size: 135% 105%;
-          -moz-transition: all .5s;
-          -webkit-transition: all .5s;
-          transition: all .5s;
-          background-position: center center;
         
           @media (min-width: 768px) {
             width: 50%;
             min-height: calc(50vw * 0.8);
             padding: 30px 30px 64px;
+            background-size: 135% 105%;
+            -moz-transition: all .5s;
+            -webkit-transition: all .5s;
+            transition: all .5s;
+            background-position: center center;
         
             &:nth-child(3) {
               width: 100%;
@@ -418,7 +429,10 @@ font-weight: 700;
             &:hover {
               -webkit-filter: invert(0.1);
               filter: invert(0.05);
-              background-size: 145% 115%;
+
+              @media (min-width: 768px) {
+                background-size: 145% 115%;
+              }
         
               &::before  {
                 content: "";
