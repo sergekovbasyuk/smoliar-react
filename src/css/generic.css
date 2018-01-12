@@ -156,7 +156,7 @@ font-weight: 700;
   }
 
   :global .is-active {
-    color: #2499dc;
+    color: rgba(166, 166, 166, 1);
   }
 }
 
@@ -385,7 +385,7 @@ font-weight: 700;
           }
         
           :global .is-active {
-            color: #2499dc;
+            color: rgba(166, 166, 166, 1);
           }
         }
 

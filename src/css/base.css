@@ -37,7 +37,7 @@ a {
   transition: color 0.3s ease-out;
 
   &:hover {
-    color: #1287f4;
+    color: rgba(166, 166, 166, 1);
   }
 }
 

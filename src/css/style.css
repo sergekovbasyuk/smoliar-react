@@ -67,7 +67,7 @@
 
   .slick-active {
     button {
-      background: rgba(#1287f4, 0.7);
+      background: rgba(255, 255, 255, 1);
     }
   }
 }
@@ -93,9 +93,9 @@
     background-size: 115% auto;
   }
 
-  transition: background-size 1.1s ease-in;
-  -moz-transition: background-size 1.1s ease-in;
-  -web-kit-transition: background-size 1.1s ease-in
+  transition: background-size 1.3s ease-in-out;
+  -moz-transition: background-size 1.3s ease-in-out;
+  -web-kit-transition: background-size 1.3s ease-in-out;
 }
 
 :global .dynamic-background {
