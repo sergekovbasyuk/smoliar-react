@@ -93,9 +93,9 @@
     background-size: 115% auto;
   }
 
-  transition: background-size 1.3s ease-in-out;
-  -moz-transition: background-size 1.3s ease-in-out;
-  -web-kit-transition: background-size 1.3s ease-in-out;
+  transition: background-size 1.4s ease-out;
+  -moz-transition: background-size 1.4s ease-out;
+  -web-kit-transition: background-size 1.4s ease-out;
 }
 
 :global .dynamic-background {
