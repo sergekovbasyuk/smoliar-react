@@ -48,15 +48,8 @@ const AboutPage = ({ data, videoId, location }) => {
         location={location}
         backgroundImage={secondImageUrl}
       /> */}
-
-      <Third
-        text={quote}
-        image={thirdImageUrl}
-      />
-      <section className={s.videoWrapper}>
-        <YouTube videoId={videoId} />
-      </section>
-      <Four
+      
+    <Four
         benefitsTitle={benefitsTitle}
         benefitsText={benefitsText}
         benefit1Title={benefit1Title}
@@ -66,10 +59,20 @@ const AboutPage = ({ data, videoId, location }) => {
         benefit3Title={benefit3Title}
         benefit3Text={benefit3Text}
       />
+
+      <section className={s.videoWrapper}>
+        <YouTube videoId={videoId} />
+      </section>
+
       <Five
         images={carouselImagesUrls}
         title={conclusionTitle}
         text={conclusionText}
+      />
+
+    <Third
+        text={quote}
+        image={thirdImageUrl}
       />
     </div>
   );
