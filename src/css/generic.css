@@ -176,9 +176,9 @@ font-weight: 700;
     padding: 30px 30px 64px;
     background-size: cover;
     background-size: 172% auto;
-    -moz-transition: background-size .55s ease-out,  -moz-transition .5s;
-    -webkit-transition: background-size .55s ease-out, -webkit-transition .5s;
-    transition: background-size .55s ease-out, filter .5s;
+    -moz-transition: all .55s ease-out,  -moz-transition .5s;
+    -webkit-transition: all .55s ease-out, -webkit-transition .5s;
+    transition: all .55s ease-out, filter .5s;
     background-position: center center;
 
     &::before {
