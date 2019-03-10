@@ -21,29 +21,18 @@
   text-align: center;
   align-items: center;
   flex-direction: column;
-  overflow: hidden;
-
-  &:after {
-    background : url('https://res.cloudinary.com/dsie3eeqb/image/upload/v1485861452/smoliar/schedule-bg.jpg') no-repeat;
-    content : "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-    transition: all 1.1s ease-in;
-    -moz-transition: all 1.1s ease-in;
-    -web-kit-transition: all 1.1s ease-in;
-  }
+  background-image: url('https://res.cloudinary.com/dsie3eeqb/image/upload/v1485861452/smoliar/schedule-bg.jpg');
 
   @media (min-width: 768px) {
     min-height: 43vw;
+    background-size: 115% auto;
+    transition: background-size 1.1s ease-in;
+    -moz-transition: background-size 1.1s ease-in;
+    -web-kit-transition: background-size 1.1s ease-in;
 
     &:hover,
     &:focus {
-      &::after{
-        transform: scale(1.1);
-      }
+      background-size: 130% auto;
     }
   }
 }
